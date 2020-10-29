@@ -12,7 +12,8 @@
 ## Java
 
 ## DevOps
-### [[부하테스트]]
+### [부하테스트]
+- [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
 
 ## JavaScript
 
