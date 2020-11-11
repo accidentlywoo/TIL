@@ -10,7 +10,6 @@
 
 ## Spring
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction)
-- [Spring Transaction Document](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html)
 
 ## Java
 
