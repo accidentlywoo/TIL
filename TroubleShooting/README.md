@@ -30,5 +30,6 @@
     -> DB Lock의심 
 
 ### 연구 방향
+ - Transaction 공부 오질나게 하게됨. 한번 정리해야 겠음.
  - MySQL Inno DB에대한 공부와 Connection session에대한 공부가 필요.
 
