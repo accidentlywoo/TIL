@@ -9,8 +9,13 @@
 ### 암호학
 
 ## Spring
+- [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction)
+- [Spring Transaction Document](https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/transaction.html)
 
 ## Java
+
+## Trouble Shooting
+- [Spring Boot + JPA(Hibernate) + MySQL :: 데이터 저장시 미반영문제](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting)
 
 ## DevOps
 ### [부하테스트]
