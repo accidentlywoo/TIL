@@ -28,3 +28,4 @@
 ### [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS)
 
 ## 도서
+- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring)
