@@ -1,5 +1,5 @@
 # TIL
- 상태 :running_woman: - 진행 중, :woman_student: - 정리 끝, :ledger: - 꾸준히, :thought_balloon: - 구상 중
+ 상태 :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중
 
 ## CS
 ### 알고리즘
@@ -7,10 +7,9 @@
 ### 리눅스
 - [리눅스 기초]() :running_woman:
 ### network
-- [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :ledger:
+- [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
 ### 컴퓨터 구조
 ### 암호학
-
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: :: WIKI 참고, Java8, Thread, MVC, SQL
@@ -26,7 +25,7 @@
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
 
 ## Trouble Shooting
-- [Spring Boot + JPA(Hibernate) + MySQL :: 데이터 저장시 미반영문제](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting) :ledger:
+- [Spring Boot + JPA(Hibernate) + MySQL :: 데이터 저장시 미반영문제](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting) :green_book:
 
 ## Data Base
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
@@ -49,17 +48,17 @@
 
 ## AI / ML
   
-## 도서 및 논문 :books: (:open_book: - 공부 중, :green_book: - 읽기 끝, :closed_book: - 정리 끝)
+## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :open_book:
    :: 자바 카페 스터디 2020.11.25 마무리 예상 중 
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/master/JavaEEDesignPattern) :open_book:
-- [함께 자라기]() :green_book: :: 읽고 정리안하는 중..
-- [코어 자바스크립트]() :green_book: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
-- [자바스크립트 핵심가이드]() :green_book: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
-- [객체 지향의 사실과 오해]() :green_book: :: 읽고 정리안하는 중..
+- [함께 자라기]() :ledger: :: 읽고 정리안하는 중..
+- [코어 자바스크립트]() :ledger: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
+- [자바스크립트 핵심가이드]() :ledger: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
+- [객체 지향의 사실과 오해]() :ledger: :: 읽고 정리안하는 중..
 - [토비스프링 바이블 읽기]() :open_book: :: 부분적으로 읽었지만 정리계획 중..
 
-- [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :open_book:
+- [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :green_book:
 ---
 
 ## 분기 계획 (:gem: - 목표, :dart: - 성취 )
