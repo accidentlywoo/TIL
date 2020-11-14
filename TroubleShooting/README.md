@@ -33,3 +33,35 @@
  - Transaction 공부 오질나게 하게됨. 한번 정리해야 겠음.
  - MySQL Inno DB에대한 공부와 Connection session에대한 공부가 필요.
 
+
+## 2. Spring Boot 특정 조건에서 동작하지 않는 Flow
+진짜 대환장할 노릇.
+
+예시 
+
+```
+if(조건 A){
+   obj.set(a);
+}else if (조건 B){
+   obj.set(b); // 이후 동작안함
+}
+anotherService.sendRequest(obj);
+```
+
+특징. 
+   - Spring Boot 기반 Rest API 내부에서 if / else if 조건문을 타고 상태값을 세팅해서 특정 uri에 요청을 보내는 로직 
+   - if조건에서 걸린 로직을 타고 else if조건에서 request가 소리소문없이 사라짐. 
+   - 상용만 테스트해볼수 있는 복잡한 환경.
+   - 팀원과 함께 비명지르며, 봄
+   - 같은 uri를 타는데, if / else if 조건에 따라 request가 날라감
+   - 특정 service만을 위한 로직임.
+   - 위 예제에서 ```anotherService.sendRequest``` @Async 애노테이션이 붙어있고, 부모는 @Transactional이 붙어있음.
+
+
+
+### Try
+ - 테스트가 매우 조심스러워서 logging을 낱낱히 추가해서 작업해봄.
+ - 위 예시에서 ```anotherService.sendRequest```로직을 타지도 않음.
+ - 에러도 안남.
+ - 동료와 1차 트러블 슈팅 후 비명 두번 지름
+
