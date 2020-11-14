@@ -4,7 +4,7 @@
 ## 스터디 목적
 기본기 + 알파를 위한 꾸준한 노력과 정성, 함께자라는 즐거움 + 갓기선님의 허니팁 챙기기
 
-### 1. 주차 :: JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가
+### 1. [주차 :: JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week1-JVM-HowToRunJavaCode)
 - JVM이란 무엇인가.
 - 컴파일 하는 방법
 - 바이트코드란 무엇인가
