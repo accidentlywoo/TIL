@@ -4,8 +4,10 @@
 ## CS
 ### 알고리즘
 ### OS
+### 리눅스
+- [리눅스 기초]() :running_woman:
 ### network
-- [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network)
+- [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :ledger:
 ### 컴퓨터 구조
 ### 암호학
 
@@ -44,8 +46,10 @@
 
 ## Python
 - [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
+
+## AI / ML
   
-## 도서 :books: (:open_book: - 공부 중, :green_book: - 읽기 끝, :closed_book: - 정리 끝)
+## 도서 및 논문 :books: (:open_book: - 공부 중, :green_book: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :open_book:
    :: 자바 카페 스터디 2020.11.25 마무리 예상 중 
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/master/JavaEEDesignPattern) :open_book:
@@ -54,3 +58,30 @@
 - [자바스크립트 핵심가이드]() :green_book: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
 - [객체 지향의 사실과 오해]() :green_book: :: 읽고 정리안하는 중..
 - [토비스프링 바이블 읽기]() :open_book: :: 부분적으로 읽었지만 정리계획 중..
+
+- [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :open_book:
+---
+
+## 분기 계획 (:gem: - 목표, :dart: - 성취 )
+### 2020 4분기 계획 :clock9:
+  1. 백엔드로 다시 취업 :dart:
+  2. 알고리즘, 리눅스, 네트워크, OS 기초 탄탄 -> (+ 대학원 종합시험 대비) :gem: :: 기초 정리
+  3. 리팩터링 스터디 마무리 :gem:
+  4. 갓기선과 함깨하는 매주 자바 스터디 18주 풀 참여 :gem:
+  5. 혼자 애플리케이션 만들기 :: 언어 상관없이 Pipeline 구축 까지 :gem:
+  6. 대학원 논문 구상 및 주제 확정 :gem:
+
+### 2021 1분기 계획 : :clock12:
+  1. 대학원 복학 :gem:
+  2. 종합시험 합격 (알고리즘, 리눅스, 네트워크, OS) :gem: :: 성취 전파
+  3. 
+
+### 2021 2분기 계획 : :clock3:
+  1. 논문 통과 :gem:
+  2. 
+
+### 2021 3분기 계획 : :clock6:
+ 1. 대학원 졸업 :gem:
+ 2. 
+
+### 2021 4분기 계획 : :clock9:
