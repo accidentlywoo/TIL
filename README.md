@@ -25,7 +25,7 @@
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
 
 ## Trouble Shooting
-- [Spring Boot + JPA(Hibernate) + MySQL :: 데이터 저장시 미반영문제](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting) :green_book:
+- [미제 사건 프로파일 TroubleShooting](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting) :green_book:
 
 ## Data Base
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
