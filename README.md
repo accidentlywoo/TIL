@@ -21,7 +21,8 @@
     :: WIKI 참고 - Feat. Dynamic Web Project 레거시 웹 컨텍스트의 동작 이해 feat. Tomcat, JSP, Servlet Life Cycle, Http 기술, MyBatis
 
 - [갓기선과 함깨하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip) :running_woman:
-   :: [스터디 GitHub Repository](https://github.com/whiteship/live-study/issues)
+   
+   :: [스터디 Issue GitHub Repository](https://github.com/whiteship/live-study/issues)
 
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
