@@ -13,12 +13,15 @@
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: :: WIKI 참고, Java8, Thread, MVC, SQL
+  
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: :: WIKI 참고 - Feat. Dynamic Web Project 레거시 웹 컨텍스트의 동작 이해 feat. Tomcat, JSP, Servlet Life Cycle, Http 기술, MyBatis
-- [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student: :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito
+
 - [갓기선과 함깨하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip) :running_woman:
    :: [스터디 GitHub Repository](https://github.com/whiteship/live-study/issues)
 
 ## Spring
+- [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student: :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito
+
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
 
 ## Test
