@@ -17,11 +17,11 @@
 - [Spring Boot + JPA(Hibernate) + MySQL :: 데이터 저장시 미반영문제](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting)
 
 ## Data Base
-- [MySQL]()
+- [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL)
 
 ## DevOps
-### [부하테스트]
-- [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
+- [부하테스트]
+   :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
 
 ## JavaScript
 
