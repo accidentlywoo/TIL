@@ -20,7 +20,9 @@
    :: [스터디 GitHub Repository](https://github.com/whiteship/live-study/issues)
 
 ## Spring
-- [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student: :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito
+- [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
+
+ :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito (feat. 코드로 배우는 스프링 웹 프로젝트 :ledger:)
 
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
 
