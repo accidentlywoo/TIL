@@ -59,3 +59,4 @@
 ### 참고 블로그
 - [자바가상머신,JVM이란 무엇인가?](https://asfirstalways.tistory.com/158)
 - [JVM Wiki](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EA%B0%80%EC%83%81_%EB%A8%B8%EC%8B%A0)
+- [oracle java technologies](https://www.oracle.com/java/technologies/)
