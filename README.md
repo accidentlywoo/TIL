@@ -12,6 +12,8 @@
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction)
 
 ## Java
+- [갓기선과 함깨하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip)
+   :: [스터디 GitHub Repository](https://github.com/whiteship/live-study/issues)
 
 ## Trouble Shooting
 - [Spring Boot + JPA(Hibernate) + MySQL :: 데이터 저장시 미반영문제](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting)
@@ -30,8 +32,6 @@
 ## NodeJS
 - [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS)
 
-## 도서 & 스터디
+## 도서
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring)
    :: 자바 카페 스터디
-- [갓기선과 함깨하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip)
-   :: [스터디 GitHub Repository](https://github.com/whiteship/live-study/issues)
