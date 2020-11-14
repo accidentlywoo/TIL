@@ -1,5 +1,5 @@
 # TIL
- 상태 :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중
+ 상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중
 
 ## CS
 ### 알고리즘
