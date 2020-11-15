@@ -62,8 +62,7 @@
 > 수업시간에 배운내용을 끌어내서 정리중 정확한 자료를 링크를 첨부하자!  
 
     자바는 동적으로 클래스를 읽어오므로, 프로그램이 싱행 중인 런타임에서야 모든 코드가 JVM과 연결된다.이렇게 동적으로 클래스를 로딩해주는 것이 클래스 로더(Class Loader)이다.
-
-![자바 실행과정](https://github.com/accidentlywoo/TIL/blob/main/images/java-excution.png)
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/java-excution.png" width="40%" height="30%" title="px(픽셀) 크기 설정" alt="자바 실행과정"></img>
 
 ## 4. 바이트코드란 무엇인가
     자바 소스코드를 JVM이 이해할 수 있는 언어가 자바 바이트 코드이다. 자바 컴파일러에 의해 변환되는 코드의 명령어 크기가 1바이트라서 자바 바이트코드라고 불리고 있다.
