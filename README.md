@@ -50,7 +50,7 @@
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
 
 ## JavaScript
-- [Vue 고인물](https://github.com/accidentlywoo/legacyVue)
+- [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
 - [모던 JavaScript 튜터리얼]() :thought_balloon:
     ::[참고 링크](https://ko.javascript.info/)
 
