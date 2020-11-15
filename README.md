@@ -1,5 +1,5 @@
 # TIL
- 상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중
+ 상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중, :fire: - 초집중
 
  프로그래밍 공부기록을 모아서 기록하고 기록하자!
 
@@ -27,6 +27,8 @@
 
 - [갓기선과 함깨하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip) :running_woman:
    
+   고퀄리티 정리 :hearts: :fire:
+
    :: [스터디 Issue GitHub Repository](https://github.com/whiteship/live-study/issues)
 
 ## Spring
@@ -64,12 +66,14 @@
 - [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS) :running_woman:
 
 ## Python
-- [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
+- [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: 
+  
+    :: 정리안됨 주의
 
 ## AI / ML
   
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
-- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :open_book:
+- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :open_book: :fire:
    :: 자바 카페 스터디 2020.11.25 마무리 예상 중 
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/master/JavaEEDesignPattern) :open_book:
 - [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book:
