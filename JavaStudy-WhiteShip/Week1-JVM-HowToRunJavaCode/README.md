@@ -1,5 +1,7 @@
 # 1 주차 :: JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가
 
+> > 삶은 책임지는 것에서 시작된다. 당신은 혼자 매 순간의 삶과 자신의 모든 행동에 대해 책임을 져야 한다.
+
 1. JVM이란 무엇인가
 2. 컴파일 하는 방법
 3. 실행하는 방법
@@ -50,13 +52,27 @@
 > [자바 가상머신 규격](https://www.oracle.com/java/technologies/)
 
 ## 2. 컴파일 하는 방법
-## 3. 실행하는 방법
+    개발자들이 작성한 .java확장자의 Java 소스코드를 Java Complier를 통해 .class 확장자의 자바 바이트코드를 생성한다. 요즘 IDE들은 Java 소스코드를 [command] + [s] (window :: [ctrl] + [s]) 키를 눌르거나, 저장할때 또는 타이핑을 치고나서 약간의 시간이 지나면 컴파일을 자동 해준다. 수동으로 컴파일을 하고 싶을때에는 terminal이나 cmd 등에서 javac명령어를 통해 Java 소스코드를 컴파일 할 수 있다.
+    javac 는 JDK(Java Development Kit에 포함된 개발 지원 도구이다)
+    
+## 3. 실행하는 방법 :thought_balloon:
+    .class 확장자의 자바 바이트코드는 클래스 로더에 의해 JVM내에 로드되고, JVM의 바이트코드 검증기(verifer :: 클래스 로딩 시점에 동작하는 것으로 알고있음.)인터프리터와 실행엔진에 의해 기계어로 해석되어 실행된다.
+    JVM의 인터프리터는 클래스로딩 영역(바이트코드를 JVM 메모리에 올리기위한 작업)과 실행엔진에서 JIT(Just In Time) Compiler와 런타임 시스템에 기계어 변환시 동작하는 인터프리터가 있다.
+
+> 수업시간에 배운내용을 끌어내서 정리중 정확한 자료를 링크를 첨부하자!  
+
+    자바는 동적으로 클래스를 읽어오므로, 프로그램이 싱행 중인 런타임에서야 모든 코드가 JVM과 연결된다.이렇게 동적으로 클래스를 로딩해주는 것이 클래스 로더(Class Loader)이다.
+
 ## 4. 바이트코드란 무엇인가
+    자바 소스코드를 JVM이 이해할 수 있는 언어가 자바 바이트 코드이다. 자바 컴파일러에 의해 변환되는 코드의 명령어 크기가 1바이트라서 자바 바이트코드라고 불리고 있다.
+
 ## 5. JIT 컴파일러란 무엇이며 어떻게 동작하는지
+    JIT(Just In Time) Compiler란 런타임시 실제 기계어로 변환해주는 컴파일러를 의미한다. 
 ## 6. JVM 구성 요소
 ## 7. JDK 와 JRE 의 차이
 
-### 참고 블로그
+### 참고 사이트
 - [자바가상머신,JVM이란 무엇인가?](https://asfirstalways.tistory.com/158)
 - [JVM Wiki](https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94_%EA%B0%80%EC%83%81_%EB%A8%B8%EC%8B%A0)
 - [oracle java technologies](https://www.oracle.com/java/technologies/)
+- [tcpschool 자바 시작하기](http://tcpschool.com/java/java_intro_programming)
