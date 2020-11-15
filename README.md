@@ -1,15 +1,20 @@
 # TIL
  상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중
 
+ 프로그래밍 공부기록을 모아서 기록하고 기록하자!
+
 ## CS
 ### 알고리즘
+- [영리한 프로그래밍을 위한 알고리즘]() :green_book:
 ### OS
+
 ### 리눅스
 - [리눅스 기초]() :running_woman:
 ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
 ### 컴퓨터 구조
 ### 암호학
+### Docker
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
@@ -67,11 +72,20 @@
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :open_book:
    :: 자바 카페 스터디 2020.11.25 마무리 예상 중 
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/master/JavaEEDesignPattern) :open_book:
+- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book:
+- [알고리즘 산책]() :open_book:
+- [토비스프링 바이블 읽기]() :open_book: :: 부분적으로 읽었지만 정리계획 중..
+- [이것이 자바다]() :ledger: :: 읽고 정리안하는 중..
 - [함께 자라기]() :ledger: :: 읽고 정리안하는 중..
 - [코어 자바스크립트]() :ledger: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
 - [자바스크립트 핵심가이드]() :ledger: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
+- [이펙티브 자바]() :ledger: :: 1회독 정리안하는 중.. 2회독과 정리 및 실습이 필요..
 - [객체 지향의 사실과 오해]() :ledger: :: 읽고 정리안하는 중..
-- [토비스프링 바이블 읽기]() :open_book: :: 부분적으로 읽었지만 정리계획 중..
+- [운영체제 개론]() :ledger: :: 읽고 정리안하는 중..
+  
+- [모던 자바 인 액션]() :thought_balloon:
+- [시작하세요! 도커]() :thought_balloon:
+
 
 - [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :green_book:
 ---
