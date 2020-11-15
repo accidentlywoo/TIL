@@ -62,13 +62,16 @@
 > 수업시간에 배운내용을 끌어내서 정리중 정확한 자료를 링크를 첨부하자!  
 
     자바는 동적으로 클래스를 읽어오므로, 프로그램이 싱행 중인 런타임에서야 모든 코드가 JVM과 연결된다.이렇게 동적으로 클래스를 로딩해주는 것이 클래스 로더(Class Loader)이다.
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/java-excution.png" width="40%" height="30%" display="inline-block" alt="자바 실행과정"></img> <img src="https://github.com/accidentlywoo/TIL/blob/main/images/runtime-data-area.png" width="40%" height="30%" display="inline-block" alt="자바 실행과정"></img>
-
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/java-excution.png" width="40%" height="30%" display="inline-block" alt="자바 실행과정" /> 
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/runtime-data-area.png" width="40%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역"/>
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/runtime-data-stack.png" width="40%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"></img>
 ## 4. 바이트코드란 무엇인가
-    자바 소스코드를 JVM이 이해할 수 있는 언어가 자바 바이트 코드이다. 자바 컴파일러에 의해 변환되는 코드의 명령어 크기가 1바이트라서 자바 바이트코드라고 불리고 있다.
+    자바 소스코드를 JVM이 이해할 수 있는 언어가 자바 바이트 코드이다. 
+    자바 컴파일러에 의해 변환되는 코드의 명령어 크기가 1바이트라서 자바 바이트코드라고 불리고 있다.
 
 ## 5. JIT 컴파일러란 무엇이며 어떻게 동작하는지
-    JIT(Just In Time) Compiler란 런타임시 실제 기계어로 변환해주는 컴파일러를 의미한다. 동적 번역(dynamic translation)이라고도 불리는 이 기법은 프로그램의 실행 프로그램의 실행 속도를 향상시키기 위해 개발되었다.
+    JIT(Just In Time) Compiler란 런타임시 실제 기계어로 변환해주는 컴파일러를 의미한다. 
+    동적 번역(dynamic translation)이라고도 불리는 이 기법은 프로그램의 실행 프로그램의 실행 속도를 향상시키기 위해 개발되었다.
 
 ## 6. JVM 구성 요소
 ## 7. JDK 와 JRE 의 차이
