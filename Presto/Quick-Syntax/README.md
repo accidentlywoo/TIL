@@ -33,5 +33,33 @@
 
 11. 첫 주차 월요일 추출
     ```to_char(date_trunc('week', date(current_timestamp AT TIME ZONE 'Asia/Seoul')), 'yyyymmdd')```
-    
-12. 
+
+12. Null값 변경
+    ```coalesce(col, '변환값') ```
+
+13. 문자열 대치
+    ```replace(cols, '바꿀 문자', '바뀔 문자ㅣ')```
+
+14. Skewed 정도 확인
+    ```skewness(cols)```
+
+15. 상관계수(수치형 col)
+    ```corr(col1, col2)```
+
+16. 표준편차
+    ```stddev_pop(col)```
+
+17. 중앙값
+    ```approx_percentile(col, 0.5)```
+
+18. Log화
+    ``` 
+    ln(col)
+    log2(col)
+    log10(col)
+    ```
+19. 특정 문자 추출
+    ```
+    substr(col, 시작(1), 끝(6))
+    -> 1부터 6번째까지의 문자열이 추출됨 substr(wooyeonhui, 1, 6) = 'wooyeon'
+    ```
