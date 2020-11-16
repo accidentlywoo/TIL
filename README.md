@@ -36,6 +36,9 @@
 
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
 
+## JPA
+- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/master/JPA-theorem) :green_book:
+  
 ## Test
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
 
