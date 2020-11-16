@@ -49,6 +49,10 @@
 - [부하테스트]() :thought_balloon:
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
 
+## SQL SQLD자격증을 갖고있다. 쿼리 킹이다. 데이터가 핵심이지!
+- [Presto](https://github.com/accidentlywoo/TIL/tree/master/Presto) :green_book:
+
+
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
 - [모던 JavaScript 튜터리얼]() :thought_balloon:
