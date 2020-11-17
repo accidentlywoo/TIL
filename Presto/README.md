@@ -17,3 +17,4 @@ Presto가 뭔가...
 
 ## 쿼리는 뚜둘겨야 제맛!
 - [실무에서 사용하는 Presto SQL문법](https://github.com/accidentlywoo/TIL/tree/main/Presto/Quick-Syntax)
+- [공홈 도큐먼트](https://github.com/accidentlywoo/TIL/tree/main/Presto/documentation)
