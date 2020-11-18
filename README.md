@@ -9,7 +9,7 @@
 ### OS
 
 ### 리눅스
-- [리눅스 기초]() :running_woman:
+- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/master/Linux-basic) :running_woman:
 ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
 ### 컴퓨터 구조
