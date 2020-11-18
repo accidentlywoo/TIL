@@ -99,6 +99,9 @@
 - [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :green_book:
 ---
 
+## 컨퍼런스
+- [2020 IF KAKAO](https://github.com/accidentlywoo/TIL/tree/master/if-kakao-2020)
+
 ## 분기 계획 (:gem: - 목표, :dart: - 성취 )
 ### 2020 4분기 계획 :clock9:
   1. Java 백엔드 다시 취업 :dart:
