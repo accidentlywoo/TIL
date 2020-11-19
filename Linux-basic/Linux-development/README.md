@@ -3,10 +3,10 @@
 ## 리눅스 개발환경
   1. [CentOS 설치](#1-centos-설치)
   2. [GCC 설치 및 컴파일](#2-gcc-설치-및-컴파일)
-  3. GDB 디버깅
-  4. make 및 Makefile
-  5. 쉘 문법
-  6. 쉘 프로그래밍
+  3. [GDB 디버깅](#3-gdb-디버깅)
+  4. [make 및 Makefile](#4-make-및-makefile)
+  5. [쉘 문법](#5-쉘-문법)
+  6. [쉘 프로그래밍](#6-쉘-프로그래밍)
    
 ## 리눅스 시스템 프로그래밍
   1. 파일 IO
@@ -52,11 +52,16 @@
    1. Virtual Box 설치되어있어서 바로 뚝딱뚝딱 함.
    2. [kakao mirror](http://mirror.kakao.com/centos/8.2.2004/isos/x86_64/)사이트에서 CentOS-8.2.2004-x86_64-dvd1.iso 요걸 설치해 봤다.. 엄청 오래걸림 15분 이상
    3. 설치 후 설정 > storage > Controller: IDE > 'Empty' 확인
-   4. Optical Drive : 설치한 CentOS-8.2.2004-x86_64-dvd1.iso 요걸 선택한다. ( 다운로드를 기다리고있기 때문에, 복습을 해야한다.. )
+   4. Optical Drive : 설치한 CentOS-8.2.2004-x86_64-dvd1.iso 요걸 선택한다. ( 다운로드를 기다리다.. 놓)
 
 - PuTTY
   - SSH, 텔넷, rlogin, raw TCP를 위한 클라이언트로 동작하는 자유 및 오픈 소스 단말 에뮬레이터 응용 프로그램이다.
     PuTTY라는 이름에는 특별한 뜻이 없으나 tty는 유닉스 전통의 터미넣의 이름을 가리키며 teletype를 짧게 줄인 것이다.
+
+- CentOS 접속
+  - CentOS 가상 머신 설정
+    : 네트워크 어댑처1, NAT, 포트 포워딩을 통해 가상 머신 내부 네트워크에 연결
+      노트북에서 자기자신의 루프백 IP(127.0.0.1)
 
 
 ###  2. GCC 설치 및 컴파일

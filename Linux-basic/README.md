@@ -5,7 +5,7 @@
 
 ->  노트 필기 전부 여기로 다시 정리와 복습 :fire:
 
-## 리눅스 운영
+## [리눅스 운영](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic/Linux-operation)
 ### 리눅스 기초와 이론
   1. 리눅스 역사, 배포판 종류
   2. 실습 환경 구축하기 - VM
