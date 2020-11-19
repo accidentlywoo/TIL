@@ -1,13 +1,9 @@
 # Linux-basic
-리눅스 정말 잘하고 싶다..
-
-계획 : 리눅스 운영, 리눅스 개발 병렬 진행 
-
-->  노트 필기 전부 여기로 다시 정리와 복습 :fire:
+리눅스 개발 개 초 보
 
 ## 리눅스 개발
 ### 리눅스 개발환경
-  1. CentOS 설치
+  1. [CentOS 설치](https://github.com/accidentlywoo/TIL/blob/main/Linux-basic/Linux-development/README-1.md)
   2. GCC 설치 및 컴파일
   3. GDB 디버깅
   4. make 및 Makefile

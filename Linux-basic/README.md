@@ -44,7 +44,7 @@
   1. 라즈베리파이를 이용한 공유기 만들기
   2. 오픈소스를 활용한 멀티미디어 서버 만들기
 
-## 리눅스 개발
+## [리눅스 개발](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic/Linux-development)
 ### 리눅스 개발환경
   1. CentOS 설치
   2. GCC 설치 및 컴파일
