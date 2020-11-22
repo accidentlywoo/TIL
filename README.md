@@ -62,7 +62,7 @@
 - [Presto](https://github.com/accidentlywoo/TIL/tree/master/Presto) :green_book:
 - [Hive]() :thought_balloon:
 
-### - ßOLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
+### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
 
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
