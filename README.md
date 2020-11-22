@@ -39,6 +39,7 @@
  :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito (feat. 코드로 배우는 스프링 웹 프로젝트 :ledger:)
 
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
+- [Spring Core]()
 
 ## JPA
 - [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/master/JPA-theorem) :green_book:
@@ -49,16 +50,19 @@
 ## Trouble Shooting
 - [미제 사건 프로파일 TroubleShooting](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting) :green_book:
 
-## Data Base
-- [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
-
 ## DevOps
 - [부하테스트]() :thought_balloon:
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
 
-## SQL SQLD자격증을 갖고있다. 쿼리 킹이다. 데이터가 핵심이지!
-- [Presto](https://github.com/accidentlywoo/TIL/tree/master/Presto) :green_book:
+## Data Base SQLD자격증을 갖고있다. 쿼리 킹이다. 데이터가 핵심이지!
+- [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
 
+
+### OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
+- [Presto](https://github.com/accidentlywoo/TIL/tree/master/Presto) :green_book:
+- [Hive]() :thought_balloon:
+
+### OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
 
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
