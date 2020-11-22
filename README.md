@@ -58,11 +58,11 @@
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
 
 
-### OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
+### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
 - [Presto](https://github.com/accidentlywoo/TIL/tree/master/Presto) :green_book:
 - [Hive]() :thought_balloon:
 
-### OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
+### - ßOLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
 
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
