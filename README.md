@@ -67,7 +67,6 @@
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
 - [모던 JavaScript 튜터리얼]() :thought_balloon:
-    ::[참고 링크](https://ko.javascript.info/)
 
 ## React
 - [우아한테크러닝 3기](https://github.com/accidentlywoo/HelloReactive) :woman_student: 
