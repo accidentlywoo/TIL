@@ -37,7 +37,7 @@
  :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito (feat. 코드로 배우는 스프링 웹 프로젝트 :ledger:)
 
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :running_woman:
-- [Spring Boot 2.4 + JPA](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction)
+- [Spring Boot 2.4 + JPA](https://github.com/accidentlywoo/TIL/tree/main/SeeUSpringBoot2.4)
 - [Spring Core]()
 
 ## JPA
