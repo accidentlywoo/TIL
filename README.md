@@ -52,6 +52,7 @@
 ## DevOps
 - [부하테스트]() :thought_balloon:
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
+- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/master/MavenQuiz)  
 
 ## Data Base SQLD자격증을 갖고있다. 쿼리 킹이다. 데이터가 핵심이지!
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
