@@ -37,7 +37,8 @@
  :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito (feat. 코드로 배우는 스프링 웹 프로젝트 :ledger:)
 
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
-- [Spring Core]()
+- [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/master/SeeUSpringBoot2.4)
+- [Spring Core]() :green_book:
 
 ## JPA
 - [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/master/JPA-theorem) :green_book:
@@ -98,7 +99,7 @@
 - [운영체제 개론]() :ledger: :: 읽고 정리안하는 중..
   
 - [모던 자바 인 액션]() :thought_balloon:
-- [시작하세요! 도커]() :thought_balloon:
+- [시작하세요! 도커]() :open_book:
 
 
 - [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :green_book:
