@@ -1,5 +1,6 @@
 # MavenQuiz
 메이븐 쥐뿔도 모릅니다..
+갓기선님 블로그보고 따라온 [메이븐 퀴즈퀴즈](http://andresalmiray.com/maven-dependencies-pop-quiz-results/)
 
 ## 질문 1. Given the following POM file, which version of Guava will be selected?
 ```
