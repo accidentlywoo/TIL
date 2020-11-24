@@ -18,7 +18,8 @@
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
 ### 컴퓨터 구조
 ### 암호학
-### Docker
+### Cloud
+- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
@@ -37,7 +38,7 @@
  :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito (feat. 코드로 배우는 스프링 웹 프로젝트 :ledger:)
 
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
-- [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/master/SeeUSpringBoot2.4)
+- [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/master/SeeUSpringBoot2.4) :running_woman:
 - [Spring Core]() :green_book:
 
 ## JPA
@@ -51,8 +52,8 @@
 
 ## DevOps
 - [부하테스트]() :thought_balloon:
-    :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/)
-- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/master/MavenQuiz)  
+    :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) :thought_balloon:
+- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/master/MavenQuiz) :green_book:  
 
 ## Data Base SQLD자격증을 갖고있다. 쿼리 킹이다. 데이터가 핵심이지!
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
