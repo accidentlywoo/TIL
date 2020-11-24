@@ -70,9 +70,7 @@
 - [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS) :running_woman:
 
 ## Python
-- [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: 
-  
-    :: 정리안됨 주의
+- [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
 
 ## AI / ML
   
