@@ -30,14 +30,14 @@
 
     :: WIKI 참고 - Feat. Dynamic Web Project 레거시 웹 컨텍스트의 동작 이해 feat. Tomcat, JSP, Servlet Life Cycle, Http 기술, MyBatis
 
-- [갓기선과 함깨하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip) :running_woman: 고퀄리티 정리 :hearts: :fire: 
+- [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip) :running_woman: 고퀄리티 정리 :hearts: :fire: 
  
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 
  :: WIKI 참고 - Maven Project, Spring 5, MyBatis, Tomcat, jUnit5, Mockito (feat. 코드로 배우는 스프링 웹 프로젝트 :ledger:)
 
-- [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :running_woman:
+- [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :thought_balloon:
 - [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/master/SeeUSpringBoot2.4) :running_woman:
 - [Spring Core]() :green_book:
 
@@ -52,7 +52,7 @@
 
 ## DevOps
 - [부하테스트]() :thought_balloon:
-    :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) :thought_balloon:
+    :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) 
 - [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/master/MavenQuiz) :green_book:  
 
 ## Data Base SQLD자격증을 갖고있다. 쿼리 킹이다. 데이터가 핵심이지!
