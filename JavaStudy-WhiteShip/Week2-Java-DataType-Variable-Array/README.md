@@ -203,6 +203,11 @@ INT의 X7 = 0x52_;
         Promotion - 묵시적 형변환
 
 ### Casting 
+        Primitive 타입에서 Casting은 큰 타입이 작은 타입으로 변환되는 기법을 말한다.
+        이때 따로 타입을 명시해야하고 데이터 손실이 발생할 수 있다.
+
+        문제는 Primitive 타입이아닌, 객체에서 Casting시에 메모리 구조이다.
+        햣
 
 ### Promotion
         Primitive 타입에서 Promotion은 작은 타입이 큰 타입으로 변환되는 기법을 말한다.
