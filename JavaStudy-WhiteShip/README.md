@@ -24,7 +24,17 @@
 6. 타입 변환, 캐스팅 그리고 타입 프로모션
 7. 1차 및 2차 배열 선언하기
 8. 타입 추론, var
-### 3. 3 주차 :: 연산자
+### 3. [3 주차 :: 연산자](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week3-Java-Operator) :open_book:
+1. 산술 연산자
+2. 비트 연산자
+3. 관계 연산자
+4. 논리 연산자
+5. instanceof
+6. assignment(=) operator
+7. 화살표(->) 연사자
+8. 3항 연산자
+9. 연산자 우선 순위
+10. (optional) Java 13. switch 연산자
 ### 4. 4 주차 :: 제어문
 ### 5. 5 주차 :: 클래스
 ### 6. 6 주차 :: 상속
