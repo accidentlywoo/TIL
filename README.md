@@ -75,8 +75,7 @@
 ## AI / ML
   
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
-- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :open_book: :fire:
-   :: 자바 카페 스터디 2020.11.25 마무리 예상 중 
+- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :ledger:
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/book/JavaEEDesignPattern) :open_book:
 - [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book:
 - [알고리즘 산책]() :open_book:
@@ -103,7 +102,7 @@
 ### 2020 4분기 계획 :clock9:
   1. Java 백엔드 다시 취업 :dart:
   2. 알고리즘, 리눅스, 네트워크, OS 기초 탄탄 -> (+ 대학원 종합시험 대비) :gem: :: 기초 정리
-  3. 리팩터링 스터디 한번도 빠지지않고 마무리 :gem:
+  3. 리팩터링 스터디 한번도 빠지지않고 마무리 :dart:
   4. 갓기선과 함깨하는 매주 자바 스터디 18주 풀 참여 :gem:
   5. 혼자 애플리케이션 만들기 :: 언어 상관없이 Pipeline 구축 까지 :gem:
   6. 대학원 논문 구상 및 주제 확정 :gem:
