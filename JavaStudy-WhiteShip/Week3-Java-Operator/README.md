@@ -86,15 +86,130 @@
     이 연산자는 Java 11에서 deprecated되었다. [Java 11 Deprecated API](https://docs.oracle.com/en/java/javase/11/docs/api/deprecated-list.html)
     클래스 이름으로만 타입을 검증하는 것이 정확하지 않기 때문에(다른 패키지 같은 이름 클래스 생성 가능),
     FQCN(Full Qualify ClassName :: 패키지 경로 포함한 클래스명) 타입체크를 권장하고 있다.
-    (관련 자료 찾기) 
+    (관련 자료 찾기*) 
 
 ## 6. assignment(=) operator
+    할당 연산자는 말 그대로 할당해주는 연산자이다.
+    이 연산자는 Object에 참조값을 할당할 수 있다. 
 
 ## 7. 화살표(->) 연사자
-## 8. 3항 연산자
+    화살표 연산자는 람다식을 표햔한다.
+    람다식은 매개변수의 데이터 유형을 생략할 수 있다.
+    또, 매개변수가 하나일 경우 괄호를 생략할 수 있다.
+
+    단일 표현식을 지정하면 Java 런타임 표현식을 평가 한 다음 해당 값을 반환한다.
+```
+p -> {
+    return p.getGendrt() == Person.Sex.MALE
+    && p.getAge() >= 18
+    && p.getAge() <= 25;
+}
+```
+    return문은 표현식이 아니다. 그래서 람다식에서 구문을 {}로 묶어야 한다.
+    그러나 void 메서드는 {}로 안묶어도 된다.
+    아래는 유효한 람다식이다.
+```
+email -> System.out.println(email);
+```
+
+## 8. 3항 연산자(ternary conditional operator)
+    if-else 구문에서 사용할 수 있다.
+
+```
+booleanExpression ? expression1 : expression2
+```
+
 ## 9. 연산자 우선 순위
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/operator.png" width="66%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
+
 ## 10. (optional) Java 13. switch 연산자
+    Java 12는 switch 표현식과 마찬가지로 단일 값으로 평가되고 명령문에서 사용할 수 있는 표현식을 도입했다.
+    또한 break 명령문이 필요하지 않은 '화살표' 레이블을 도입했다..
+    Java 13은 switch 식에 yield를 도입했다.
+
+```
+public enum Day { SUNDAY, MONDAY, TUESDAY,
+    WEDNESDAY, THURSDAY, FRIDAY, SATURDAY; } // base 
+```
+    과거 한땀한땀 개빡치는 switch문, 나는 자바8 환경에서 switch문 코드 쓰면 개 화를 내는 사람 중 하나였다
+```
+int numLetters = 0;
+    Day day = Day.WEDNESDAY;
+    switch (day) {
+        case MONDAY:
+        case FRIDAY:
+        case SUNDAY:
+            numLetters = 6;
+            break;
+        case TUESDAY:
+            numLetters = 7;
+            break;
+        case THURSDAY:
+        case SATURDAY:
+            numLetters = 8;
+            break;
+        case WEDNESDAY:
+            numLetters = 9;
+            break;
+        default:
+            throw new IllegalStateException("Invalid day: " + day);
+    }
+    System.out.println(numLetters);
+```
+
+    java 12에서 switch 구문을 표현식으로 쓸 수 있어졌다. 
+```
+Day day = Day.WEDNESDAY;    
+    System.out.println(
+        switch (day) {
+            case MONDAY, FRIDAY, SUNDAY -> 6;
+            case TUESDAY                -> 7;
+            case THURSDAY, SATURDAY     -> 8;
+            case WEDNESDAY              -> 9;
+            default -> throw new IllegalStateException("Invalid day: " + day);
+        }
+    ); 
+```
+    값을 대입할 수 있다.
+```
+ int numLetters = 0;
+    Day day = Day.WEDNESDAY;
+    switch (day) {
+        case MONDAY, FRIDAY, SUNDAY -> numLetters = 6;
+        case TUESDAY                -> numLetters = 7;
+        case THURSDAY, SATURDAY     -> numLetters = 8;
+        case WEDNESDAY              -> numLetters = 9;
+        default -> throw new IllegalStateException("Invalid day: " + day);
+    };
+    System.out.println(numLetters);
+```
+
+    Java 13에서 yeild명령문이 도입된다. 화살표 표현말고 : 을 사용해도되지만, -> 가 더 우아해 보인다.
+```
+ int numLetters = switch (day) {
+        case MONDAY, FRIDAY, SUNDAY -> {
+            System.out.println(6);
+            yield 6;
+        }
+        case TUESDAY -> {
+            System.out.println(7);
+            yield 7;
+        }
+        case THURSDAY, SATURDAY -> {
+            System.out.println(8);
+            yield 8;
+        }
+        case WEDNESDAY -> {
+            System.out.println(9);
+            yield 9;
+        }
+        default -> {
+            throw new IllegalStateException("Invalid day: " + day);
+        }
+    };  
+```
 
 ### 참고 사이트
-- [공홈 Java Tutorials](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+- [공홈 Java8 Tutorials](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+- [공홈 Java13 Tutorials](https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html)
 - [코딩 팩토리 : 비트 쉬프트](https://coding-factory.tistory.com/521)
