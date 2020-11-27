@@ -55,10 +55,41 @@
 
     비트 | 연산자는 비트 포함 or 연산을 수행
 
-## 3. 관계 연산자
+## 3. equality and Relational Operators
+    동등과 관계 연산자는 값이 큰지 작은지 등을 비교하고, 
+    primitive 타입의 값에서 사용한다.
+
+    == : 동등비교
+    != : 같지 않음 비교
+    > : 초과 비교
+    >= : 이상 비교
+    < : 미만 비교
+    <= : 이하 비교
+
 ## 4. 논리 연산자
-## 5. instanceof
+    &&와 || 연산자는 boolean 값에서 Conditional-AND와 Conditional-OR 연산을 실행한다.
+    이 연산자는 "short-circuiting"이 존재한다.
+
+    && 에서 "short-circuiting"
+    (1)ture && (2)false :: (1),(2) 모두 평가 후 false반환
+    (1)false && (2)true :: (1)이 false이기 때문에 구문 평가를 종료하고 false반환
+
+    || 에서 "short-circuiting"
+    (1)ture && (2)false :: (1)이 true이기 때문에 구문 평가를 종료하고 true반환
+    (1)false && (2)true :: (1),(2) 모두 평가 후 true반환
+    (1)false && (2)false :: (1),(2) 모두 평가 후 false반환
+
+## 5. instanceof (The Type Comparison Operator instanceof)
+    instanceof 연산자는 객체를 특정 타입과 비교한다. 
+    사용자는 클래스, 서브클래스, 특정 인터페이스를 구현하는 클래스의 객체인지 확인할 수 있다.
+
+    이 연산자는 Java 11에서 deprecated되었다. [Java 11 Deprecated API](https://docs.oracle.com/en/java/javase/11/docs/api/deprecated-list.html)
+    클래스 이름으로만 타입을 검증하는 것이 정확하지 않기 때문에(다른 패키지 같은 이름 클래스 생성 가능),
+    FQCN(Full Qualify ClassName :: 패키지 경로 포함한 클래스명) 타입체크를 권장하고 있다.
+    (관련 자료 찾기) 
+
 ## 6. assignment(=) operator
+
 ## 7. 화살표(->) 연사자
 ## 8. 3항 연산자
 ## 9. 연산자 우선 순위
