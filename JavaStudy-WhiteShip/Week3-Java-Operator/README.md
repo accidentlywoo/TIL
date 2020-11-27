@@ -44,10 +44,21 @@
     ex) 자바 기본 정수타입은 int는 4바이트
     2 << 3 
     2를 32비트로 분해한다음 왼쪽으로 3비트 이동
+    양수일때 빈자리는 0으로 채워지고, 밀린 3비트는 버려진다.
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/2<<3.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+
+    16 >> 3
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/16>>3.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
     -16 >> 3
+    음수의 경우 
+    빈자리는 1로 채워진다.
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/-16>>3.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
     -16 >>> 3
+    오직 자바에만 있는 연산. 
+    >>와 다르게 양수 음수 상관없이 무조건 0으로 빈칸이 채워진다.
+ <img src="https://github.com/accidentlywoo/TIL/blob/main/images/-16>>>3.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>   
 
     비트 & 연산자는 비트 and 연산을 수행
 
@@ -87,7 +98,7 @@
     클래스 이름으로만 타입을 검증하는 것이 정확하지 않기 때문에(다른 패키지 같은 이름 클래스 생성 가능),
     FQCN(Full Qualify ClassName :: 패키지 경로 포함한 클래스명) 타입체크를 권장하고 있다.
     (관련 자료 찾기*) 
-    
+
 [Java 11 Deprecated API](https://docs.oracle.com/en/java/javase/11/docs/api/deprecated-list.html)
 
 ## 6. assignment(=) operator
@@ -122,7 +133,7 @@ booleanExpression ? expression1 : expression2
 ```
 
 ## 9. 연산자 우선 순위
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/operator.png" width="30%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
+<img src="https://github.com/accidentlywoo/TIL/blob/main/images/operator.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
 ## 10. (optional) Java 13. switch 연산자
     Java 12는 switch 표현식과 마찬가지로 단일 값으로 평가되고 명령문에서 사용할 수 있는 표현식을 도입했다.
