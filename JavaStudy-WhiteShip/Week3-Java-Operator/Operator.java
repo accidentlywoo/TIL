@@ -40,7 +40,7 @@ public class Operator{
         String builder = "";
         for(int i = 0; i < 32; i ++){
             builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
-            if(i != 15 && i%4 == 0)
+            if(i%4 == 0)
                 builder+='_';
         }
         return builder;
