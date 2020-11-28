@@ -136,6 +136,9 @@ booleanExpression ? expression1 : expression2
 <img src="https://github.com/accidentlywoo/TIL/blob/main/images/operator.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
 ## 10. (optional) Java 13. switch 연산자
+    기존 switch 문은 그대로 존재하고, Java 12부터 switch 연산자가 추가된것
+    헷갈리지 말자!
+
     Java 12는 switch 표현식과 마찬가지로 단일 값으로 평가되고 명령문에서 사용할 수 있는 표현식을 도입했다.
     또한 break 명령문이 필요하지 않은 '화살표' 레이블을 도입했다..
     Java 13은 switch 식에 yield를 도입했다.
