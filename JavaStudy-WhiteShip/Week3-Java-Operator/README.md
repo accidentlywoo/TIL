@@ -225,6 +225,92 @@ Day day = Day.WEDNESDAY;
     };  
 ```
 
+## 빛기선님의 유튭으로 얻은 허니팁
+1. it, ital 을 인텔리J에서 치면 for문 자동 생성
+2. 중간값을 구하는 로직에서 꿀팁
+    특히, 멀티 쓰레드 프로그래밍 환경에서 주의해야할 사항
+    아래의 단순한 예제(받아들이는 값의 최대치는 검증되고 들어왔다고 생각하고 반올림 계산)
+```
+public class Operator{
+    public static void main(String[] args){
+        int start = Integer.MAX_VALUE;
+        int end = Integer.MAX_VALUE;
+        int mid = (start + end) / 2;
+        System.out.println("Stck Over Flow ! : " + mid); // -1
+        System.out.println("binary mid : " + intToBinaryString(mid));
+        // 1_1111_1111_1111_111
+    }
+    static String intToBinaryString(int b){
+        String builder = "";
+        for(int i = 0; i < 16; i ++){
+            builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
+           if(i != 15 && i%4 == 0)
+                builder+='_';
+        }
+        return builder;
+    }
+}
+```
+    int는 4byte이기 때문에 -2^31 ~ 2^31-1범위를 넘어가면 데이터 유실이 발생한다.
+    큰값을 계산할 수 있거나, 멀티 쓰레드 환경에서 예상치 못한 결과값이 나오기 때문에,회피하는 것이 좋다.
+```
+public class Operator{
+    public static void main(String[] args){
+        int start = Integer.MAX_VALUE;
+        int end = Integer.MAX_VALUE;
+        int mid = start + (end - start) / 2;
+        System.out.println("Stack Over Flow Evasion : " + mid); 
+        // 2147483647
+        System.out.println("binary mid : " + intToBinaryString(mid));
+        // 0_1111_1111_1111_111
+    }
+    static String intToBinaryString(int b){
+        String builder = "";
+        for(int i = 0; i < 16; i ++){
+            builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
+           if(i != 15 && i%4 == 0)
+                builder+='_';
+        }
+        return builder;
+    }
+}
+```
+    갓기선님이 알려주신 간지 비법 시프트 연산자 활용
+```
+public class Operator{
+    public static void main(String[] args){
+        int start = Integer.MAX_VALUE;
+        int end = Integer.MAX_VALUE;
+        int  mid = (start + end) >>> 1;
+        System.out.println("Ssap Gangi : " + mid);
+        // 2147483647
+        System.out.println("binary mid : " + intToBinaryString(mid));
+        // 0_1111_1101_0010_101
+    }
+    static String intToBinaryString(int b){
+        String builder = "";
+        for(int i = 0; i < 16; i ++){
+            builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
+           if(i != 15 && i%4 == 0)
+                builder+='_';
+        }
+        return builder;
+    }
+}
+```
+    아래와 같은 >> 연산은 OverFlow발생시, 
+    부호연산을 담당하는 맨앞비트까지 영향이 간다.
+    따라서, >> 연산은 음수 결과가 나온다.
+```
+        mid = (start + end) >> 1;
+        System.out.println("Ssap Gangi fail: " + mid);
+        System.out.println("binary mid fail: " + intToBinaryString(mid));
+```
+    
+[위 예제도 바로 실행가능하지만 Full 실습코드](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week3-Java-Operator/Operator.java)
+
+1. xor연산으로 배열의 중복값 검출해보기
+
 ### 참고 사이트
 - [공홈 Java8 Tutorials](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 - [공홈 Java13 Tutorials](https://docs.oracle.com/en/java/javase/13/language/switch-expressions.html)
