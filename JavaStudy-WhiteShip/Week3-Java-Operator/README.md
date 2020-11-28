@@ -147,7 +147,7 @@ booleanExpression ? expression1 : expression2
 public enum Day { SUNDAY, MONDAY, TUESDAY,
     WEDNESDAY, THURSDAY, FRIDAY, SATURDAY; } // base 
 ```
-    과거 한땀한땀 개빡치는 switch문, 나는 자바8 환경에서 switch문 코드 쓰면 개 화를 내는 사람 중 하나였다
+    
 ```
 int numLetters = 0;
     Day day = Day.WEDNESDAY;

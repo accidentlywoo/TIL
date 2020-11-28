@@ -9,11 +9,11 @@
 
 ## CS
 ### 알고리즘
-- [영리한 프로그래밍을 위한 알고리즘]() :green_book:
+- [영리한 프로그래밍을 위한 알고리즘]() :green_book: :fire:
 ### OS
 
 ### 리눅스
-- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/master/Linux-basic) :running_woman:
+- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/master/Linux-basic) :running_woman: :fire:
 ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
 ### 컴퓨터 구조
@@ -36,13 +36,10 @@
 - [Spring Core]() :green_book:
 
 ## JPA
-- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/master/JPA-theorem) :green_book:
+- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/master/JPA-theorem) :green_book: :fire:
   
 ## Test
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
-
-## Trouble Shooting
-- [미제 사건 프로파일 TroubleShooting](https://github.com/accidentlywoo/TIL/tree/master/TroubleShooting) :green_book:
 
 ## DevOps
 - [부하테스트]() :thought_balloon:
