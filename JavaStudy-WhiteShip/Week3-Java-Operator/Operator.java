@@ -1,8 +1,8 @@
 public class Operator{
     public static void main(String[] args){
         int start = Integer.MAX_VALUE;
-        // int end = Integer.MAX_VALUE;
-        int end = 2100000000;
+        int end = Integer.MAX_VALUE;
+        // int end = 2100000000;
         System.out.println("binary total : " + intToBinaryString(start+end));
 
         int mid = (start + end) / 2; // 멀티 쓰레드 프로그래밍 중에 스택 오버플로우가 발생할 수 있다
@@ -32,11 +32,13 @@ public class Operator{
         mid = (start2 + end2) >>> 1;
         System.out.println("2 Ssap Gangi : " + mid);
         System.out.println("binary mid : " + intToBinaryString(mid));
+
+        System.out.println("힝구힝구 : "+Integer.toBinaryString(mid)); // 양수 앞자리 짜름 주의
     }
 
     static String intToBinaryString(int b){
         String builder = "";
-        for(int i = 0; i < 16; i ++){
+        for(int i = 0; i < 32; i ++){
             builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
             if(i != 15 && i%4 == 0)
                 builder+='_';

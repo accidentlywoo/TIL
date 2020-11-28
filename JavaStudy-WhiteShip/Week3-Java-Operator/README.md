@@ -238,7 +238,7 @@ public class Operator{
         int mid = (start + end) / 2;
         System.out.println("Stck Over Flow ! : " + mid); // -1
         System.out.println("binary mid : " + intToBinaryString(mid));
-        // 1_1111_1111_1111_111
+        // 1_1111_1111_1111_1111_1111_1111_1111_111
     }
     static String intToBinaryString(int b){
         String builder = "";
@@ -262,11 +262,11 @@ public class Operator{
         System.out.println("Stack Over Flow Evasion : " + mid); 
         // 2147483647
         System.out.println("binary mid : " + intToBinaryString(mid));
-        // 0_1111_1111_1111_111
+        // 0_1111_1111_1111_1111_1111_1111_1111_111
     }
     static String intToBinaryString(int b){
         String builder = "";
-        for(int i = 0; i < 16; i ++){
+        for(int i = 0; i < 32; i ++){
             builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
            if(i != 15 && i%4 == 0)
                 builder+='_';
@@ -285,11 +285,11 @@ public class Operator{
         System.out.println("Ssap Gangi : " + mid);
         // 2147483647
         System.out.println("binary mid : " + intToBinaryString(mid));
-        // 0_1111_1101_0010_101
+        // 0_1111_1111_1111_1111_1111_1111_1111_111
     }
     static String intToBinaryString(int b){
         String builder = "";
-        for(int i = 0; i < 16; i ++){
+        for(int i = 0; i < 32; i ++){
             builder+=((0x80000000 >>> i) & b) == 0 ? '0' : '1';
            if(i != 15 && i%4 == 0)
                 builder+='_';
