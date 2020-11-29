@@ -9,7 +9,7 @@
 
 ## CS
 ### 알고리즘
-- [영리한 프로그래밍을 위한 알고리즘]() :green_book: :fire:
+- [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/master/Clever-Algorithm) :green_book: :fire:
 ### OS
 
 ### 리눅스
@@ -94,6 +94,8 @@
 
 ## 컨퍼런스
 - [2020 IF KAKAO](https://github.com/accidentlywoo/TIL/tree/master/if-kakao-2020)
+
+## 습관 만들기
 
 ## 분기 계획 (:gem: - 목표, :dart: - 성취 )
 ### 2020 4분기 계획 :clock9:
