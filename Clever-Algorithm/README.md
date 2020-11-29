@@ -238,7 +238,8 @@ int binomial(int n, int k)
   2. 순환식 계산(Memoization, Bommtom up)
 
   Key Observation
-  
+<img src="hhttps://github.com/accidentlywoo/TIL/tree/master/Clever-Algorithm/diagram/dynamic2-1.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+
   
 ### Dynamic Programming - 3
 ### Dynamic Programming - 4
