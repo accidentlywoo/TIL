@@ -228,8 +228,18 @@ int binomial(int n, int k)
  - Momoization은 top-down방식이며, 실제로 필요한 subproblem만을 푼다.
  - 동적계획법은 bottom-up 방식이며, recursion에 수반되는 overhead가 없다.
 
-
 ### Dynamic Programming - 2
+  행렬 경로 문제
+  - 정수들이 저장된 n x n 행렬의 좌상단에서 우하단까지 이동한다.
+    단 오른쪽이나 아래쪽 방향으로만 이동할 수 있다.
+  - 방문한 칸에 있는 정수들의 합이 최소화되도록 하라.
+
+  1. 순환식 세우고
+  2. 순환식 계산(Memoization, Bommtom up)
+
+  Key Observation
+  
+  
 ### Dynamic Programming - 3
 ### Dynamic Programming - 4
 ### Dynamic Programming - 5
