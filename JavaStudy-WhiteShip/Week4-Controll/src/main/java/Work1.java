@@ -1,17 +1,19 @@
 import org.kohsuke.github.*;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
-public class App {
+public class Work1 {
 	public static void main(String[] args) throws IOException {
 		String repoName = "whiteship/live-study";
-		GHRepository repository = null;
-		GitHub gitHub;
-		gitHub = new GitHubBuilder().withOAuthToken("2c374643be04c0f9891fab7213002c9e71ce3857").build();
-		repository = gitHub.getRepository(repoName);
+
+		GitHub gitHub = GitHubBuilder.fromEnvironment().build();
+		GHRepository repository = gitHub.getRepository(repoName);
 		List<GHIssue> listIssues = getIssues(repository);
 
 		for(GHIssue item : listIssues){
