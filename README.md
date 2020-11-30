@@ -19,7 +19,7 @@
 ### 컴퓨터 구조
 ### 암호학
 ### Cloud
-- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/master/Qwiklabs)
+- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/master/Qwiklabs) :running_woman: :fire:
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
 
 ## Java 
