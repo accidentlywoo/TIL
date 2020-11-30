@@ -36,6 +36,11 @@
 9. 연산자 우선 순위
 10. (optional) Java 13. switch 연산자
 ### 4. [4 주차 :: 제어문](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week4-Controll)
+0. JUnit 5 학습하세요.
+- 인텔리J, 이클립스, VS Code에서 JUnit 5로 테스트 코드 작성하는 방법에 익숙해 질 것.
+- 이미 JUnit 알고 계신분들은 다른 것 아무거나!
+- 더 자바, 테스트 강의도 있으니 참고하세요~
+  
 1. 과제 live-study 대시 보드를 만드는 코드를 작성하세요.
 - 깃헙 이슈 1번부터 18번까지 댓글을 순회하며 댓글을 남긴 사용자를 체크 할 것.
 - 참여율을 계산하세요. 총 18회에 중에 몇 %를 참여했는지 소숫점 두자리가지 보여줄 것.
