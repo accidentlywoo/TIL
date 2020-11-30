@@ -239,6 +239,77 @@ int binomial(int n, int k)
 
   Key Observation
 <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/dynamic2-1.png" width="30%" height="30%" display="inline-block" alt="동적계획법"/>
+  (i,j)에 도달하기 위해서는 (i, j-1)혹은 (i-1, j)를 거쳐햐 한다.
+  또한 (i, j-1)혹은 (i-1, j)까지는 최선의 방법으로 이동해야 한다.
+
+  Recursive Algorithm
+```
+int mat(int i, int j)
+{
+  if(i == 1 && j == 1)
+    return m[i][j];
+  else if (i == 1)
+    return mat(1, j-1) + m[i][j];
+  else if(j == 1)
+    return mat(i-1, 1) + m[i][j];
+  else
+    return Math.min(mat(i-1,j), mat(i,j-1)) + m[i][j];
+}
+```
+  Memoization으로 중복계산 방지
+```
+int mat(int i, int j)
+{
+  if(L[i][j] != -1) return L[i][j];
+  if(i == 1 && j == 1)
+    L[i][j] = m[i][j];
+  else if (i == 1)
+    L[i][j] = mat(1, j-1) + m[i][j];
+  else if(j == 1)
+    L[i][j] = mat(i-1, 1) + m[i][j];
+  else
+    L[i][j] = Math.min(mat(i-1,j), mat(i,j-1)) + m[i][j];
+  return L[i][j];
+}
+```
+
+  Bottom-Up
+```
+int mat()
+{
+  for(int i = 1; i <= n ; i++ ){
+    for(int j=1; j <= n ; j++){
+      if (i == 1 && j == 1)
+        L[i][j] = m[1][1];
+      else if( i == 1)
+        L[i][j] = m[i][j] + L[i][j-1];
+      else if (j == 1)
+        L[i][j] = m[i][j] + L[i-1][j];
+      else
+        L[i][j] = m[i][j] = m[i][j] +Math.min(L[i-1][j], L[i][j-1]);
+    }
+  }
+  return L[n][n];
+}
+```
+  -> 시간복잡도 : O(n^2)
+
+  코드 단순화 해보기
+```
+/* initialise L with L[0][j]=L[i][0] == for all i and j */
+int mat()
+{
+  for(int i = 1; i <= n; i++){
+    for (int j = 1; j <= n; j++){
+      if(i == 1 && j == 1)
+        L[i][j] = m[1][1];
+      else
+        L[i][j] = m[i][j] + Math.min(L[i-1][j], L[i][j-1]);
+    }
+  }
+  return L[n][n];
+}
+```
 
   
 ### Dynamic Programming - 3
