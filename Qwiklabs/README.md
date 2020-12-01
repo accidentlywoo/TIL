@@ -15,11 +15,6 @@ GCP 기반 실습을 할 수 있는 좋은 곳~
     - [1. Cloud Shell 활성](#1-cloud-shell-활성)
     - [2. Hello World](#2-hello-world)
     - [3. Build](#3-build)
-- [Use an official Node runtime as the parent image](#use-an-official-node-runtime-as-the-parent-image)
-- [Set the working directory in the container to /app](#set-the-working-directory-in-the-container-to-app)
-- [Copy the current directory contents into the container at /app](#copy-the-current-directory-contents-into-the-container-at-app)
-- [Make the container's port 80 available to the outside world](#make-the-containers-port-80-available-to-the-outside-world)
-- [Run app.js using node when the container launches](#run-appjs-using-node-when-the-container-launches)
 
 Dokcer는 애플리케이션을 개발, 제공 및 실행하기위한 개방형 플랫폼.
 Docker를 사용하면 애플리케이션을 인프라에서 분리하고 인프라를 관리 형 애플리케이션처럼 취급 할 수 있다.
@@ -126,7 +121,7 @@ CONTAINER ID      IMAGE           COMMAND      ...     NAMES
  ```mkdir test && cd test```
 
  ```Dockerfile```만들기
-    ``` 
+``` 
 cat > Dockerfile <<EOF
 # Use an official Node runtime as the parent image
 FROM node:6
@@ -143,4 +138,4 @@ EXPOSE 80
 # Run app.js using node when the container launches
 CMD ["node", "app.js"]
 EOF
-    ```
+```
