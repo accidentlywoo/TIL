@@ -15,6 +15,8 @@ GCP 기반 실습을 할 수 있는 좋은 곳~
     - [1. Cloud Shell 활성](#1-cloud-shell-활성)
     - [2. Hello World](#2-hello-world)
     - [3. Build](#3-build)
+    - [4. Run](#4-run)
+    - [Debug](#debug)
 
 Dokcer는 애플리케이션을 개발, 제공 및 실행하기위한 개방형 플랫폼.
 Docker를 사용하면 애플리케이션을 인프라에서 분리하고 인프라를 관리 형 애플리케이션처럼 취급 할 수 있다.
@@ -115,7 +117,7 @@ CONTAINER ID      IMAGE           COMMAND      ...     NAMES
 컨테이너 ```Names``도 임의로 생성되지만 지정할 수 있다 
  -> ```docker run --name [container-name] hello-world```
 
- ### 3. Build
+### 3. Build
  간단한 노드 애플리케이션을 기반으로하는 Docker 이미지를 빌드해 보자.
  다음 명령을 실행하여 폴더를 만들고 이동하자
  ```mkdir test && cd test```
@@ -139,3 +141,198 @@ EXPOSE 80
 CMD ["node", "app.js"]
 EOF
 ```
+이 파일은 Docker데몬에 이미지 빌드 방법을 지시한다.
+
+[Dockerfile Command Reference](https://docs.docker.com/engine/reference/builder/#known-issues-run)
+
+이제 노드 애플리케이션을 작성하고 그 후에 이미지를 빌드란다.
+
+간단한 노드 애플리케이션 만들기..(이렇게 간단하게 서버를 뚝딱하다니...)
+```
+cat > app.js <<EOF
+const http = require('http');
+
+const hostname = '0.0.0.0';
+const port = 80;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+        res.end('Hello World\n');
+});
+
+server.listen(port, hostname, () => {
+    console.log('Server running at http://%s:%s/', hostname, port);
+});
+
+process.on('SIGINT', function() {
+    console.log('Caught interrupt signal and will exit');
+    process.exit();
+});
+EOF
+```
+이것은 포트 80에서 수신 대기하고 "Hello World"를 반환하는 간단한  HTTP서버.
+
+이제 이미지를 만들어보자
+
+" . " 은 Dockerfile이 있는 디렉토리 내에서 명령을 실행해야하므로 현재 디렉토리를 의미한다.
+```docker build -t node-app:0.1```
+이 명령이 실행을 완료하는 데 몇 분 정도 걸릴 수 있다.
+출력 예시
+```
+Sending build context to Docker daemon 3.072 kB
+Step 1 : FROM node:6
+6: Pulling from library/node
+...
+...
+...
+Step 5 : CMD node app.js
+ ---> Running in b677acd1edd9
+ ---> f166cd2a9f10
+Removing intermediate container b677acd1edd9
+Successfully built f166cd2a9f10
+```
+```name:tag``` 구문으로 "-t"옵션은 이름과 태그이다.
+이미지의 ```name```은 ```node-app```이고 ```0.1```은 tag이다.
+tag는 도커 이미지 빌드시 매우 추천된다.
+만약 tag를 지정하지 않으면 기본값으로 설정되며 최신의 이미지와 구별하기 어려워진다.
+또한 Dockerfile위의 각 줄 이미지가 빌드 될 때 중간 컨테이너 레이어가되는 방식을 확인한다.
+(?)
+
+다음 명령을 실행해 빌드 한 이미지를 확인해라
+```docker images```
+출력 예시
+```
+REPOSITORY     TAG      IMAGE ID        CREATED            SIZE
+node-app       0.1      f166cd2a9f10    25 seconds ago     656.2 MB
+node           6        5a767079e3df    15 hours ago       656.2 MB
+hello-world    latest   1815c82652c0    6 days ago         1.84 kB
+```
+참고 node는 기본 이미지이며 사용자가 만든 이미지가 node-app입니다.
+먼저 node-app을 지우지 않고 node를 지울 수 없다.
+이미지의 크기는 VM에 비해 상대적으로 작다. 
+같은 노드 이미지의 다른 버전 node:slim과node:alpine 더작고 쉽게 휴대할 수 있는 이미지를 제공한다.
+
+### 4. Run
+아래 코드를 사용하여 빌드 한 이미지를 기반으로 컨테이너를 실행한다.
+```docker run -p 4000:80 --name my-app node-app:0.1```
+명령 출력
+```
+Server running at http://0.0.0.0:80/
+``` 
+--name 플래그는 선호하는 이름을 지정할 수 있다.
+-p Docker에 호스트의 포트 4000을 컨테이너의 포트 80에 매핑하도록 지시한다.
+이제 ```http://localhost:4000``에서 서버에 연결할 수 있다.
+포트 매핑이 없으먄 localhost의 컨테이너에 도달 할 수 없다.
+
+다른 터미널을 열고 서버를 테스트한다.
+```
+curl http://localhost:4000
+```
+명령 출력
+```
+Hello World
+```
+컨테이너는 초기 터미널이 실행되는 동안 실행된다. 
+컨테이너가 백그라운드에서 실행되도록하려면(터미널 세션에 연결되지 않음) -d 플래그를 지정해야 한다.
+
+초기 터미널을 닫고 다음 명령을 실행하여 컨테이너를 중지하고 제거한다.
+```
+docker stop my-app && docker rm my-app
+```
+
+다음 명령을 실행하여 백그라운드에서 컨테이너를 시작한다.
+```
+docker run -p 4000:80 --name my-app -d node-app:0.1
+
+docker ps
+```
+출력 예시
+```
+CONTAINER ID   IMAGE          COMMAND        CREATED         ...  NAMES
+xxxxxxxxxxxx   node-app:0.1   "node app.js"  16 seconds ago  ...  my-app
+```
+```docker ps``의 결과물로 컨테이너 실행중을 알 수 있다.
+```docker logs [container_id]``를 실행시켜 로그를 볼 수 있다.
+
+```docker logs [container_id]```
+출력 예시
+```
+Server running at http://0.0.0.0:80/
+```
+
+애플리케이션을 변경해보자. 
+맨처음 만들었던 test 디렉토리로 이동하자
+```cd test```
+
+app.js를 텍스트 에디터로 변경해보자.
+"Hello World" -> "Welcome to Cloud"로 변경
+```
+....
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+        res.end('Welcome to Cloud\n');
+});
+....
+```
+
+새로운 이미지를 tag를 0.2 와 빌드하자
+```docker build -t node-app:0.2```
+출력물
+```
+Step 1/5 : FROM node:6
+ ---> 67ed1f028e71
+Step 2/5 : WORKDIR /app
+ ---> Using cache
+ ---> a39c2d73c807
+Step 3/5 : ADD . /app
+ ---> a7087887091f
+Removing intermediate container 99bc0526ebb0
+Step 4/5 : EXPOSE 80
+ ---> Running in 7882a1e84596
+ ---> 80f5220880d9
+Removing intermediate container 7882a1e84596
+Step 5/5 : CMD node app.js
+ ---> Running in f2646b475210
+ ---> 5c3edbac6421
+Removing intermediate container f2646b475210
+Successfully built 5c3edbac6421
+Successfully tagged node-app:0.2
+```
+step 2에서 기존 캐시 레이어를 사용하고 있다.
+step 3과 이후로, app.js가 바꼈기때문에 레이어가 바꼈다.
+
+다른 버전의 컨테이너를 실행하자.
+80포트 대신 호스트의 포트 8080에 매핑하는 방법에 주목하자
+호스트 포트 4000은 이미 사용 중이므로 사용할 수 없다.
+```
+docker run -p 8080:80 --name my-app-2 -d node-app:0.2
+docker ps
+```
+출력 예시
+```
+CONTAINER ID     IMAGE             COMMAND            CREATED             
+xxxxxxxxxxxx     node-app:0.2      "node app.js"      53 seconds ago      ...
+xxxxxxxxxxxx     node-app:0.1      "node app.js"      About an hour ago   ...
+```
+
+컨테이너를 테스트한다.
+```
+curl http://localhost:8080
+```
+출력 물
+```
+Welcome to Cloud
+```
+
+(백그라운드에서 실행 중인) 첫번째 컨테이너를 테스트 한다.
+```
+curl http://localhost:4000
+```
+출력 물
+```
+Hello World
+```
+
+### Debug
