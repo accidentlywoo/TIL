@@ -238,9 +238,14 @@ int binomial(int n, int k)
   2. 순환식 계산(Memoization, Bommtom up)
 
   Key Observation
+
 <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/dynamic2-1.png" width="30%" height="30%" display="inline-block" alt="동적계획법"/>
+  
   (i,j)에 도달하기 위해서는 (i, j-1)혹은 (i-1, j)를 거쳐햐 한다.
-  또한 (i, j-1)혹은 (i-1, j)까지는 최선의 방법으로 이동해야 한다.
+  ***또한 (i, j-1)혹은 (i-1, j)까지는 최선의 방법으로 이동해야 한다.***
+
+  L[i, j] : (1,1)에서 (i, j)까지 이르는 최소합
+  제너럴 캐이스와, 베이스 케이스를 완전히 세우는게 핵심 (?)
 
   Recursive Algorithm
 ```
@@ -253,10 +258,10 @@ int mat(int i, int j)
   else if(j == 1)
     return mat(i-1, 1) + m[i][j];
   else
-    return Math.min(mat(i-1,j), mat(i,j-1)) + m[i][j];
+    return Math.min(mat(i-1,j), mat(i,j-1)) + m[i][j]; // 바로 리턴
 }
 ```
-  Memoization으로 중복계산 방지
+  Memoization으로 중복계산 방지 L -> -1로 초기화 가정
 ```
 int mat(int i, int j)
 {
@@ -268,12 +273,12 @@ int mat(int i, int j)
   else if(j == 1)
     L[i][j] = mat(i-1, 1) + m[i][j];
   else
-    L[i][j] = Math.min(mat(i-1,j), mat(i,j-1)) + m[i][j];
-  return L[i][j];
+    L[i][j] = Math.min(mat(i-1,j), mat(i,j-1)) + m[i][j]; // 저장
+  return L[i][j]; // 후 리턴
 }
 ```
 
-  Bottom-Up
+  Bottom-Up 먼저 계산된 값을 이용. 순서가 있는 방식
 ```
 int mat()
 {
@@ -294,9 +299,9 @@ int mat()
 ```
   -> 시간복잡도 : O(n^2)
 
-  코드 단순화 해보기
+  코드 단순화 해보기 Common Trick
 ```
-/* initialise L with L[0][j]=L[i][0] == for all i and j */
+/* initialise L with L[0][j]=L[i][0] = infinity for all i and j */
 int mat()
 {
   for(int i = 1; i <= n; i++){
@@ -310,6 +315,63 @@ int mat()
   return L[n][n];
 }
 ```
+
+  경로 구하기 
+```
+/*initialise L with L[0][j]=L[i][0] = infinity for all i and j*/
+int mat()
+{
+  for(int i = 1; i <=n; i++){
+    for(int j = 1; j <=n; k++){
+      if(i==1 && j ==1){
+        L[i][j] = m[1][1];
+        P[i][j] = '-';
+      }else {
+        if(L[i-1][j] < L[i][j-1]){
+          L[i][j] = m[i][j] + L[i-1][j];
+          P[i][j] = '<-';
+        }
+        else {
+          L[i][j] = m[i][j] + L[i][j-1];
+          P[i][j] = '^|'; //위로 화살표
+        }
+      }
+    }
+  }
+  return L[n][n];
+}
+```
+  경로 자체 출력하기
+```
+void printPath()
+{
+  int i = n, j = n; // 외 맨 오른 밑에서 시작하는 걸까...
+  while (P[i][j] != '-'){
+    print(i + " " + j);
+    if(P[i][j] == '<-')
+      j = j - 1;
+    else 
+      i = i - 1;
+  }
+  print(i + " " + j);
+}
+```
+  재귀적으로 바꾼 호출, 시작점이 1,1 -> (i, j)
+```
+void printPathRecursive(i, j)
+{
+  if(P[i][j] == '-') // (1,1)
+    print(i + " " + j);
+  else {
+    if (P[i][j] == '<-')
+      printPathRecursive(i, j-1);
+    else
+      printPathRecursive(i-1, j);
+    print(i + " " + j);
+  }
+}
+```
+
 
   
 ### Dynamic Programming - 3
