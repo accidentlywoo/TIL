@@ -38,7 +38,8 @@ Docker 컨테이너는 Kubernetes에서 직접 사용할 수 있으므로 Kubern
     Cloud Shell에 사전 설치되어 있으며 탭완성을 지원한다.
 
     ```gcloud auth list``` -> 활성 계정 이름을 나열
-    산출 예시
+    
+출력 예시
     ```
     Credentialed accounts:
     - google1623327_student@qwiklabs.net
@@ -46,7 +47,8 @@ Docker 컨테이너는 Kubernetes에서 직접 사용할 수 있으므로 Kubern
     
 
     ```gcloud config list project``` -> 프로젝트 ID 나열
-    산출 예시
+    
+출력 예시
     ```
     [core]
     project = qwiklabs-gcp-44776a13dea667a6
@@ -55,7 +57,8 @@ Docker 컨테이너는 Kubernetes에서 직접 사용할 수 있으므로 Kubern
 ### 2. Hello World
 Cloud Shell을 열고 다음 명령어를 입력하여 hello world 컨테이너를 실행하여 시작
 ```docker run hello-world```
-산출 예시
+
+출력 예시
 ```
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
@@ -73,7 +76,8 @@ docker 데몬은 hello-world이미지를 검색하고 로컬에서 이미지를 
 
 다음 명령을 실행하여 Docker Hub에서 가져온 컨테이너 이미지를 살펴보자.
 ```docker images```
-산출 예시
+
+출력 예시
 ```
 REPOSITORY     TAG      IMAGE ID       CREATED       SIZE
 hello-world    latest   1815c82652c0   6 days ago    1.84 kB
@@ -83,7 +87,8 @@ Docker Hub 공용 레지스트리에서 가져온 이미지이다.
 Docker 데몬이 로컬에서 이미지를 찾을 수 없는 경우 기본적으로 공용 레지스트리에서 이미지를 검색한다.
 컨테이너를 다시 실행 해 보자
 ```docker run hello-world```
-산출 예시
+
+출력 예시
 ```
 Hello from Docker!
 This message shows that your installation appears to be working correctly.
@@ -95,14 +100,16 @@ To generate this message, Docker took the following steps:
 
 마지막으로 다음 명령을 실행하여 실행중인 컨테이너를 확인
 ```docker ps```
-산출 예시
+
+출력 예시
 ```
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 실행중인 컨테이너가 없다. 이전에 실행 한 hello-world 컨테이너가 이미 종료되었다.
 실행이 완료된 컨테이너를 포함하여 모든 컨테이너를 보려면 다음을 실행하시오
 ```docker ps -a```
-산출 예시
+
+출력 예시
 ```
 CONTAINER ID      IMAGE           COMMAND      ...     NAMES
 6027ecba1c39      hello-world     "/hello"     ...     elated_knuth
@@ -173,6 +180,7 @@ EOF
 " . " 은 Dockerfile이 있는 디렉토리 내에서 명령을 실행해야하므로 현재 디렉토리를 의미한다.
 ```docker build -t node-app:0.1```
 이 명령이 실행을 완료하는 데 몇 분 정도 걸릴 수 있다.
+
 출력 예시
 ```
 Sending build context to Docker daemon 3.072 kB
@@ -196,6 +204,7 @@ tag는 도커 이미지 빌드시 매우 추천된다.
 
 다음 명령을 실행해 빌드 한 이미지를 확인해라
 ```docker images```
+
 출력 예시
 ```
 REPOSITORY     TAG      IMAGE ID        CREATED            SIZE
@@ -242,16 +251,21 @@ docker run -p 4000:80 --name my-app -d node-app:0.1
 
 docker ps
 ```
+
 출력 예시
 ```
 CONTAINER ID   IMAGE          COMMAND        CREATED         ...  NAMES
 xxxxxxxxxxxx   node-app:0.1   "node app.js"  16 seconds ago  ...  my-app
 ```
-```docker ps``의 결과물로 컨테이너 실행중을 알 수 있다.
+```docker ps```의 결과물로 컨테이너 실행중을 알 수 있다.
+
 ```docker logs [container_id]``를 실행시켜 로그를 볼 수 있다.
 
 ```docker logs [container_id]```
+
+
 출력 예시
+
 ```
 Server running at http://0.0.0.0:80/
 ```
@@ -274,7 +288,8 @@ const server = http.createServer((req, res) => {
 
 새로운 이미지를 tag를 0.2 와 빌드하자
 ```docker build -t node-app:0.2```
-출력물
+
+출력 예시
 ```
 Step 1/5 : FROM node:6
  ---> 67ed1f028e71
@@ -305,6 +320,8 @@ step 3과 이후로, app.js가 바꼈기때문에 레이어가 바꼈다.
 docker run -p 8080:80 --name my-app-2 -d node-app:0.2
 docker ps
 ```
+
+
 출력 예시
 ```
 CONTAINER ID     IMAGE             COMMAND            CREATED             
@@ -315,6 +332,7 @@ xxxxxxxxxxxx     node-app:0.1      "node app.js"      About an hour ago   ...
 컨테이너를 테스트한다.
 ```
 curl http://localhost:8080
+
 ```
 출력 물
 ```
@@ -335,6 +353,7 @@ Hello World
 ```docker logs [container_id]```를 사용하여 컨테이너의 로그를 볼 수 있다.
 컨테이너가 실행 중일 때 로그 출력을 따르려면 -f 옵션을 사용하세요.
 ```docker logs [container_id]```
+
 출력 예시
 ```
 Server running at http://0.0.0.0:80/
@@ -346,11 +365,12 @@ Server running at http://0.0.0.0:80/
 bash ```WORKDIR```디렉토리(/app)에서 구체적인 ```Dockerfile```을 실행했다.
 여기에,  디버깅을 위해 컨테이너 내부에 상호작용 shell session 세션이 있다
 
-커맨드 출력물
+커맨드 출력 예시
 ```root@xxxxxxxxxxxx:/app#```
 디렉토리를 보자
 ```ls```
-커멘드 출력물
+
+커멘드 출력 예시
 ```
 Dockerfile  app.js
 ```
@@ -358,7 +378,9 @@ exit the Bash session
 ```exit```
 사용자는 컨테이너의 메타데이터를 도커 인스펙트를 사용해서 확인할 수 있다.
 ```docker inspect [container_id]```
-출력물 예시
+
+
+출력 예시 예시
 ```
 [
     {
@@ -375,6 +397,7 @@ exit the Bash session
 ```
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [container_id]
 ```
+
 출력 예시
 ```192.168.9.3```
 
@@ -396,6 +419,7 @@ For gcr:
   
   사용자는 다음 구문을 실행하여 프로젝트 ID를 찾을 수 있다
 ```gcloud config list project```
+
 출력 예시문
 ```
 [core]
@@ -409,7 +433,8 @@ Tag ```node-app:0.2``. ```[project-id]```는 사용자 설정에 맞게 바꾸�
 docker tag node-app:0.2 gcr.io/[project-id]/node-app:0.2
 ```
 ```docker images```
-출력물 예시
+
+출력 예시 예시
 ```
 REPOSITORY                      TAG         IMAGE ID          CREATED
 node-app                        0.2         76b3beef845e      22 hours ago
@@ -421,7 +446,8 @@ hello-world                     latest      1815c82652c0      7 weeks ago
 
 이 이미지를 gcr에 push하자.
 ```docker push gcr.io/[project-id]/node-app:0.2```
-출력물 예시
+
+출력 예시 예시
 ```
 The push refers to a repository [gcr.io/[project-id]/node-app]
 057029400a4a: Pushed
