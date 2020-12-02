@@ -1,11 +1,12 @@
-# [Docker 소개](#1-docker-소개)
-   
+# [Docker 소개](#1-docker-소개) :whale:
+
+  도커 - 쉽지 않아!
 
 --- 
 
-## 1. Docker 소개
-- [Docker 소개](#docker-소개)
-  - [1. Docker 소개](#1-docker-소개)
+## Docker 소개
+- [Docker 소개 :whale:](#docker-소개-whale)
+  - [Docker 소개](#docker-소개)
     - [1. Cloud Shell 활성](#1-cloud-shell-활성)
     - [2. Hello World](#2-hello-world)
     - [3. Build](#3-build)
