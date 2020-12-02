@@ -115,6 +115,59 @@
 
 ## 7. 그래프 알고리즘
 ### 그래프(graph) 개념과 표현
+  개념과 표현(Concepts and Representations)
+
+  - 무방향 그래프 G=(V, E) : 일반적으로 자기자신을 연결하지 않는다
+    - V : 노드(node) 혹은 정점(vertex)
+    - E : 노드쌍을 연결하는 에지(edge) 혹은 링크(link)
+    - 개체(Object)들 간의 이진관계를 표현
+    - n = |V|, m = |E|
+<img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/graph.png" width="30%" height="30%" display="inline-block" alt="그래프"/>
+  -> V={1,2,3,4,5,6,7}
+  -> E = {(1,2),(1,3)...(3,7)}
+  -> n = 7
+  -> m = 8
+
+  - 방향 그래프(Directed Graph) G=(V,E) : 자기자신을 연결할 수 있다
+    - 에지(u,v) != (v,u)는 u로부터 V로 방향을 가짐
+
+  - 가중치(weighted)그래프
+    - 에지마다 가중치(weight)가 지정
+
+ 그래프의 표현
+
+ - 인접행렬(adjacency matrix)
+    <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/adjacency-matrix.png" width="30%" height="30%" display="inline-block" alt="인접행렬"/>
+   - 저장 공간 : O(n ^2)
+   - 어떤 노드 v에 인접한 모든 노드 찾기 : O(n) 시간
+   - 어떤 에지 (u, v)가 존재하는지 검사 : O(1) 시간 
+  
+ - 인접리스트(adjacency list)
+   - 정점 집합을 표현하는 하나의 배열과 
+   - 각 정점마다 인접한 정점들의 연결 리스트
+    <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/adjacency-list.png" width="30%" height="30%" display="inline-block" alt="인접리스트"/>
+   - 저장 공간 : O(n + m)
+   - 어떤 노드 v에 인접한 모든 모든 노드 찾기 : O(degree(v)) 시간 : degree(v) <= n-1
+   - 어떤 에지 (u, v)가 존재하는지 검사 : O(degree(u)) 시간
+
+ - 방향 그래프
+   - 인접행렬은 비대칭
+   - 인접 리스트는 m개의 노드를 가짐 
+   <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/directed-graph.png" width="30%" height="30%" display="inline-block" alt="방향그래프"/>
+    -> 비대칭 행렬 가능  
+
+ - 가중치 그래프의 인접행렬 표현
+   - 에지의 존재를 나타내는 값으로 1대신 에지의 가중치를 저장
+   - 에지가 없을 때 혹은 대각선 :
+     - 특별히 정해진 규칙은 없으며, 그래프와 가중치가 의미하는 바에 따라서
+     - 예 : 가중치가 거리 혹은 비용을 의미하는 경우라면 에지가 없으면 무한, 대각선은 0
+     - 예 : 만약 가중치가 용량을 의미한다면 에지가 없을때 0, 대각선은 무한
+
+ - 경로와 연결성
+   - 무방향 그래프 G = (V, E)에서 노드 u와 노드 v를 연결하는 경로(path)가 존재할 때 v와 u는 서로 연결되었다고 말함
+   - 모든 노드 쌍들이 서로 연결된 그래프를 연결된(connected) 그래프라고 한다.
+   - 연결요소 (connected component)
+
 ### 순회 - 그래프에서 BFS
 ### 순회 - 그래프에서 DFS
 ### DAG 와 위상순서
