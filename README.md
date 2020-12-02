@@ -94,7 +94,7 @@
 ---
 
 ## 컨퍼런스
-- [2020 IF KAKAO](https://github.com/accidentlywoo/TIL/tree/master/if-kakao-2020)
+- [2020 IF KAKAO](https://if.kakao.com/session)
 
 ## 습관 만들기
 
