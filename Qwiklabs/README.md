@@ -17,6 +17,7 @@ GCP 기반 실습을 할 수 있는 좋은 곳~
     - [3. Build](#3-build)
     - [4. Run](#4-run)
     - [Debug](#debug)
+    - [Publish](#publish)
 
 Dokcer는 애플리케이션을 개발, 제공 및 실행하기위한 개방형 플랫폼.
 Docker를 사용하면 애플리케이션을 인프라에서 분리하고 인프라를 관리 형 애플리케이션처럼 취급 할 수 있다.
@@ -336,3 +337,110 @@ Hello World
 ```
 
 ### Debug
+컨테이너 빌드 및 실행에 익숙해 졌으므로(?) 몇 가지 디버깅 사례를 살펴보자
+```docker logs [container_id]```를 사용하여 컨테이너의 로그를 볼 수 있다.
+컨테이너가 실행 중일 때 로그 출력을 따르려면 -f 옵션을 사용하세요.
+```docker logs [container_id]```
+출력 예시
+```
+Server running at http://0.0.0.0:80/
+```
+실행중인 컨테이너 내에서 대화형 Bash세션을 시작하려는 경우에 ```docker exec```명령을 실행한다.
+다른 터미널을 열고(Cloud Shell에서 + 아이콘 클릭) 다음 명령어를 입력한다.
+```docker exec -it [container_id] bash```
+```-it```플래그는 컨테이너와 pseudo-tty배치와 표준 입출력을 유지 상호작용하게 해준다.
+bash ```WORKDIR```디렉토리(/app)에서 구체적인 ```Dockerfile```을 실행했다.
+여기에,  디버깅을 위해 컨테이너 내부에 상호작용 shell session 세션이 있다
+
+커맨드 출력물
+```root@xxxxxxxxxxxx:/app#```
+디렉토리를 보자
+```ls```
+커멘드 출력물
+```
+Dockerfile  app.js
+```
+exit the Bash session
+```exit```
+사용자는 컨테이너의 메타데이터를 도커 인스펙트를 사용해서 확인할 수 있다.
+```docker inspect [container_id]```
+출력물 예시
+```
+[
+    {
+        "Id": "xxxxxxxxxxxx....",
+        "Created": "2017-08-07T22:57:49.261726726Z",
+        "Path": "node",
+        "Args": [
+            "app.js"
+        ],
+...
+```
+```--format```을 이용해 빈횐된 특정 JSON 필드를 검사할 수 있다.
+예를 들어
+```
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [container_id]
+```
+출력 예시
+```192.168.9.3```
+
+### Publish
+이번엔 Google Container Registry(gcr)에 이미지를 push해보자.
+새로운 환경을 재현하기 위해 모든 컨테이너를 제거할 것이다.
+그러고, 컨테이너를 pull하고 실행 시킬 것이다.
+이는 도커 컨테이너의 이식성을 보여줄 것이다.
+
+grc에서 호스팅하는 프라이빗 레지스트리에 이미지를 push하기위해,
+사용자는 레지스트리 이름을 이미지에 태그해야 한다.
+그 형식은 ```[hostname]/[project-id]/[image]:[tag]``` 이다
+
+For gcr:
+- ```[hostname]```=gcr.io
+- ```[project-id]```=your project's ID
+- ```[image]```= your image name
+- ```[tag]```= any string tag of your choice. If unspecified, it defaults to "latest".
+  
+  사용자는 다음 구문을 실행하여 프로젝트 ID를 찾을 수 있다
+```gcloud config list project```
+출력 예시문
+```
+[core]
+project = [project-id]
+
+Your active configuration is: [default]
+```
+
+Tag ```node-app:0.2``. ```[project-id]```는 사용자 설정에 맞게 바꾸라!
+```
+docker tag node-app:0.2 gcr.io/[project-id]/node-app:0.2
+```
+```docker images```
+출력물 예시
+```
+REPOSITORY                      TAG         IMAGE ID          CREATED
+node-app                        0.2         76b3beef845e      22 hours ago
+gcr.io/[project-id]/node-app    0.2         76b3beef845e      22 hours ago
+node-app                        0.1         f166cd2a9f10      26 hours ago
+node                            6           5a767079e3df      7 days ago
+hello-world                     latest      1815c82652c0      7 weeks ago
+```
+
+이 이미지를 gcr에 push하자.
+```docker push gcr.io/[project-id]/node-app:0.2```
+출력물 예시
+```
+The push refers to a repository [gcr.io/[project-id]/node-app]
+057029400a4a: Pushed
+342f14cb7e2b: Pushed
+903087566d45: Pushed
+99dac0782a63: Pushed
+e6695624484e: Pushed
+da59b99bbd3b: Pushed
+5616a6292c16: Pushed
+f3ed6cb59ab0: Pushed
+654f45ecb7e3: Pushed
+2c40c66f7667: Pushed
+0.2: digest: sha256:25b8ebd7820515609517ec38dbca9086e1abef3750c0d2aff7f341407c743c46 size: 2419
+```
+GCP console의 Container Registry 네비메뉴에서 확인해라.
+```http://gcr.io/[project-id]/node-app```
