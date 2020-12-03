@@ -41,11 +41,90 @@ Kubernetes Engine 환경은 컨테이너 클러스터를 향성하기 위해 그
   - 클러스터에 대한 가시성을 위해 Stackdriver Monitoring으로 로깅 및 모니터링
 
 ## Task 1 : Set a default compute zone
+1. 대략적인 기본 컴퓨팅 영역을 설정하기 위해 ```us-central1-a```를 설정해 보겠다. 
+   ```gcloud config set compute/zone us-central1-a```
+
+   출력 결과물
+   ```Update property [compute/zone]```
 
 ## Task 2 : Create a GKE Cluster
+클러스터는 최소한 클러스터 마스터 머신과 노드로 구성된다.
+노드는 여러 일을하는 머신이다. 노드는 클러스터의 일부로 만드는 데 필요한 Kubernetes 프로세스를 실행하는 Compute Engine 가상머신(VM) 인스턴스이다.
+
+1. 클러스터를 생성하기 위해, 다음 명령을 실행해라, ```[CLUSTER-NAME]``` 는 적절한 이름으로... 
+   ```
+    gcloud container clusters create [CLUSTER-NAME]
+   ```
+   시간이 조금 걸릴 수 있다.
+
+   출력 예시
+   ```
+   NAME        LOCATION       ...   NODE_VERSION  NUM_NODES  STATUS
+    my-cluster  us-central1-a  ...   1.16.13-gke.401  3          RUNNING
+  ```
 
 ## Task 3 : Get authentication credentials for the cluster
+클러스터를 생성 후, 상호 작용하려면 인증 자격 증명이 필요하다.
+1. 클러스터를 인증하기위해, 다음 명령을 실행해라
+   
+   ```gcloud container clusters get-credentials [CLUSTER-NAME]```
+
+   출력 예시
+   ```
+    Fetching cluster endpoint and auth data.
+    kubeconfig entry generated for my-cluster.
+   ```
 
 ## Task 4 : Deploy an application to the cluster
+이제 컨테이너화한 애플리케이션을 클러스터에 배포할 수 있다.
+이번 예시에서는 ```hello-app``` 을 만든 클러스터에서 실행해보자
+- [애플리케이션의 컨테이너화 알아보기](https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview)
+
+GKE은 사용자의 클러스터의 자원을 관리하고 생성하기위해 Kubernetes 객체를 사용한다.
+Kubernetes는 웹 서버같이 Stateless한 배포를 위해 배포 객체를 제공한다.
+- [배포 객체 알아보기](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
+
+서비스 객체는 인터넷에서 애플리케이션을 접근하기 위해 규칙을 정의하고 로드밸런싱을 한다.
+
+  1. ```hello-app```라는 컨테이너 이미지 ```hello-server``라는 배포를 새로 만들기위해, 다음 명령을 실행하라
+  ```
+  kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0
+  ```
+
+  출력 예제
+  ```deployment.apps/hello-server created```
+
+  ```hello-server``` 
+
+  이 쿠버네티스 명령은 ```hello-server```를 표현하는 배포 객체를 생성한다.
+  이 경우, ```--image``` 배포할 컨테이너 이미지를 구체화한다.
+  이 명령은 Container Registry 버킷에서 샘플 이미지를 pull해온다.
+  ```gcr.io/google-samples/hello-app:1.0``` 구체적인 이미지버전을 pull받게 나타낸다.
+  만약 버전이 명시되지 않으면, 최산 버전을 사용한다.
+
+  2. 애플리케이션을 외부 트래픽에 노출할 수있는 쿠버네티스 리소스인, 쿠버네티스 서비스를 생성하기 위해서, 다음 명령어를 실행하세요.
+   ```kubectl expose deployment hello-server --type=LoadBalancer --port 8080```
+
+   - ```--port``` 컨테이너가 노출하는 포트를 지정한다.
+   - ```type="LoadBalancer``` 컨테이너에 대한 Compute Engine 로드밸런서를 만든다.
+
+  출력 예시
+```service/hello-server exposed```
+
+3. ```hello-server`` 서비스를 검사하기위래 아래 kubectl get명령어 실행
+   ```kubectl get service```
+
+  출력 예시
+```
+  NAME              TYPE              CLUSTER-IP        EXTERNAL-IP      PORT(S)           AGE
+  hello-server      loadBalancer      10.39.244.36      35.202.234.26    8080:31991/TCP    65s
+  kubernetes        ClusterIP         10.39.240.1       <none>           433/TCP           5m13s
+```
+외부 IP 만들때 시간이 좀 걸린다. 
+
+4. 애플리케이션을 브라우저로 보기위해 시도해보라~
+```http://[EXTERNAL-IP]:8080```
 
 ## Task 5 : Deleting the cluster
+1. 클러스터 지우기. 다음 명령을 실행하자
+   ```gcloud container cluster delete [CLUSTER-NAME]```
