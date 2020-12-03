@@ -21,6 +21,8 @@
 ### Cloud
 - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/master/Qwiklabs) :running_woman: :fire:
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
+- [흔들리는 도커의 위상](https://www.samsungsds.com/kr/insights/docker.html)
+- [Kubernetes deprecates Docker : 쿠버 공홈](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/)
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
