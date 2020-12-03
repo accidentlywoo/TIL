@@ -137,7 +137,9 @@
  그래프의 표현
 
  - 인접행렬(adjacency matrix)
+
     <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/adjacency-matrix.png" width="30%" height="30%" display="inline-block" alt="인접행렬"/>
+
    - 저장 공간 : O(n ^2)
    - 어떤 노드 v에 인접한 모든 노드 찾기 : O(n) 시간
    - 어떤 에지 (u, v)가 존재하는지 검사 : O(1) 시간 
@@ -145,7 +147,9 @@
  - 인접리스트(adjacency list)
    - 정점 집합을 표현하는 하나의 배열과 
    - 각 정점마다 인접한 정점들의 연결 리스트
+
     <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/adjacency-list.png" width="30%" height="30%" display="inline-block" alt="인접리스트"/>
+
    - 저장 공간 : O(n + m)
    - 어떤 노드 v에 인접한 모든 모든 노드 찾기 : O(degree(v)) 시간 : degree(v) <= n-1
    - 어떤 에지 (u, v)가 존재하는지 검사 : O(degree(u)) 시간
@@ -153,6 +157,7 @@
  - 방향 그래프
    - 인접행렬은 비대칭
    - 인접 리스트는 m개의 노드를 가짐 
+
    <img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/directed-graph.png" width="30%" height="30%" display="inline-block" alt="방향그래프"/>
     -> 비대칭 행렬 가능  
 
@@ -169,6 +174,138 @@
    - 연결요소 (connected component)
 
 ### 순회 - 그래프에서 BFS
+  그래프 순회 (Graph Traversal)
+
+  - 순회(traversal)
+    - 그래프의 모든 노드들을 방문하는 일
+  - 대표적 두 가지 방법
+    - BFS(Breadth-First Search, 너비 우선 순회)
+    - DFS(Depth-First Search, 깊이 우선 순회)
+
+  - BFS 알고리즘은 다음 순서로 노드들을 방문
+    - L0 = {s}, 여기서 s는 출발 노드
+    - L1 = L0의 모든 이웃 노드들
+    - L2 = L1의 이웃들 중 L0에 속하지 않는 노드들
+  
+    ...
+
+    - Li = L i-1의 이웃들 중 Li-2에 속하지 않는 노드들
+
+<img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/BFS.png" width="30%" height="30%" display="inline-block" alt="너비우선순회"/>
+
+      너비 우선순회 알고리즘을 구현하는 가장 간단한 방법 -큐
+        1. check the start node;
+        2. insert the start node into the queue;
+        
+  ```
+  while the queue is not empty do
+    remove a node v from queue;
+    for each unchecked neighbour w of v do
+      check and insert w into the queue;
+  ```
+
+  수도 코드
+  ```
+BFS(G, s) // 그래프 G와 출발 노드 s
+  Q is empty; 
+  Enqueue(Q, s); // 출발 노드 큐 널기
+  while Q is not empty do
+    u <- Dequeue(Q) // 반복문에서 하나 꺼내기
+    for each v adjacent to u do // ㄱ꺼낸 u에 인접한 v 노드 
+      if v is unvisited then
+        mark v as visited;
+        Enqueue(Q, v);
+      end.
+    end.
+  end.
+  ```
+
+  ***BFS와 최단경로***
+  - s에서 Li에 속한 노드까지의 최단 경로의 길이는 i이다.
+  - BFS를 하면서 각 노드에 대해서 최단 경로의 길이를 구할 수 있다.
+  
+  - 입력 : 방향 혹은 무방향 그래프 G=(V,E), 그리고 출발노드 s E(포함) V
+  - 출력 : 모든 노드 v에 대해서
+      - d[v] = s로부터 v까지의 최단경로의 길이(에지의 개수)
+      - Pi[v] = s로부터 v까지의 최단경로상에서 v의 직전 노드(predecessor)
+```
+BFS(G, s)
+  Q is empty
+ +d[s] <- 0;     /* distance from s to s is 0 */
+ +Pi[s] <- null; /* no predecessor of s */
+  Enqueue(Q, s);
+  while Q is not empty do
+    u <- Dequeue(Q)
+    for each v adjacent to u do
+      if v is unvisited then
+        mark v as visited;
+       +d[v]] <- d[u] + 1;  /* distance to v */
+       +Pi[v] <- u;         /* u is the predecessor of v */
+        Enqueue(Q, v);
+    end.
+  end.
+```
+***O(n+m) with adjacent list***
+보통 모든 노드들에 대해서 d[v]를 -1로 초기화해두고, -1이면 unvisited, 아니면 visited로 판단한다.
+
+시간 복접도 
+
+```
+BFS(G, s)
+  Q is empty
+  for each node u do
+    d[u] <- -1; 
+    Pi[u] <- null;
+  end.
+  d[u] <- 0; Pi[s] <- null;
+  Enqueue(Q, s);
+  while Q is not empty do // 최대 n번 반복
+    u <- Dequeue(Q)
+    for each v adjacent to u do // 인접리스트로 구현할 경우 for문은 각 노드 v에 대해서 degree(v)번 돈다.
+      if v is unvisited then
+        mark v as visited;
+        d[v]] <- d[u] + 1;  /* distance to v */
+        Pi[v] <- u;         /* u is the predecessor of v */
+        Enqueue(Q, v); //unchecked 노드만 queue에 들어갈 수 있으므로 어떤 노드도 큐에 두번 들어가지는 않는다.
+    end.
+  end.
+``` 
+인접리스트로 구현할 경우 시간 복잡도는
+
+인테스그럴 V degree(v) = 2m 이므로 O(n + m) // 인접그래프 일경우 O(n ^ 2)
+
+degree(v) -> 인접리스트 한 노드에서 연결된 노드들
+
+n -> edge 개수
+
+<img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/BFS-graph.png" width="30%" height="30%" display="inline-block" alt="BFS-graph"/>
+
+  BFS 트리
+  - 각 노드 v와 Pi[v]를 연결하는 에지들로 구성된 트리
+<img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/BFS-Tree.png" width="30%" height="30%" display="inline-block" alt="BFS-Tree"/>
+
+  너비우선순회 : 최단 경로 출력하기
+```
+PRINT-PATH(G, s, v) /* 출발점 s에서 노드 v까지의 경로 출력하기 */
+  if v=s then
+    print s;
+  else if Pi(v) = null then
+    print "no path from s to v exists";
+  else
+    PRINT-PATH(G, s, Pi[v]);
+    print v;
+  end.
+```
+  - 그래프가 disconnected이거나 혹은 방향 그래프라면 BFS에 의해서 모든 노드가 방문되지 않을 수도 있음
+  - BFS를 반복하여 모든 노드 방문
+```
+BFS-ALL (G)
+{
+  while there exists unvisited node v
+    BFS(G, V);
+}
+```
+
 ### 순회 - 그래프에서 DFS
 ### DAG 와 위상순서
 ### 최소비용신장트리(minimum spanning tree) - 1
