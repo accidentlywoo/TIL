@@ -307,6 +307,44 @@ BFS-ALL (G)
 ```
 
 ### 순회 - 그래프에서 DFS
+  깊이우선순회 (DFS)
+
+<img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/DFS-1.png" width="30%" height="30%" display="inline-block" alt="깊이우선순회"/>
+
+  1. 출발점 s에서 시작한다.
+  2. 현재 노드를 visited로 mark하고 인접한 노드들 중 unvisited 노드가 존재하면 그 노드로 간다.
+  3. 2번을 계속 반복한다.
+  4. 만약 unvisited인 이웃 노드가 존재하지 않는 동안 계속해서 직전 노드로 되돌아간다.
+  5. 다시 2번을 반복한다
+  6. 시작노드 s로 돌앙고 더 이상 갈 곳이 없으면 종료한다.
+
+<img src="https://github.com/accidentlywoo/TIL/blob/main/Clever-Algorithm/diagram/DFS.png" width="30%" height="30%" display="inline-block" alt="깊이우선순회"/>
+
+DFS 깊이우선탐색
+
+```
+DFS(G, v)
+  visited[v] <- YES
+  for each node u adjacent to v do
+    if visited[u] = NO then
+      DFS(G, u);
+  end.
+end.
+```
+  - 그래프가 disconnected이가나 혹은 방향 그래프라면 DFS에 의해서 모든 노드가 방문되지 않을 수도 있음
+  - DFS를 반복하여 모든 노드 방문
+```
+DFS-ALL(G)
+{
+  for each v E(포함) V
+    visited[v] <- NO;
+  for each v E(포함) V
+    if(visited[v] = NO) then
+      DFS(G, v);
+}
+```
+시간 복잡도 : O(n+m)
+
 ### DAG 와 위상순서
 ### 최소비용신장트리(minimum spanning tree) - 1
 ### 최소비용신장트리(minimum spanning tree) - 2
