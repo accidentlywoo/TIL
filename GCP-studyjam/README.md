@@ -6,6 +6,10 @@
 
 ---
 
+## 읽 리스트 : 흔들리는 도커의 위상
+- [흔들리는 도커의 위상](https://www.samsungsds.com/kr/insights/docker.html)
+- [Kubernetes deprecates Docker : 쿠버 공홈](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/)
+
 ## 1. Container, Docker 개념
 ### What is Container?
 

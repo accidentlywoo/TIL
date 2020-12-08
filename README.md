@@ -2,6 +2,7 @@
  상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중, :fire: - 초집중
 
  프로그래밍 공부기록을 모아서 기록하고 기록하자!
+ 2020.12 목표. 3년차 개발 회고 및 공부내용 정리. 네트워크, 데브옵스 공부를 진지하게 해보자
 
  뚝딱뚝딱 정리중-
 
@@ -18,11 +19,6 @@
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
 ### 컴퓨터 구조
 ### 암호학
-### Cloud
-- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/master/Qwiklabs) :running_woman: :fire:
-- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
-- [흔들리는 도커의 위상](https://www.samsungsds.com/kr/insights/docker.html)
-- [Kubernetes deprecates Docker : 쿠버 공홈](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/)
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
@@ -48,6 +44,9 @@
 - [부하테스트]() :thought_balloon:
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) 
 - [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/master/MavenQuiz) :green_book:  
+- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/master/Qwiklabs) :running_woman: :fire:
+- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
+- [도전! CKA](https://github.com/accidentlywoo/TIL/tree/master/CKA) :running_woman:
 
 ## Data Base !
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
@@ -113,6 +112,7 @@
   1. 갓기선과 함깨하는 매주 자바 스터디 18주 풀 참여 및 마무리:gem:
   2. 대학원 논문 1차 페이퍼 작성 및 연구 :gem:
   3. 대학원 복학 :gem:
+  4. CKA 뿌시기 따고야 만다!!! :gem:
 
 ### 2021 2분기 계획 : :clock3:
   1. 종합시험 합격 (알고리즘, 리눅스, 네트워크, OS) :gem: :: 성취 전파
