@@ -7,6 +7,8 @@
 
 ## [HTTP/3 UDP](https://github.com/accidentlywoo/TIL/tree/main/network/Http3-UDP)
 
+## [지옥에서온 AWS 교육](https://github.com/accidentlywoo/TIL/tree/main/network/AWS-edu)
+
 ### 1. 데몬이란?
 멀티태스킹 운영체제에서 사용자가 직접 제어하지 않고, 백그라운드에서 돌면서 여러 작업을 하는 프로그램을 말한다. 일반적으로 프로세스로 실행된다.
 
