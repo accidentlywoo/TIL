@@ -10,7 +10,9 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    // https://mvnrepository.com/artifact/org.kohsuke/github-api
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     compile group: 'org.kohsuke', name: 'github-api', version: '1.117'
+}
+test {
+    useJUnitPlatform()
 }

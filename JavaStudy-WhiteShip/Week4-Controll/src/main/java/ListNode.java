@@ -13,16 +13,9 @@ import java.util.List;
  * Doble Linked List
  */
 public class ListNode {
-	private int[] node;
-	private final List<int[]> list;
+	private int size;
 
-	private int listLen;
-
-	public ListNode(){
-		node = new int[3]; // node[0] : front Link , node[1] : data , node[2] : end Link
-		list = new ArrayList<int[]>();
-		listLen = list.size();
-	}
+	public ListNode(){ size = 0; }
 
 	private int[] getNode(){
 		return new int[3];

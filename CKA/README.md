@@ -3,9 +3,12 @@
 공부를 해보고, 시험각을 잡아보자...
 
 ---
-## Index
+
+- [CKA 잘 준비하는 법](https://github.com/accidentlywoo/TIL/tree/main/CKA/CKA잘준비하는법)
+
+## Basic Index
 - [CKA](#cka)
-  - [Index](#index)
+  - [Basic Index](#basic-index)
   - [Course Learning Objectives](#course-learning-objectives)
   - [What is Kubernetes](#what-is-kubernetes)
   - [Kubernetes의 구성 요소](#kubernetes의-구성-요소)
