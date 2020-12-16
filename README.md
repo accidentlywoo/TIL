@@ -48,7 +48,7 @@
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
 - [도전! CKA](https://github.com/accidentlywoo/TIL/tree/master/CKA) :running_woman:
 
-## Data Base !
+## Data Base ! 
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
 
 
