@@ -5,6 +5,7 @@
 ---
 
 - [CKA 잘 준비하는 법](https://github.com/accidentlywoo/TIL/tree/main/CKA/CKA잘준비하는법)
+- [쿠버 공홈 Tutorial](https://kubernetes.io/ko/docs/tutorials/)
 - [CKA Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA/CKA-udemy)
   
 ## Basic Index
