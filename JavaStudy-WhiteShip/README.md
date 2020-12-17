@@ -24,7 +24,7 @@
 6. 타입 변환, 캐스팅 그리고 타입 프로모션
 7. 1차 및 2차 배열 선언하기
 8. 타입 추론, var
-### 3. [3 주차 :: 연산자](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week3-Java-Operator) :open_book:
+### 3. [3 주차 :: 연산자](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week3-Java-Operator) :closed_book:
 1. 산술 연산자
 2. 비트 연산자
 3. 관계 연산자
@@ -35,7 +35,7 @@
 8. 3항 연산자
 9. 연산자 우선 순위
 10. (optional) Java 13. switch 연산자
-### 4. [4 주차 :: 제어문](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week4-Controll)
+### 4. [4 주차 :: 제어문](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week4-Controll):open_book:
 0. JUnit 5 학습하세요.
 - 인텔리J, 이클립스, VS Code에서 JUnit 5로 테스트 코드 작성하는 방법에 익숙해 질 것.
 - 이미 JUnit 알고 계신분들은 다른 것 아무거나!
@@ -65,7 +65,20 @@
 - int pop()을 구현하세요.
   
 5. Queue를 구현하세요.
-### 5. 5 주차 :: 클래스
+### 5. [5 주차 :: 클래스](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/Week5-Class) :open_book:
+1. 클래스를 정의하는 방법
+2. 객체 만드는 방법 (new 키워드 이해하기)
+3. 메소드 정의라는 방법
+4. 생성자 정의하는 방법
+5. this 키워드 이해하기
+
+---
+
+6. int값을 가지고 있는 이진 트리를 나타내는 Node라는 클래스를 정의하세요.
+7. int value, Node left,right를 가지고 있어야 한다.
+8. BinaryTree라는 클래스를 정의라고 주어진 노드를 기준으로 출력하는 bfs(Node node)
+9. DFS는 왼쪽, 루트, 오른쪽 순으로 순회하세요
+
 ### 6. 6 주차 :: 상속
 ### 7. 7 주차 :: 패키지
 ### 8. 8 주차 :: 인터페이스
