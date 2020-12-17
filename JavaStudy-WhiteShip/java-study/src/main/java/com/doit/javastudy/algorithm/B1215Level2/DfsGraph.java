@@ -34,7 +34,7 @@ public class DfsGraph {
 	public void printGraphToAdjArr(){
 		for(int i = 0; i < this.dfsGraph.length; i++){
 			for(int j = 0; j < this.dfsGraph[i].length; j++){
-				System.out.println(this.dfsGraph[i][j]);
+				System.out.print(this.dfsGraph[i][j] + " ");
 			}
 			System.out.println();
 		}
@@ -45,7 +45,7 @@ public class DfsGraph {
 		/* dfs()에 들어온 vidx는 방문한 것이므로
 		 * 방문배열의 해당 index값을 true로 바꿔주고 값을 출력함 */
 		this.visitArr[vIdx] = true;
-		System.out.println(vIdx);
+		System.out.print(vIdx + " ");
 
 		/* 인접 행렬로 구현된 그래프에서 정점의 개수(nV) 만큼 탐색 */
 		for(int i =1; i < this.nV; i++){
