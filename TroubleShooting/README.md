@@ -76,3 +76,53 @@ anotherService.sendRequest(obj);
  - 장황하기 짝이없는 코드, 파라미터로 들어오는 상태코드를 new~ DB 조회한 상태코드 old~ 작명센스
  - 문제를 해결하긴 했으나, 진짜 시간과 정성이 너무나 아깝고 처참하다. 화가난다.
 
+## JPA Native Query 카디널러티 한줄 날라가는 현상 (꼭 실험 다시해보기)
+JPA가 쿼리를 DB콘솔에서 실행한 결과를 자바로 매핑할때 1번 row누락된 결과가 나오는 현상
+
+문제의 코드
+
+```
+@Query(value = 
+         "   select" +
+			"        DATE_FORMAT(rr.date,'%Y-%m') month" +
+			"      , count(if(rr.A = 'A' and rr.C = 'C', rr.A, null)) as ac" +
+			"      , count(if(rr.A = 'A' and rr.C = 'S', rr.A, null)) as as" +
+			"      , count(if(rr.A = 'T' and rr.C = 'C', rr.A, null)) as tc" +
+			"   from tableA rr" +
+			"  inner join tableB p on rr.b_id = p.id" +
+			"  where 1 = 1" +
+			"    and rr.C in ('C','S')" +
+			"    and rr.A in ('A','T')" +
+			"    and p.keyWord = :keyWord" +
+			"  group by 1" +
+			"  order by month desc" +
+			"  limit :offset,:limit"
+			, nativeQuery = true)
+```
+
+"  group by 1" +
+
+ -> 가장 최신 데이터 카디널러티 날라감 
+
+```
+@Query(value = 
+         "   select" +
+			"        DATE_FORMAT(rr.date,'%Y-%m') month" +
+			"      , count(if(rr.A = 'A' and rr.C = 'C', rr.A, null)) as ac" +
+			"      , count(if(rr.A = 'A' and rr.C = 'S', rr.A, null)) as as" +
+			"      , count(if(rr.A = 'T' and rr.C = 'C', rr.A, null)) as tc" +
+			"   from tableA rr" +
+			"  inner join tableB p on rr.b_id = p.id" +
+			"  where 1 = 1" +
+			"    and rr.C in ('C','S')" +
+			"    and rr.A in ('A','T')" +
+			"    and p.keyWord = :keyWord" +
+			"  group by month" +
+			"  order by month desc" +
+			"  limit :offset,:limit"
+			, nativeQuery = true)
+```
+
+"  group by 1" + -> "  group by month" +
+
+변경하니 최신 데이터 안날라가고 잘나옴
