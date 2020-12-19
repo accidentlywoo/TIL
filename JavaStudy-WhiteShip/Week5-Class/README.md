@@ -12,6 +12,7 @@
 
 ---
 
+[과제 코드 저장소](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip/java-study)
 6. int값을 가지고 있는 이진 트리를 나타내는 Node라는 클래스를 정의하세요.
 7. int value, Node left,right를 가지고 있어야 한다.
 8. BinaryTree라는 클래스를 정의라고 주어진 노드를 기준으로 출력하는 bfs(Node node)
@@ -92,7 +93,7 @@ public double calculateAnswer (double wingSpan, int numberOfEngines,
 같은 클래스에서 메소드 시그니처가 같은 메소드를 정의하면 컴파일 에러가 난다.
 다른말로하면, 같은 메서드 명으로 매개변수를 다르게하면, 다른 메소드 시그니처로 인식한다.이를 **오버로딩**이라 부른다.
 
-반환 타입은 메서드 시그니처 요소가 아니기 때문에, 같은 이름, 같은 파라미터 변수면 에러가 난다.
+반환 타입은 메서드 시그니처 요소가 아니기 때문에, 같은 이름, 같은 파라미터 변수면 컴파일에러가 난다.
  <img src="https://github.com/accidentlywoo/TIL/blob/main/images/methodsignature.png" width="60%" height="60%" display="inline-block" alt="메서드 시그니처"/> 
 
 오버로딩(Overloading)의 예시
