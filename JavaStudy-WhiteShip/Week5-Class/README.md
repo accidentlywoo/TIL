@@ -93,7 +93,7 @@ public double calculateAnswer (double wingSpan, int numberOfEngines,
 다른말로하면, 같은 메서드 명으로 매개변수를 다르게하면, 다른 메소드 시그니처로 인식한다.이를 **오버로딩**이라 부른다.
 
 반환 타입은 메서드 시그니처 요소가 아니기 때문에, 같은 이름, 같은 파라미터 변수면 에러가 난다.
- <img src="https://github.com/accidentlywoo/TIL/blob/main/images/methodsignature.png" width="100%" height="100%" display="inline-block" alt="메서드 시그니처"/> 
+ <img src="https://github.com/accidentlywoo/TIL/blob/main/images/methodsignature.png" width="60%" height="60%" display="inline-block" alt="메서드 시그니처"/> 
 
 오버로딩(Overloading)의 예시
 ```
