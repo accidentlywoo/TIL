@@ -13,6 +13,7 @@
     - [Kube Scheduler](#kube-scheduler)
     - [Kubelet](#kubelet)
     - [Kube Proxy](#kube-proxy)
+  - [Practice](#practice)
 
 ---
 
@@ -91,3 +92,78 @@ API 서버는 쿠버네티스 API를 노출하는 쿠버네티스 **컨트롤 �
 
 ### Kubelet
 ### Kube Proxy
+
+## Practice
+1. Recap Pods 
+2. ReplicaSets 
+- 리플리카셋 파일로 생성하기
+```
+kubectl apply -f replicaset-definition-1.yaml
+// or
+kubectl create -f replicaset-definition-1.yaml
+```
+두 명령어의 차이는 모르겠다
+
+- 리플리카셋 지우기
+```
+kubectl delete replicasets.apps replicaset-name
+```
+
+- 리플리카셋 수정하기
+```
+kubectl edit replicasets.apps replicaset-name
+```
+해당 리플리카셋에 pod들을 모두 지워서 다시 생성되게 한다.
+
+- 리플리카셋 스케일 변경
+pod 갯수 5개로 변경
+```
+kubectl scale replicaset --replicas=5 replicaset-name
+```
+3. Deployments
+  yaml 구조
+```
+apiVersion: apps/v1
+kind: Deployment #Deployment파일이라는 걸 알려줌,
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      label:
+        app:myapp
+        type: front-end
+      spec:
+        containers:
+        - name: nginx-container
+          image: nginx
+replicas: 3
+selector:
+  matchLabels:
+    type: front-end # spec - template - metadata - label - type : 과 똑같은 값이여야 한다.
+```
+  Deployments > ReplicaSets > Pods 느낌으로다가~
+  아래 명령으로 Deployments > ReplicaSets > Pods를 한번에 볼 수 있다.
+```
+kubectl get all
+```
+
+이미지 조회하기
+```
+kubectl describe deployments.apps frontend-deployment | grep -i image
+```
+
+간단한 deployment yaml없이 cli로 생성하기
+```
+kubectl create deployment deployment-name --image-imgage-name
+
+kubectl scale deployment --replicas=3
+```
+
+- 시험 꿀팁
+CLI시험 중 YAML 파일을 복붙하기 어려울 수 있다. ```kubectl run``을 사용하면 YAML 파일을 전혀 만들지 않고도 명령만으로 벗어날 수도 있다.
+[참고 자료](https://kubernetes.io/docs/reference/kubectl/conventions/)
