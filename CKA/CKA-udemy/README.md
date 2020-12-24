@@ -113,7 +113,7 @@ kube-proxy는 운영 체제에 가용한 패킷 필터링 계층이 있는 경�
 ### 컨테이너 런타임
 컨테이너 런타임은 컨테이너 실행을 담당하는 소프트웨어이다.
 
-쿠버네티스는 여러 컨테이너 런타임을 지원한다.
+쿠버네티스는 여러 컨테이너 런타임을 지원한다.도커, containerd, CRI-O, Kubernetes CRI(Container Runtime Interface)를 구현한 모든 소프트웨어
 
 ## Practice
 1. Recap Pods 
@@ -220,6 +220,8 @@ kubectl get pods --all-namespaces | grep blue
 
 5. Service
 서비스는 다양한 컴포넌트들과 커뮤니케이션하도록 도와준다
+
+service-definition.yml
 ```
 apiVersion: v1
 kind: Service
@@ -231,11 +233,188 @@ spec:
   ports:
    - targetPort: 80
     *port: 80
-     nodeportL 30008
+     nodeport: 30008
   selector:
     app: myapp
     type: front-end
 ```
 ```
+kubectl create -f service-definition.yml
 
+kubectl get services
+
+curl http://192.168.1.2:30008
 ```
+
+6. Services Cluster IP
+마이크로 서비스 아키텍처 구조에서 유용한데,
+
+여러개의 프론트앤드 포드와 여러개의 백엔드 포드, 여러개의 DB포드가있다면
+
+프론트앤드 포드들에서 백엔드 포드로 연결될 때, 백엔드 포드를 일일히 찾아가서 연결하는게 아니라, Cluster IP를 제공하여 쉽게 연결할 수 있도록 한다.
+```
+apiVersion: v1
+kind: Service
+metadata:
+    name: back-end
+
+spec:
+    type: ClusterIP
+    ports:
+    - targetPort: 80
+      port: 80
+
+    selector:
+      app: myapp
+      type: back-end
+```
+```
+kubectl create -f service-definition.yml
+
+kubectl get services
+```
+
+7. Service - Loadbalancer
+service-definition.yml
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+
+spec:
+  type: LoadBalancer # 바뀌는 부분
+  ports:
+   - targetPort: 80
+    *port: 80
+     nodeport: 30008
+  selector:
+    app: myapp
+    type: front-end
+```
+
+명령어 연습
+```
+kubectl describe svc kubernetes
+
+kubectl describe deployments.apps simple-webapp-deployment | grep -i image
+
+kubectl expose deployment simple-webapp-deployment --name=webapp-service --target-port=8080 --type=NodePort --port=8080 --dry-run=client -o yaml > svc.yaml
+
+# vi로 svc.yaml열어서 NodePort에 포트넣는 작업해야됨
+
+kubectl apply -f svc.yaml
+```
+
+7. Imperative vs Declarative
+
+**Infrastructure as Code**
+
+- Imperative 
+  1. Provision a VM by the name 'web-server'
+  2. Install NGINX Software on it
+  3. Edit configuration file to use port '8080'
+  4. Edit configuration file to web path '/var/www/nginx'
+  5. Load web pages to '/var/www/nginx' from GIT Repo - X
+  6. Start NGINX server
+
+- Devlarative
+```
+VM Name: web-server
+Database: nginx:1.18
+Port: 8080
+Path: /var/www/nginx
+Code: GIT Repo - X
+```
+
+**Kubernetes**
+
+- Imperative
+  - Create Objects
+  1. ```> kubectl run --image=ngix nginx```
+  2. ```> kubectl create deployment --image=ngix nginx```
+  3. ```> kubectl expose deployment nginx --port 80```
+  4. ```> kubectl edit deployment nignx```
+
+  - Update Objects
+  5. ```> kubectl scale deployment nginx --replicas=5```
+  6. ```> kubectl set image deployment nginx nginx=nginx:1.18```
+  7. ```> kubectl create -f nginx.yaml```
+  8. ```> kubectl replace -f nginx.yaml```
+  9.  ```> kubectl delete -f nginx.yaml```
+
+- Declarative
+  ```> kubectl apply -f nginx.yaml ```
+
+- Declarative가 관리가 쉽고 좋은 방법이다.
+  
+- kubectl 사용한 필수 명령 팁
+  대부분 defined 파일을 사용하여 declarative 방식으로 작업한다.
+  이는 작업 동안 커맨드 명령을 일회성 작업으로 빠르게 수행되고 쉽게 템플릿작업 생성하는 데 도움이 될 수 있다.
+  이 방법은 시험 중 시간 절약할 수 있다.
+
+  시험 시작전 커맨드 작업랄 때 유용할 수 있는 두가지 옵션
+  1. ```--dry-run``` : 기본적으로 명령이 실행되는 즉시 리소스 생성. 
+                      단순 명령 테스트 시 ```---dry-run=client``옵션 사용
+                      이는 리소스를 생성하지 않고 대신 리소스를 생성할 수 있는지 여부와 명령이 올바른지 여부를 알려준다.
+  2. ```-o yaml``` : 화면에 YAML 형식의 리소스 정의를 출력한다.
+
+Use the above two in combination to generate a resource definition file quickly, that you can then modify and create resources as required, instead of creating the files from scratch.
+- 총정리
+**POD**
+Create an NGINX Pod
+
+```kubectl run nginx --image=nginx```
+
+Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
+
+```kubectl run nginx --image=nginx  --dry-run=client -o yaml```
+
+**Deployment**
+Create a deployment
+
+```kubectl create deployment --image=nginx nginx```s
+
+Generate Deployment YAML file (-o yaml). Don't create it(--dry-run)
+
+```kubectl create deployment --image=nginx nginx --dry-run -o yaml```
+
+Generate Deployment with 4 Replicas
+
+```kubectl create deployment nginx --image=nginx --replicas=4```
+
+You can also scale a deployment using the ```kubectl scale``` command.
+
+```kubectl scale deployment nginx --replicas=4```
+
+Another way to do this is to save the YAML definition to a file.
+
+```kubectl create deployment nginx --image=nginx--dry-run=client -o yaml > nginx-deployment.yaml```
+
+You can then update the YAML file with the replicas or any other field before creating the deployment.
+
+**Service**
+
+Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
+
+```kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml```
+
+(This will automatically use the pod's labels as selectors)
+
+Or
+
+```kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml  (This will not use the pods labels as selectors, instead it will assume selectors as app=redis. You cannot pass in selectors as an option. So it does not work very well if your pod has a different label set. So generate the file and modify the selectors before creating the service)```
+
+Create a Service named nginx of type NodePort to expose pod nginx's port 80 on port 30080 on the nodes:
+
+```kubectl expose pod nginx --port=80 --name nginx-service --type=NodePort --dry-run=client -o yaml```
+
+(This will automatically use the pod's labels as selectors, but you cannot specify the node port. You have to generate a definition file and then add the node port in manually before creating the service with the pod.)
+
+Or
+
+```kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml```
+
+(This will not use the pods labels as selectors)
+
+Both the above commands have their own challenges. While one of it cannot accept a selector the other cannot accept a node port. I would recommend going with the `kubectl expose` command. If you need to specify a node port, generate a definition file using the same command and manually input the nodeport before creating the service.
