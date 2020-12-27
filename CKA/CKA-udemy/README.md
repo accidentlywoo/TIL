@@ -418,3 +418,6 @@ Or
 (This will not use the pods labels as selectors)
 
 Both the above commands have their own challenges. While one of it cannot accept a selector the other cannot accept a node port. I would recommend going with the `kubectl expose` command. If you need to specify a node port, generate a definition file using the same command and manually input the nodeport before creating the service.
+
+8. Command
+커멘치는 연습을 많이 하자
