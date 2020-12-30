@@ -17,6 +17,7 @@
     - [Kube Proxy](#kube-proxy)
     - [컨테이너 런타임](#컨테이너-런타임)
   - [Practice](#practice)
+  - [Scheduling](#scheduling)
 
 ---
 
@@ -115,7 +116,9 @@ kube-proxy는 운영 체제에 가용한 패킷 필터링 계층이 있는 경�
 
 쿠버네티스는 여러 컨테이너 런타임을 지원한다.도커, containerd, CRI-O, Kubernetes CRI(Container Runtime Interface)를 구현한 모든 소프트웨어
 
+
 ## Practice
+
 1. Recap Pods 
 2. ReplicaSets 
 - 리플리카셋 파일로 생성하기
@@ -419,5 +422,31 @@ Or
 
 Both the above commands have their own challenges. While one of it cannot accept a selector the other cannot accept a node port. I would recommend going with the `kubectl expose` command. If you need to specify a node port, generate a definition file using the same command and manually input the nodeport before creating the service.
 
-8. Command
-커멘치는 연습을 많이 하자
+8. Kubectl Apply Command
+  - Declarative
+
+  nginx.yaml
+```
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+    type: front-end-service
+spec:
+  containers:
+  - name: nginx-container
+    imge: nginx:1.18
+```
+  
+  Create Objects
+  ```> kubectl apply -f nginx.yaml```
+
+  ```> kubectl apply -f /path/to/config-files```
+
+  Update Objects
+  ```> kubectl apply -f nginx.yaml```
+
+## Scheduling 
