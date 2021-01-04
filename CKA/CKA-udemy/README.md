@@ -18,6 +18,7 @@
     - [컨테이너 런타임](#컨테이너-런타임)
   - [Practice](#practice)
   - [Scheduling](#scheduling)
+  - [Taints and Tolerations](#taints-and-tolerations)
 
 ---
 
@@ -450,3 +451,51 @@ spec:
   ```> kubectl apply -f nginx.yaml```
 
 ## Scheduling 
+```kubectl -n pod-name get pods```
+```kubectl get pods --shows-labels```
+```kubectl get pods -l env=dev```
+```kubectl get pods -l env-dev --no-headers | wc -l``` -> 결과 count갯수
+```kubectl get all -l env=prod --no-headers```
+```kubectl get pods -l env=prod,bu=finance,tier=frontend```
+
+.yaml 에서 tier name과 selector name을 맞춰준다..
+
+## Taints and Tolerations
+Taints Node
+
+```kubectl taint nodes node-name key=value:taint-effect```
+
+taint-effect : NoSchedule | PreferNoSchedule | NoExecute
+
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    imagePullPolicy: IfNotPresent
+  tolerations:
+  - key: "example-key"
+    operator: "Exists"
+    effect: "NoSchedule"
+```
+```kubectl delete pod pod-name```
+
+```kubectl describe node node01 | grep -i taint```
+
+```kubectl taint node node-name key=value:taint-effect```
+
+```kubectl run pod-name --image=nginx --restart=Never --dry-run -o yaml > taint.yaml```
+
+```kubectl explain pod --recursive | grep -A5 tolerations```
+
+```kubectl get pods -o wide``` 더 많은 정보 조회
+
+```kubectl describe nodes master | grep -i taint```
+
+```kubectl taint node master 위명령결과```
