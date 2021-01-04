@@ -16,9 +16,13 @@
     - [Kubelet](#kubelet)
     - [Kube Proxy](#kube-proxy)
     - [컨테이너 런타임](#컨테이너-런타임)
-  - [Practice](#practice)
+  - [Kubectl 정리](#kubectl-정리)
+    - [Statement](#statement)
+    - [출력 옵션(Formatting output)](#출력-옵션formatting-output)
+    - [Custom columns](#custom-columns)
+  - [Kubectl practice](#kubectl-practice)
   - [Scheduling](#scheduling)
-  - [Taints and Tolerations](#taints-and-tolerations)
+    - [Taints and Tolerations](#taints-and-tolerations)
 
 ---
 
@@ -117,8 +121,68 @@ kube-proxy는 운영 체제에 가용한 패킷 필터링 계층이 있는 경�
 
 쿠버네티스는 여러 컨테이너 런타임을 지원한다.도커, containerd, CRI-O, Kubernetes CRI(Container Runtime Interface)를 구현한 모든 소프트웨어
 
+## [Kubectl 정리](https://kubernetes.io/ko/docs/reference/kubectl/overview/)
+Kubectl은 쿠버네티스 클러스터를 제어하기 위한 커맨드 라인 도구이다. 
+kubectl은 cofig 파일을 ```$HOME/.kube```에서 찾는다.
 
-## Practice
+KUBECONFIG 환경 변수를 설정라거나 ```--kubeconfig`` 플래그를 설정하여 다른 kubeconfig 파일을 지정할 수 있다.
+
+### Statement
+  ```kubectl [command] [TYPE] [NAME] [flags]```
+  
+  1. [command]
+    : 하나 이상의 리소스에서 수행하려는 동작을 지정한다. 
+      ex. **create**, **get**, **describe**, **delete**
+
+  2. [TYPE]
+    : 리소스 타입을 지정한다. 
+      리소스 타입은 대소문자를 구분하지 않으며 단수형, 복수형 또는 약어 형식을 지정할 수 있다.
+
+      똑같은 결과를 출력하는 예시
+```
+kubectl get pod pod1
+kubectl get pods pod1
+kubectl get po pod1
+```
+
+  3. [NAME]
+    : 리소스 이름을 지정한다.
+      **이름은 대소문자를 구분한다**. 이름 생략 시 모든 리소스에 대한 세부 사항이 표시된다.
+
+      여러 리소스에 대한 작업을 수행할 때, 타입 및 이름별로 각 리소스를 지정하거나 하나 이상의 파일을 지정할 수 있다.
+      1. 타입 및 이름으로 리소스를 지정하기
+          - 리소스가 모두 동일한 타입인 경우 리소스를 그룹화하려면 다음을 사용한다. TYPE1 name1 name2 name<#>
+          예: kubectl get pod example-pod1 example-pod2
+
+          - 여러 리소스 타입을 개별적으로 지정하려면 다음을 사용한다. TYPE1/name1 TYPE1/name2 TYPE2/name3 TYPE<#>/name<#>
+          예: kubectl get pod/example-pod1 replicationcontroller/example-rc1
+
+      2. 하나 이상의 파일로 리소스를 지정하기
+          - YAML이 특히 구성 파일에 대해 더 사용자 친화적이므로, JSON 대신 YAML을 사용한다.
+          예: kubectl get -f ./pod.yaml
+
+  4. [flags]
+    : 선택적 플래그를 지정한다.
+      ex. -s 또는 --server 플래그를 사용하여 쿠버네티스 API서버의 주소와 포트를 지정할 수 있다.
+
+  ### 출력 옵션(Formatting output)
+    기본 kubectl 명령의 출력은 사람이 읽을 수 있는 기본 형식이다.
+
+    특정 세부하상에대한 출력 형식을 뽑기위해선 사용자는 **-o** 또는 **-output** 플래그를 붙인다
+    
+    문법은 ```kubectl [command] [TYPE] [NAME] -o <output_format>```
+
+    많이쓰는 <output_format> : json, name, wide, yaml
+
+    예시
+    ```kubectl get pod web-pod-13je7 -o yaml```
+
+  ### Custom columns 
+  // TODO 꼭 정리 밑에 예제들도 한번 쭈욱 처보자..
+    
+
+
+## Kubectl practice
 
 1. Recap Pods 
 2. ReplicaSets 
@@ -460,7 +524,7 @@ spec:
 
 .yaml 에서 tier name과 selector name을 맞춰준다..
 
-## Taints and Tolerations
+### Taints and Tolerations
 Taints Node
 
 ```kubectl taint nodes node-name key=value:taint-effect```
