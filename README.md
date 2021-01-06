@@ -10,13 +10,13 @@
 
 ## CS
 ### 알고리즘
-- [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/master/Clever-Algorithm) :green_book: :fire:
+- [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/main/Clever-Algorithm) :green_book: :fire:
 ### OS
 
 ### 리눅스
-- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/master/Linux-basic) :running_woman: :fire:
+- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic) :running_woman: :fire:
 ### network
-- [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/master/network) :green_book:
+- [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/main/network) :green_book:
 ### 컴퓨터 구조
 ### 암호학
 
@@ -25,17 +25,17 @@
   
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: 
 
-- [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/master/JavaStudy-WhiteShip) :running_woman: 고퀄리티 정리 :hearts: :fire: 
+- [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip) :running_woman: 고퀄리티 정리 :hearts: :fire: 
  
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 
-- [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/master/SpringTransaction) :thought_balloon:
-- [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/master/SeeUSpringBoot2.4) :running_woman:
+- [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
+- [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/main/SeeUSpringBoot2.4) :running_woman:
 - [Spring Core]() :green_book:
 
 ## JPA
-- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/master/JPA-theorem) :green_book: :fire:
+- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book: :fire:
   
 ## Test
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
@@ -43,17 +43,17 @@
 ## DevOps
 - [부하테스트]() :thought_balloon:
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) 
-- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/master/MavenQuiz) :green_book:  
-- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/master/Qwiklabs) :running_woman: :fire:
-- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/master/GCP-studyjam) :running_woman:
-- [도전! CKA](https://github.com/accidentlywoo/TIL/tree/master/CKA) :running_woman:
+- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/main/MavenQuiz) :green_book:  
+- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :running_woman: :fire:
+- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :running_woman:
+- [도전! CKA](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
 
 ## Data Base ! 
-- [MySQL](https://github.com/accidentlywoo/TIL/tree/master/MySQL) :thought_balloon:
+- [MySQL](https://github.com/accidentlywoo/TIL/tree/main/MySQL) :thought_balloon:
 
 
 ### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
-- [Presto](https://github.com/accidentlywoo/TIL/tree/master/Presto) :green_book:
+- [Presto](https://github.com/accidentlywoo/TIL/tree/main/Presto) :green_book:
 - [Hive]() :thought_balloon:
 
 ### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
@@ -72,6 +72,7 @@
 - [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
 
 ## AI / ML
+- [생활코딩 머신러닝 야학](https://github.com/accidentlywoo/TIL/tree/main/ML-opentutorials)
   
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :ledger:

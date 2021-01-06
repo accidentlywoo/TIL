@@ -23,6 +23,7 @@
   - [Kubectl practice](#kubectl-practice)
   - [Scheduling](#scheduling)
     - [Taints and Tolerations](#taints-and-tolerations)
+    - [Node Selector & Node Affinity](#node-selector--node-affinity)
 
 ---
 
@@ -563,3 +564,5 @@ spec:
 ```kubectl describe nodes master | grep -i taint```
 
 ```kubectl taint node master 위명령결과```
+
+### Node Selector & Node Affinity
