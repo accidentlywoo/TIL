@@ -148,3 +148,79 @@ JPA 킹 갓 짱이 되고싶다.
   - JPA를 사용하면서 JDBC 커넥션을 직접 사용하거나, 스프링 JdbcTemplate, 마이바티스등을 함께 사용 가능
   - 단 영속성 컨텍스트를 적절한 시점에 강제로 플러시 필요
   - 예) JPA를 우회해서 SQL을 실행하기 직전에 영속성 컨테스트 수동 플래시
+
+### 기본 문법과 쿼리 API
+ - JPQL은 객체지향 쿼리 언어다. 따라서 테이블을 대상으로 쿼리하는 것이 아니라 엔티티 객체를 대상으로 쿼리한다.
+ - JPQL은 SQL을 추상화해서 특정 데이터베이스 SQL에 의존하지 않는다.
+ - JPQL은 결국 SQL로 변환된다.
+
+ 1. JPQL 문법
+  ```
+  select_문 :: = 
+    select_절
+    from_절
+    [where_절]
+    [groupby 절]
+    ...
+  ```
+ - select m from Member as m where m.age > 18 :: 대소문자 구분
+ - 엔티티와 속성은 대소문자 구분O (Member, age)
+ - JPQL 키워드는 대소문자 구분X (SELECT, FROM, where)
+ - 엔티티 이름 사용, 테이블 이름이 아님(Member)
+ - 별칠른 필수(m) (하이버네이트는 as는 생략가능)
+
+ 2. 집합과 정렬
+  ```
+  select
+    COUNT(m),
+    SUM(m.age)
+    AVG(m.age),
+    MAX(m.age),
+    MIN(m.age)
+  from Member m 
+  ```
+
+  3. TypeQuery, Query
+  - TypeQuery : 반환 타입이 명확할 때 사용
+  ```
+  TypeQuery<Member> query = em.createQuery("SELECT m FROM Member m", Member.class);
+  ```
+  - Query : 반환 타입이 명확하지 않을 때 사용
+  ```
+  Query query = em.createQuery("SELECT m.username, m.age from Member m", Member.class);
+  ```
+
+  -> 반환타입을 사용하지 않고 체이능을 사용하자. 그렇게 설계됨.
+
+  ```
+  em.createQuery("SELECT m.username, m.age from Member m where n.username =?1", Member.class)
+  .setParameter("username","member1")
+  .getSingleResult();
+  ```
+
+  4. 결과 조회 API
+  - query.getResultList() : 결과가 하나 이상일 때, 리스트 반환
+    -> 결과가 없으면 빈 리스트 반환
+  - query.getSingleResult() : 결과가 정확히 하나, 단일 객체 반환
+    - 결과가 없으면 : javax.persistence.NoResultException 
+      : 논란이 많다.try-catch 해야됨. Spring Data JPA -> null, Optional 반환
+    - 둘 이상이면 : javax.persistence.NonUniqueResultException
+
+  5. 파라미터 바인딩 - 이름 기준, 위치 기준
+  이름 기준
+  ```
+  SELECT m FROM Member m where m.username =:username
+  ```
+
+  ```
+  query.setParameter("username", usernameParam);
+  ```
+
+  위치 기준
+  ```
+  SELECT m FROM Member m where m.username = ?1
+  ```
+
+  ```
+  query.setParameter(1, usernameParam);
+  ```
