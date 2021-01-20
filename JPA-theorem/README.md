@@ -142,7 +142,7 @@ JPA 킹 갓 짱이 되고싶다.
   - 실무 사용 권장
 
 5. 네이티브 쿼리
-   문자열에 sql작성
+   문자열에 sql작성 
 
 6. JDBC 직접 사용, SpringJdbcTemplate 등
   - JPA를 사용하면서 JDBC 커넥션을 직접 사용하거나, 스프링 JdbcTemplate, 마이바티스등을 함께 사용 가능
