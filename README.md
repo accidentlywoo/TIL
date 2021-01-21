@@ -47,7 +47,7 @@
 - [부하테스트]() :thought_balloon:
     :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) 
 - [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/main/MavenQuiz) :green_book:  
-- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :running_woman: :fire:
+- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :running_woman: :green_book:  
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :running_woman:
 - [도전! CKA](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
 
