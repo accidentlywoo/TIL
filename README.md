@@ -17,7 +17,7 @@
 - [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic) :running_woman: :fire:
 ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/main/network) :green_book:
-- [백엔드라면! HTTP](https://github.com/accidentlywoo/TIL/tree/main/HTTP)
+- [백엔드라면! HTTP](https://github.com/accidentlywoo/TIL/tree/main/HTTP) :running_woman: :fire:
 
 ### 컴퓨터 구조
 ### 암호학
