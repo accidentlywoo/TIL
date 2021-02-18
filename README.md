@@ -97,8 +97,12 @@
 
 
 - [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :green_book:
+
 ---
 
+## 킹블로그
+- [개발자를 위한 인프라 기초정리](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)
+  
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
 
