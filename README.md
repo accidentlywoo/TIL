@@ -26,14 +26,11 @@
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
-  
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: 
-
 - [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip) :running_woman: 고퀄리티 정리 :hearts: :fire: 
  
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
-
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
 - [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/main/SeeUSpringBoot2.4) :running_woman:
 - [Spring Core]() :green_book:
@@ -45,9 +42,7 @@
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
 
 ## DevOps
-- [부하테스트]() :thought_balloon:
-    :: [참고 링크](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) 
-- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/main/MavenQuiz) :green_book:  
+
 - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :running_woman: :green_book:  
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :running_woman:
 - [도전! CKA](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
@@ -100,9 +95,12 @@
 
 ---
 
-## 킹블로그
+## 킹 참고 사이트
+- [부하테스트](https://blog.imqa.io/siljeon-web-aeb-buha-teseuteu-1byeon/) 
 - [개발자를 위한 인프라 기초정리](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)
-  
+- [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/main/MavenQuiz) :green_book:  
+- [루기 선생님의 흔들리는 도커의 위상](https://www.samsungsds.com/kr/insights/docker.html)
+
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
 
