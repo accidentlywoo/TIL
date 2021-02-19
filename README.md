@@ -100,6 +100,7 @@
 - [개발자를 위한 인프라 기초정리](https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/)
 - [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/main/MavenQuiz) :green_book:  
 - [루기 선생님의 흔들리는 도커의 위상](https://www.samsungsds.com/kr/insights/docker.html)
+- [운영체제 공룡책 무료강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98#)
 
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
