@@ -72,6 +72,9 @@
 
 ## AI / ML
 - [생활코딩 머신러닝 야학](https://github.com/accidentlywoo/TIL/tree/main/ML-opentutorials)
+
+## 튜터링 및 강의 자료
+- [자바 웹 개발 마스터 - 입문자용 자료만들기](https://github.com/accidentlywoo/TIL/tree/main/JavaWebStarter)
   
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :ledger:
@@ -104,6 +107,7 @@
 
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
+- [우아한 테크세미나-우아한 스프링](https://drive.google.com/file/d/10G1qCgdFrVXpxLUTgrSwp5ZMboXlfwmH/view)
 
 ## 습관 만들기
 
