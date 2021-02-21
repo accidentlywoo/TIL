@@ -70,7 +70,7 @@
     (static 클래스, 변수들은 JVM Class Loading 마지막 시점에서 Runtime Data Area의 Method Area에 초기화되어 적재된다.)
     이번 정리를 통해 손수 그림을 그려보며, 다시한번 메모리구조를 머리속에 넣는 좋은 시간이였다.
 
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/java-excution.png" width="33%" height="30%" display="inline-block" alt="자바 실행과정" /> <img src="https://github.com/accidentlywoo/TIL/blob/main/images/runtime-data-area.png" width="33%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역"/><img src="https://github.com/accidentlywoo/TIL/blob/main/images/runtime-data-stack.png" width="33%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
+<img src="./../images/java-excution.png" width="33%" height="30%" display="inline-block" alt="자바 실행과정" /> <img src="./../images/runtime-data-area.png" width="33%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역"/><img src="./../images/runtime-data-stack.png" width="33%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
 ## 4. 바이트코드란 무엇인가
     자바 소스코드를 JVM이 이해할 수 있는 언어가 자바 바이트 코드이다. 
     자바 컴파일러에 의해 변환되는 코드의 명령어 크기가 1바이트라서 자바 바이트코드라고 불리고 있다.
@@ -91,7 +91,7 @@
     그래서 JVM 벤더들은 내부적으로 해당 메서드가 얼마나 자주 수행되는지 체크하고,일정 정도를 넘는 경우에만 컴파일을 수행한다.
 
 ## 6. JVM 구성 요소
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/JVM.png" width="66%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
+<img src="./../images/JVM.png" width="66%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
 
 ## 7. JDK 와 JRE 의 차이
 - JDK(Java Development Tool Kits)는 개발도구인 ***javac***, java, jdb, appletviewer, javah, jar, rmi 와 JRE가 포함되어있다.
@@ -102,7 +102,7 @@
     Dynamic Class Loading 개념과 함께보면 더 재밌을 수 있다.
 
 ## +a JVM Stack per Thread
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/runtime-data-stack.png" width="33%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
+<img src="./../images/runtime-data-stack.png" width="33%" height="30%" display="inline-block" alt="자바 런타임 데이터 영역 - 스택"/>
     JVM 스택은 각 스레드마다 하나씩 존재하며 스레드가 시작될 때 생성된다. 
     스택 프레임이라는 구조체를 저장하는 스택으로, JVM은 오직 JVM 스택에 프레임을 추가하고(push) 제거하는(pop) 동작만 수행한다.
     
