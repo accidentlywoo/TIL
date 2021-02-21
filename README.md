@@ -1,5 +1,5 @@
 # TIL
- 상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중, :fire: - 초집중
+ 상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중, :fire: - 초집중, - 두둘기고 보는 우당탕탕 시리즈 :cyclone:
 
  프로그래밍 공부기록을 모아서 기록하고 기록하자!
  2020.12 목표. 3년차 개발 회고 및 공부내용 정리. 네트워크, 데브옵스 공부를 진지하게 해보자
@@ -10,12 +10,12 @@
 
 ## CS
 ### 알고리즘
-- [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/main/Clever-Algorithm) :green_book: :fire:
+- [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/main/Clever-Algorithm) :green_book: 
 ### OS
 
 ### 리눅스
 - [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic) :running_woman: :fire:
-- [도커 뚜둘뚜둘](https://github.com/accidentlywoo/TIL/tree/main/Docker-basic) :running_woman:
+- [도커 뚜둘뚜둘](https://github.com/accidentlywoo/TIL/tree/main/Docker-basic) :running_woman: :fire:
 ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/main/network) :green_book:
 - [백엔드라면! HTTP](https://github.com/accidentlywoo/TIL/tree/main/HTTP) :running_woman: :fire:
@@ -23,6 +23,7 @@
 ### 컴퓨터 구조
 ### 암호학
 - [Oauth2.0](https://github.com/accidentlywoo/TIL/tree/main/Oauth2.0)
+- [JWT 정리]() :thought_balloon:
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
@@ -33,7 +34,7 @@
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
 - [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/main/SeeUSpringBoot2.4) :running_woman:
-- [Spring Core]() :green_book:
+- [Spring Boot - 공홈](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) :green_book:
 
 ## JPA
 - [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book: :fire:
@@ -45,7 +46,9 @@
 
 - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :running_woman: :green_book:  
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :running_woman:
-- [도전! CKA](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
+- [도전! CKA - 공홈 + Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
+- [시작하세요 도커 정리]() :running_woman:
+- [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone:
 
 ## Data Base ! 
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/main/MySQL) :thought_balloon:
