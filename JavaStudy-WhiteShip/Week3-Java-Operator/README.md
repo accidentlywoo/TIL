@@ -45,20 +45,20 @@
     2 << 3 
     2를 32비트로 분해한다음 왼쪽으로 3비트 이동
     양수일때 빈자리는 0으로 채워지고, 밀린 3비트는 버려진다.
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/2<<3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+<img src="./../images/2<<3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
     16 >> 3
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/16>>3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+<img src="./../images/16>>3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
     -16 >> 3
     음수의 경우 
     빈자리는 1로 채워진다.
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/-16>>3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+<img src="./../images/-16>>3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
     -16 >>> 3
     오직 자바에만 있는 연산. 
     >>와 다르게 양수 음수 상관없이 무조건 0으로 빈칸이 채워진다.
- <img src="https://github.com/accidentlywoo/TIL/blob/main/images/-16>>>3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>   
+ <img src="./../images/-16>>>3.png" width="60%" height="30%" display="inline-block" alt="연산자 우선순위"/>   
 
     비트 & 연산자는 비트 and 연산을 수행
 

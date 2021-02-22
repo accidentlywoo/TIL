@@ -13,7 +13,7 @@
 
 ---
 
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/java-data-type.png" width="66%" height="30%" display="inline-block" alt="자바 데이터 타입"/>
+<img src="./../images/java-data-type.png" width="66%" height="30%" display="inline-block" alt="자바 데이터 타입"/>
 
 ## 1. 프리미티브 타입 종류와 값의 범위 그리고 기본 값
 1. boolean : true, false,  기본값 : false
