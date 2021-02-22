@@ -224,10 +224,10 @@ System.out.println(PAGE_PREFIX+currentPage);
     제어문을 잘 사용해야 자신이 원하는 알고리즘을 짤 수 있습니다.
 
 - if 문  : 조건 비교
-- switch - case 문 : 값에 따른 수행 결과가 달라지는 경우
-- while 문, do-while 문 : 반복의 횟수를 미리 알 수 없을때
-- for문, 중첩 반복문 : 반복의 횟수를 알고있을 때
-- break, continue 문 : 블록의 흐름 제어
+- switch - case 문 :: 값에 따른 수행 결과가 달라지는 경우
+- while 문, do-while 문 :: 반복의 횟수를 미리 알 수 없을때
+- for문, 중첩 반복문 :: 반복의 횟수를 알고있을 때
+- break, continue 문 :: 블록의 흐름 제어
 
 
 ##### 개북사
@@ -250,5 +250,5 @@ System.out.println(PAGE_PREFIX+currentPage);
   :airplane: [Java 데이터 타입과 변수, 배열](./../../JavaStudy-WhiteShip/Week2-Java-DataType-Variable-Array/README.md)
 
   :airplane: [Java 연산자](./../../JavaStudy-WhiteShip/Week3-Java-Operator/README.md)
-  
+
   :airplane: [Java 제어문](./../../JavaStudy-WhiteShip/Week4-Controll/README.md)
