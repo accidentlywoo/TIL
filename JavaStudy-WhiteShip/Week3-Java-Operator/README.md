@@ -133,7 +133,7 @@ booleanExpression ? expression1 : expression2
 ```
 
 ## 9. 연산자 우선 순위
-<img src="https://github.com/accidentlywoo/TIL/blob/main/images/operator.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+<img src="./../images/operator.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
 
 ## 10. (optional) Java 13. switch 연산자
     기존 switch 문은 그대로 존재하고, Java 12부터 switch 연산자가 추가된것
