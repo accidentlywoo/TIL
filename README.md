@@ -107,6 +107,8 @@
 - [메이븐을 얼마나 알고있나?](https://github.com/accidentlywoo/TIL/tree/main/MavenQuiz) :green_book:  
 - [루기 선생님의 흔들리는 도커의 위상](https://www.samsungsds.com/kr/insights/docker.html)
 - [운영체제 공룡책 무료강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98#)
+- [Googole Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+- [우아한테크세미나-TDD, 리팩터링](https://youngwonseo.github.io/tdd-refactoring/)
 
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
