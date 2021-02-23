@@ -214,6 +214,10 @@ System.out.println(PAGE_PREFIX+currentPage);
 - 대입, 부호, 산술, 복합대입, 증감 연산자
 - 관계, 논리, 조건, 비트 연산자
 
+- 연산자 우선순위
+<img src="./../images/operator.png" width="30%" height="30%" display="inline-block" alt="연산자 우선순위"/>
+
+
 연산자는 사실. 전부 손으로 코딩해보는게 최고입니다.
 
 :computer: 백문이 불여 1타!
