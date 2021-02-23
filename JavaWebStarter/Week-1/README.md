@@ -242,15 +242,22 @@ System.out.println(PAGE_PREFIX+currentPage);
 
 ##### 개입사
 - [생활코딩](https://opentutorials.org/course/3930)
+
   : 언어 > JAVA1
+
   : WEB :: 틈틈히 읽어 두시면 실습때 큰 도움됩니다.
+
+
   : :gem: **프로젝트 관리 > Git**
+
   :: 여러분이 작성한 소스를 공유하거나, 소스를 관리할때 어떻게 하실 건가요? 복붙?
   :gem:요즘은 업무에서만 코드를 공유하고 작업하지 않습니다. 인터넷을 통해 전세계 모든 개발자와 코드로 소통할 수 있는 방법이 여기있습니다. 업무에서는 사실상 표준으로 사용되는 Git사용법을 익히시고, GitHub통해 코드를 관리 및 공유해보세요!
+
   앞으로 진행되는 길고 복잡한 코드를 멘토에게 질문할때 효과적으로 공유할 수 있고, GitHub자체가 이력서에 작성할 수 있는 자료가 된다는 점 알고계신가요? 개발자 채용공고에 언어는 다양하게 뽑아도 Git은 천하 통일로 요구하고 있습니다!
   사실 여러분이 개발자로 일하려면 자바만큼 필수라고 강력하게 말할 수 있습니다.
 
 - 추가 자료 :: 업데이트가 늦을 수 있습니다.:beginner:
+
   :airplane: [JVM이 Java 코드를 실핸하는 방법 참고자료](./../../JavaStudy-WhiteShip/Week1-JVM-HowToRunJavaCode/README.md)
 
   :airplane: [Java 데이터 타입과 변수, 배열](./../../JavaStudy-WhiteShip/Week2-Java-DataType-Variable-Array/README.md)
