@@ -17,7 +17,7 @@
 
 ---
 
-이번에 공부한 객체 지향 프로그래밍 주제의 내용은 어떠셨나요? 우리가 만들고자하는 프로그램을 효과적으로 만들기위한 몇가지 패러다임이 있습니다. 
+우리가 만들고자하는 프로그램을 효과적으로 만들기위한 몇가지 패러다임이 있습니다. 
 
 대표적으로 [PP](https://ko.wikipedia.org/wiki/%EC%A0%88%EC%B0%A8%EC%A0%81_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)(Procedural Programming), [OOP](https://ko.wikipedia.org/wiki/%EA%B0%9D%EC%B2%B4_%EC%A7%80%ED%96%A5_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)(Object Oriented Programming), [FP](https://ko.wikipedia.org/wiki/%ED%95%A8%EC%88%98%ED%98%95_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)(Functional Programming) 등 이 있습니다. (PP, OOP, FP 글자를 눌려 wiki 링크에 들어가셔서 글을 읽어보세요!)
 
@@ -35,7 +35,7 @@ Java는 대표적인 OOP 프로그래밍을 위한 프로그래밍 언어입니�
  소프트웨어니까, 아주 빠르고 유동적으로 변화하니까 꾸준히 공부하는 습관도 개발자에겐 중요합니다! 
  
  
- 여러분들도 자동차관련한 프로그램을 어떻게 설계해야 할까? 쇼핑몰은 어떤 클래스들이 어떻게 디자인 해야할까? 끊임없이 생각해보시면서 감각을 익혀보세요. :smile:
+ 여러분들도 자동차관련한 프로그램을 어떻게 설계해야 할까? 쇼핑몰은 어떤 클래스들이 어떻게 디자인 해야할까? 끊임없이 생각해보시면서 프로그래밍의 감각을 익혀보세요. :smile:
 
 ---
 
