@@ -94,6 +94,11 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 
 > 위 코드에서 classMemberMethod()에서 ```System.out.println("인스턴스 필드 접근 : "+instanceMemberField);``` 코드를 작성할 수 있을까요?
 
+필드에 값을 대입해 볼까요?
+
+<img src="./image/class-field2.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
+
+
 - 클래스의 생성자
 
 생성자는 독특한구조입니다. 자바의 메소드는 return타입이 반드시 명시되야하지만, 생성자는 return타입이 없어야합니다. 또, 클래스와 이름이 똑같아야됩니다.
@@ -125,7 +130,17 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 3. default
 4. protected
 
-어떻게 다른지 그림으로 잘 설명해주신 사이트 추천 들어갈께요!! :satisfied:
+클래스 필드 예제에서 private접근 제어자를 써볼까요?
+
+<img src="./image/class-field3.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
+
+어휴! 빨갛게 에러표시가 엄청납니다. 필드에 어떻게 접근해야할까요?
+
+<img src="./image/class-field4.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
+
+
+
+접근제어자를 그림으로 잘 설명해주신 사이트 추천 들어갈께요!! :satisfied:
 
 [TCP School Access Modifier](http://www.tcpschool.com/java/java_modifier_accessModifier)
 
