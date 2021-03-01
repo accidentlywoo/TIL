@@ -72,19 +72,20 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 여러분들의 질문을 쭉 보면서 헷갈려하시는 부분을 정리해보겠습니다. 이부분도 암기하셔야 됩니다.
 
 1. 필드(Field) : 필드는 클래스 객체의 상태 속성을 나타내며, 클래스 멤버 변수라고 불린다. 
-    - 인스턴스 변수 : 인스턴스가 갖는 변수이다. **객체생성 (= 인스턴스화)**할때 메모리가 생성 및 할당됩니다. 
+    - 인스턴스 변수 : 인스턴스가 갖는 변수이다. 객체생성 (= 인스턴스화)할때 메모리가 생성 및 할당됩니다. 
     - 클래스 변수 : static 키워드가 인스턴스 변수 앞에 붙으면 클래스 변수이다.
 
- > stack 메모리는 무엇일까요? heap영역은 어디죠? static키워드가 붙으면 stack,heap 이외의 다른 메모리영역에 저장되는데, 그곳은 어디일까요? 
- 
- [JVM구조와 자바 런타임 메모리 구조 (자바 애플리케이션이 실행될 때 JVM에서 일어나는 일, 과정을 설명해줄 수 있나요?)](https://jeong-pro.tistory.com/148)
 
  2. 메소드(Method) : 메소드는 객체의 행동을 나타냅니다. 메소드의 특징은 파라미터를 표시한다는 점인데요! 자바에서 메소드를 함수라고 부르지 않습니다. :dizzy_face:
     - 인스턴스 메소드 : 인스턴스 변수와 비슷하다.
     - 클래스 메소드 : 역시 static 키워드가 붙어있다. 
 
 
-예시를 볼까요?
+ > stack 메모리는 무엇일까요? heap영역은 어디죠? static키워드가 붙으면 stack,heap 이외의 다른 메모리영역에 저장되는데, 그곳은 어디일까요? 
+ 
+ [JVM구조와 자바 런타임 메모리 구조 (자바 애플리케이션이 실행될 때 JVM에서 일어나는 일, 과정을 설명해줄 수 있나요?)](https://jeong-pro.tistory.com/148)
+
+예시 코드를 볼까요?
 
 <img src="./image/class-field.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
 
@@ -126,9 +127,52 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 [TCP School Access Modifier](http://www.tcpschool.com/java/java_modifier_accessModifier)
 
 #### Array
-변수를 다루면서 
+여러값을 담을 수 있는 배열의 특징과 주의점 알아볼까요?
+
+1. 배열의 길이는 고정되어 있다.
+2. 배열의 값은 Index로 접근할 수 있다.
+3. 배열의 길이 접근은?
+4. 빈번한 배열의 오류??  :broken_heart:
+
+배열은 객체입니다. Primitive Type이 아닌 모든 값들은 Referrence Type이라고 생각하셔도 문제없습니다.
+
+가끔 앱사용하다가 ArrayIndexOutOfBoundException 창뜨시는걸 본적있으신가요?
+
+배열을 사용하면, 저 에러가 참 많이나서 꼭, 배열의 길이를 체크하고 프로그래밍해야 정신 건강에 좋습니다!
+
+배열의 예시를 볼까요?
+
+```
+String[] weeks = {"월", "화", "수", "목", "금", "토", "일"};
+for (int i=0; i<weeks.length; i++) {
+    System.out.println(weeks[i]);
+}
+
+System.out.println(weeks[7]); // ArrayIndexOutOfBoundException! 발생
+```
+
+참고 사이트입니다.
+
+[점프투 자바](https://wikidocs.net/206)
 
 #### Collection
+오잉 왠 Collection? 이게 뭐지?
+
+여러분들 배열을 배우고 ArrayList 를 사용해보셨는데요.
+
+배열은 길이가 고정되어있어서 ArrayIndexOutOfBoundException이 아주 자주 발생합니다. 배열을 사용하다가 실수로 ArrayIndexOutOfBoundException을 발생시키면 프로그램의 안정성이 떨어질 수 있죠.
+
+또, 배열은 고정된 길이에 맞춰 메모리를 할당합니다.
+
+알고리즘이라고 들어보셨나요? 메모리를 효과적으로 사용하기 위해서 자바에서 컬렉션 프레임워크(Collection Framework) API를 기본적으로 제공합니다.
+
+컬렉션 프레임워크는 데이터를 효과적으로 처리할 수 있는 표준화된 방법을 제공하는 클래스의 집합입니다. 최적화도 이미 되어있고, 여러분은 이 배열이 고정적인지, 변경과 삭제가 빈번한지 판단해서 잘 선택해서 사용하시면 됩니다.
+
+좀더 알고 싶으신분들은 [TCP School Collection Framework](http://www.tcpschool.com/java/java_collectionFramework_concept)를 참고해주세요.
+
+얼마나 중요하냐고요? 찐입니다.
+
+
 #### 추가 자료 :: 업데이트가 늦을 수 있습니다.:beginner:
 멘토가 많이 바쁩니다. :joy:
 
