@@ -102,7 +102,7 @@ static field예제를 볼까요?
 
 <img src="./image/class-field5.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
 
-> sample1, sample2의 인스턴스 필드들은 각자의 heap메모리를 차지하고있어 각자 필드에 데이터를 저장하지만 static필드는 클래스와 연결돠 static영역에 1개의 데이터를 저장합니다. 이 말은 어디선가 특정 클래스의 static필드를 수정한다면, 그 클래스를 사용하는 모든 static필드의 값이 변경된다는 뜻입니다.
+> sample1, sample2의 인스턴스 필드들은 각자의 heap메모리를 차지하고있어 각자 필드에 데이터를 저장하지만 static필드는 클래스와 연결된 static영역에 1개의 데이터를 저장합니다. 이 말은 어디선가 특정 클래스의 static필드를 수정한다면, 그 클래스를 사용하는 모든 static필드의 값이 변경된다는 뜻입니다.
 
 - 클래스의 생성자
 
