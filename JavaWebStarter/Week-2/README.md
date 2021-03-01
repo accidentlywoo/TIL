@@ -259,7 +259,7 @@ System.out.println(weeks[7]); // ArrayIndexOutOfBoundException! 발생
 업데이트가 늦을 수 있습니다.:beginner:
 멘토가 많이 바쁩니다. :joy:
 
-:airplane: [자바 클래스](./../../JavaStudy-WhiteShip/Week5-Class/README.md/README.md)
+:airplane: [자바 클래스](./../../JavaStudy-WhiteShip/Week5-Class/README.md)
 
 ### 참고 자료
 - [TCP School - Java](http://www.tcpschool.com/java/intro)
