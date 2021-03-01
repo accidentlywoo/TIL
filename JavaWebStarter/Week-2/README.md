@@ -195,7 +195,7 @@ System.out.println(weeks[7]); // ArrayIndexOutOfBoundException! 발생
 
 좀더 알고 싶으신분들은 [TCP School Collection Framework](http://www.tcpschool.com/java/java_collectionFramework_concept)를 참고해주세요.
 
-얼마나 중요하냐고요? 찐입니다.
+얼마나 중요하냐고요? 프로그래밍은 잘하고싶으시다면 찐으로 공부하셔야합니다. :green_heart:
 
 
 ### 추가 자료 
@@ -212,9 +212,9 @@ System.out.println(weeks[7]); // ArrayIndexOutOfBoundException! 발생
 
 OOP를 배우면서 클래스파일이 여러개가 쓰이게되고 이제 프로그래밍이 복잡해 질탠데요.
 
-질문주실때 캡처한 한장의 소스로 파악하기 힘든경우가 많습니다~
+질문주실때 캡처한 한장의 소스로 파악하기 힘든경우가 많습니다~ :trollface:
 
-Git공부는 하고 계신지요.
+Git공부는 하고 계신지요. :telephone_receiver:
 
 [생활코딩 Git](https://opentutorials.org/course/3837)
 
