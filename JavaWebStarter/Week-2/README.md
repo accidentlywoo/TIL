@@ -42,10 +42,11 @@ Java는 대표적인 OOP 프로그래밍을 위한 프로그래밍 언어입니�
 ###  Index :: 클릭하면 해당 목차로 뿅~!
 1. [클래스](#class)
 2. [접근제어자](#접근제어자)
-3. [배열](#접근제어자)
-4. [컬렉션](#collection)
-5. [추가자료](#추가-자료)
-6. [참고자료](#참고-자료)
+3. [This](#this)
+4. [배열](#접근제어자)
+5. [컬렉션](#collection)
+6. [추가자료](#추가-자료)
+7. [참고자료](#참고-자료)
 
 #### Class
 클래스란 무엇일까요?
@@ -150,6 +151,60 @@ static field예제를 볼까요?
 접근제어자를 그림으로 잘 설명해주신 사이트 추천 들어갈께요!! :satisfied:
 
 [TCP School Access Modifier](http://www.tcpschool.com/java/java_modifier_accessModifier)
+
+### This
+this도 배우셨네요!
+
+this는 **인스턴스** 객체로 호도리! 넘어갈 수 있는 키워드입니다. 객체(=인스턴스)에 접근하는 것임으로 Class에는 접근할 수 없습니다.
+
+위 예제코드를 다시 호도리 해볼까요?
+
+<img src="./image/class-field6.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
+
+위 예제는 에러는 없지만 의도대로 동작하지 않습니다. set~메소드에서 파라미터로 들어오는 변수명을 잘보세요.
+
+필드 변수명과 똑같죠. 자바실행시 구문을 분석할때, 자바는 {} 기준으로 Block이 생성되고, 이 블록은 Scope개념으로 이어집니다.
+
+```
+public void setInstanceMemberField(String instanceMemberField){
+		instanceMemberField = instanceMemberField;
+}
+```
+
+이 메서드에서 파라미터인 ```String instanceMemberField```는 실행 시점에서 메서드 안쪽 Block 파라미터를 복사해서 아규먼트를 생성합니다.
+
+아래처럼 생성되죠 :scream:
+
+```
+public void setInstanceMemberField(String instanceMemberField){
+        String instanceMemberField = instanceMemberField;
+		instanceMemberField = instanceMemberField;
+}
+```
+
+위 코드 어떠신가요. 의미가 있는 코드일까요? 
+
+원하는건 인스턴스 필드접근인데,. 아! 이때 this 키워드를 사용해볼까요?
+
+<img src="./image/class-field7.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
+
+색깔도 맞춰주는게 보이시나요? this키워드를 붙이고 .으로 객체 접근시, 해당 객체(인스턴스)를 참조합니다. 변수명 짖기가 귀찮아서 많이 씁니다. 
+
+안드로이드 등 다른 프로그램 소스는 필드에 '_'(1글자) prefix를 사용해서 'this.'(5글자) 보다 효과적으로 사용하지만 자바기반 웹프로그래밍에서는 this.를 쓰는것이 자연스럽습니다.
+
+Scope도 잘 정리하셔야하는데요.
+
+Scope는 는 큰곳에서 작은곳의 접근은 가능하지만, 작은 곳에서 큰곳으론 접근 못합니다.
+
+예제를 볼까요?
+
+<img src="./image/scope.png" width="100%" height="30%" display="inline-block" alt="scope"/>
+
+큰 흐름은 위에서 아래로, 오른쪽에서 왼쪽으로 입니다.
+
+{}컬리 브레이스 스코프가 안쪽이 더 작은 스코프입니다. 같은 스코프는 어떨까요?
+
+코딩해보세용!:computer:
 
 ### Array
 여러값을 담을 수 있는 배열의 특징과 주의점 알아볼까요?
