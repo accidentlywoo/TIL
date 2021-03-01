@@ -98,6 +98,11 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 
 <img src="./image/class-field2.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
 
+static field예제를 볼까요?
+
+<img src="./image/class-field5.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
+
+> sample1, sample2의 인스턴스 필드들은 각자의 heap메모리를 차지하고있어 각자 필드에 데이터를 저장하지만 static필드는 클래스와 연결돠 static영역에 1개의 데이터를 저장합니다. 이 말은 어디선가 특정 클래스의 static필드를 수정한다면, 그 클래스를 사용하는 모든 static필드의 값이 변경된다는 뜻입니다.
 
 - 클래스의 생성자
 
@@ -138,7 +143,9 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 
 <img src="./image/class-field4.png" width="100%" height="30%" display="inline-block" alt="클래스 필드"/>
 
+느낌이 오시나요? .으로 필드에 접근하기보다 메소드를 이용해서 필드에 접근했을 때, 부가적인 처리 (예를 들어 갯수는 음수가 나오면 안되는데, 음수값이 들어왔을때 0으로 처리하는 로직 추가)를 함으로써 필드 데이터를 바꿀 수 있고.
 
+필드에 접근하는 메소드이름을 의미있게 지음으로써 필드변수명을 노출 시키지 않음으로써 보안성을 높일 수 있습니다.
 
 접근제어자를 그림으로 잘 설명해주신 사이트 추천 들어갈께요!! :satisfied:
 
