@@ -82,6 +82,7 @@
 
 :memo: ```여기서 플랫폼이란 OS(Mac, Window, Linux)등을 말한다. 일부 언어들은 Window용 소스, Linux용 소스 개발을 따로 했다. 자바는 그럴 필요가 없다는 뜻```
 
+[참고하면 좋은 UTube](https://www.youtube.com/watch?v=UzaGOXKVhwUhttps://www.youtube.com/watch?v=UzaGOXKVhwU)
 
 
 - 자바와 이클립스 설치하기
