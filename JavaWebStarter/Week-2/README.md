@@ -44,7 +44,8 @@ Java는 대표적인 OOP 프로그래밍을 위한 프로그래밍 언어입니�
 2. [접근제어자](#접근제어자)
 3. [배열](#접근제어자)
 4. [컬렉션](#collection)
-5. [참고](#추가-자료--업데이트가-늦을-수-있습니다beginner)
+5. [추가자료](#추가-자료)
+6. [참고자료](#참고-자료)
 
 #### Class
 클래스란 무엇일까요?
@@ -107,7 +108,7 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 
 너무 어렵다면, 나중에 천천히 생각해보셔도 됩니다. :punch:
 
-#### 접근제어자
+### 접근제어자
 접근제어자(Access modifier)란 클래스와 클래스 멤버(멤버가 뭔지 모르시면 안됩니다!!)의 선언 시 사용하는 키워드!
 
 객체 지향 프로그래밍에서 정보 은닉(Data hiding)을위해 사용합니다.
@@ -126,7 +127,7 @@ OOP의 객체의 설계 목적은 오직 **재사용**에 있습니다.
 
 [TCP School Access Modifier](http://www.tcpschool.com/java/java_modifier_accessModifier)
 
-#### Array
+### Array
 여러값을 담을 수 있는 배열의 특징과 주의점 알아볼까요?
 
 1. 배열의 길이는 고정되어 있다.
@@ -155,7 +156,7 @@ System.out.println(weeks[7]); // ArrayIndexOutOfBoundException! 발생
 
 [점프투 자바](https://wikidocs.net/206)
 
-#### Collection
+### Collection
 오잉 왠 Collection? 이게 뭐지?
 
 여러분들 배열을 배우고 ArrayList 를 사용해보셨는데요.
@@ -173,11 +174,24 @@ System.out.println(weeks[7]); // ArrayIndexOutOfBoundException! 발생
 얼마나 중요하냐고요? 찐입니다.
 
 
-#### 추가 자료 :: 업데이트가 늦을 수 있습니다.:beginner:
+### 추가 자료 
+업데이트가 늦을 수 있습니다.:beginner:
 멘토가 많이 바쁩니다. :joy:
 
 :airplane: [자바 클래스](./../../JavaStudy-WhiteShip/Week5-Class/README.md/README.md)
 
-#### 참고 자료
+### 참고 자료
 - [TCP School - Java](http://www.tcpschool.com/java/intro)
 - [어느 집착형 공부러의 소름돋는 정리](https://blog.naver.com/hsm622/222144931396)
+
+--- 
+
+OOP를 배우면서 클래스파일이 여러개가 쓰이게되고 이제 프로그래밍이 복잡해 질탠데요.
+
+질문주실때 캡처한 한장의 소스로 파악하기 힘든경우가 많습니다~
+
+Git공부는 하고 계신지요.
+
+[생활코딩 Git](https://opentutorials.org/course/3837)
+
+Git을 사용해서 GitHu 사이트에 소스를 올리시면 포트폴리오 참고가능 및 효과적인 질문을 할 수 있습니다!
