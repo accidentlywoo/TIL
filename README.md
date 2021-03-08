@@ -29,7 +29,7 @@
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: 
-- [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip) :running_woman: 고퀄리티 정리 :hearts: :fire: 
+- [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip)
  
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
