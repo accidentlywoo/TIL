@@ -13,5 +13,5 @@
 ## :running_woman: [3주차 - 자바 템플릿과 인터페이스](Week-3/README.md)
 - 상속, 형변환, 메소드 오버라이딩, 다형성, 다운 캐스팅과 인터페이스
 
-## :running_woman: [3주차 - 자바 클래스](Week-3/README.md)
+## :running_woman: [3주차 - 자바 클래스](Week-4/README.md)
 - Object, String, Wrapper, Generic, Collection, Inner Class, Lambda, Stream
