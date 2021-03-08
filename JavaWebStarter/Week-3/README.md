@@ -65,12 +65,13 @@ Object는 총 11개의 메소드를 가지고 있습니다. 어떤 메소드가 
 
 Object클래스에서 여러분들이 반드시 정리해야하는 메소드는 1. toString() 2. equals() 3. clone 입니다.
 
-나중에 배울 Thread 관련 메소드도 미리 예습해도 됩니다.
+나중에 배울 Thread 관련 메소드도 미리 예습해도 됩니다. :revolving_hearts:
+
 
 ### String
 String 은 클래스입니다. java.lang.String 으로 제공되죠!
 
-신입개발자들에게 String 타입변수와 primitive 타입 변수들과 자주 비교되며, 차이점을 많이 물어봅니다. 꼭 정리하세요!
+신입개발자들에게 String 타입변수와 primitive 타입 변수들과 자주 비교되며, 차이점을 많이 물어봅니다. 꼭 정리하세요!:fire:
 
 String인스턴스 특이한 친구입니다. String 인스턴스는 Immutable 속성을 갖는데요.
 
@@ -94,26 +95,35 @@ String 클래스는 워낙 많이 사용되서 특별한 메소드도 제공되�
 
 마찬가지로 공식싸이트에 들어가서 왼쪽 상단의 java.lang 패키지를 선택하면 왼쪽 하단에서 String 클래스를 눌러볼 수 있습니다.
 
-String클래스에서 여러분들이 반드시 정리해야하는 메소드는 1. charAt() 2. compareTo() 3. concat, 4. indexOf(), 5. trim() 입니다.
+String클래스에서 여러분들이 반드시 정리해야하는 메소드 입니다.
+1. charAt() 
+2. compareTo() 
+3. concat 
+4. indexOf() 
+5. trim() 
 
 String 클래스의 private final 필드 중에 ```byte[] value```라는 친구를 이용해 다양한 기능을 제공합니다.
 
-하나더! Immutable Object 와 Mutable Object 정리해야 할것같죵?!
+하나더! Immutable Object 와 Mutable Object 정리해야 할것같죵?! :memo:
+
+
 
 ### Wrapper Class
 Wrapper Class는 왜 있는 걸까요?
 
+:space_invader:
+
 자바가 순수한 객체지향언어가 아니라고 주장하는 논리는 바로 primitive type의 존재 때문인데요.
 
-순수한 객체지향 언어라고 불리는 Python은 int형을 재정의해서 사용할 수 있습니다.
+순수한 객체지향 언어라고 불리는 Python은 int형까지 재정의해서 사용할 수 있습니다.
 
-하지만, 자바는 int형을 재정의해서 사용할 수 없습니다.
+하지만, 자바는 int형을 재정의해서 사용할 수 없습니다. :joy:
 
 그래서 이런 primitive type을 객체로 취급해야할 때, Wrapper Class를 사용하게 됩니다.
 
 Wrapper 클래스는 8가지 primitive type에 맞추어 8가지의 Wrapper Class가 존재합니다.
 
-여기서 primitive type <-> Wrapper Class 사이의 Boxing과 UnBoxing개념이 튀어나오죠!
+여기서 primitive type <-> Wrapper Class 사이의 Boxing과 UnBoxing개념이 튀어나오죠! :tired_face:
 
 이부분은 여러분이 코드를 짜시면서 보는것이 더 와 닿습니다~.
 
@@ -121,8 +131,9 @@ Wrapper 클래스는 8가지 primitive type에 맞추어 8가지의 Wrapper Clas
 
 [참고하기 좋은 자료 : TCP School](http://www.tcpschool.com/java/java_api_wrapper)
 
+
 ### Generic Programming
-제네릭 프로그래밍은 굉장히 어려운 내용입니다.
+제네릭 프로그래밍은 굉장히 어려운 내용입니다. 깊이 알면 알 수록 어렵지만 애플리케이션을 만들때 많이 사용하게 됩니다. :cupid:
 
 인문자 여러분들은 컴파일 시에 미리 타입 검사를 수행해 에러를 방지할 수 있다. 라고 생각하시면 됩니다.
 
@@ -132,6 +143,12 @@ Wrapper 클래스는 8가지 primitive type에 맞추어 8가지의 Wrapper Clas
 
 제네릭은 실습을 하면서 직접 코딩을 해보며, 클래스의 타입을 선언하며 감각을 익히시는게 더 효과적입니다.
 
+제네릭에서 정리해야할 표현입니다.
+1. 타입 변수의 제한
+2. 제네릭 메소드
+3. 와릴드 카드 사용 :credit_card:
+
+
 ### Collection
 저번주에 잠깐나온 Collection! 이번엔 제대로 공부하셨나요?
 
@@ -140,14 +157,31 @@ Collection Framework의 대표 인터페이스인
 2. Set 인터페이스
 3. Map 인터페이스의 각 특징을 꼭 알고계셔야합니다.
 
-신입 개발자분들에게 면접질문 내용으로 나올 수 있고, 알고리즘 문제 당골 출제내용이이까요!
+신입 개발자분들에게 면접질문 내용으로 나올 수 있고, 알고리즘 문제 당골 출제내용이니까요!:telephone:
+
+<img src="./image/java-collection-hierarchy.png width="100%" height="30%" display="inline-block" alt="출처-https://facingissuesonit.com/"/>
+
+> Collection은 위 이미지처럼 계층 구조로 차근차근 상속받은 구조입니다.
+
+파란색 박스의 구현체(class)들이 어떤 특징을 갖고있는지 꼭! 정리하시면 큰 도움이 될거예요!
+
+추가적으로 Iterable이라는 인터페이스가 보이시나요?
+
+프로그래밍언어들이 Iterator, Iterable, Iter~ 가 들어가면 이친구는 공통적으로 반복문을 사용할 수 있다는 의미입니다.
+
+Iterable인터페이스의 메소드를 공부하시면 큰 도움이 됩니다! :gift_heart:
+
+Collection은 Iterable을 상속받고있으니, 모두 반복문을 사용할 수 있겠네요?
+
+반복문인 ```for(int i = 0 ...``` 에서 꼭 사용하는 이 변수명 'i'는 iterator의 'i'라는 사실!
+
 
 ### Lambda
-람다 표현식(lambda Expression)이란 무엇알까요?
+람다 표현식(lambda Expression)이란 무엇알까요? :crescent_moon:
 
 람다 표현식은 FP(Functional Programming)에서 영향을 받아 수용한 표현식인데요.
 
-너무 많은 타자를 치느라 손가락 관절염이온 개발자들이, 너무 많이 사용하는 함수표현을 짧게 표현할 수 있지 않을까? 라고 생각한 아이디어가 실천된 표현입니다.
+너무 많은 타자를 치느라 손가락 관절염이온 개발자들이, 너무 많이 사용하는 함수표현을 짧게 표현할 수 있지 않을까? 라고 생각한 아이디어가 실천된 표현입니다.:ghost:
 
 자바는 함수라는 개념이없습니다. 클래스내부에 함수를 선언한 메소드 밖에없죠.
 
@@ -159,14 +193,14 @@ Collection Framework의 대표 인터페이스인
 
 Java8 부터 추가된 기능입니다.
 
-세부내용은 다소 어려울 수 있으니, 다음주에 배우는 Multi Thread를 학습하고 깊게 공부하시는것이 좋은 방법입니다.
+세부내용은 다소 어려울 수 있으니, 다음주에 배우는 Multi Thread를 학습하고 깊게 공부하시는것이 좋은 방법입니다. :school_satchel:
 
 정확한 내부동작을 꼼꼼히 알고 사용하는 것도 좋지만, 먼저 손으로 익히고 나중에 꼼꼼히 공부하셔도 충분합니다.
 
 ### Stream
 Stream도 Java8부터 추가된 api입니다.
 
-스트림의 새부내용도 다소 난이도가 있는 내용입니다. 다음주에 배우는 Multi Thread를 학습하고 깊게 공부하시는것이 좋은 방법입니다.
+스트림의 새부내용도 다소 난이도가 있는 내용입니다. 다음주에 배우는 Multi Thread를 학습하고 깊게 공부하시는것이 좋은 방법입니다. :school_satchel:
 
 스트립 api는 참 많이 쓰입니다. 
 
@@ -187,6 +221,9 @@ Stream도 Java8부터 추가된 api입니다.
 1. 스트림의 생성
 2. 스트림의 중개 연산 (스트림의 변환)
 3. 스트림의 최종 연산 (스트림의 사용)
+
+그림으로 예시를 볼까요?
+<img src="./image/java-stream.jpeg width="100%" height="30%" display="inline-block" alt=""/>
 
 ---
 
