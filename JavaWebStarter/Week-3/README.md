@@ -159,7 +159,7 @@ Collection Framework의 대표 인터페이스인
 
 신입 개발자분들에게 면접질문 내용으로 나올 수 있고, 알고리즘 문제 당골 출제내용이니까요!:telephone:
 
-<img src="./image/java-collection-hierarchy.png width="100%" height="30%" display="inline-block" alt="출처-https://facingissuesonit.com/"/>
+<img src="./image/java-collection-hierarchy.png width="100%" height="30%" display="inline-block" alt="출처-facingissuesonit.com"/>
 
 > Collection은 위 이미지처럼 계층 구조로 차근차근 상속받은 구조입니다.
 
