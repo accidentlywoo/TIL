@@ -60,7 +60,7 @@ Object는 어떤 메소드가 있을까요?
 
 Object는 총 11개의 메소드를 가지고 있습니다. 어떤 메소드가 있을까요?
 
-[Java 8 공식 사이트](#https://docs.oracle.com/javase/8/docs/api/)
+[Java8 공식 사이트](https://docs.oracle.com/javase/8/docs/api/)
 
 공식싸이트에 들어가서 왼쪽 상단의 java.lang 패키지를 선택하면 왼쪽 하단에서 Object클래스를 눌러볼 수 있습니다.
 
@@ -91,7 +91,7 @@ String 클래스는 생성한 인스턴스를 읽을 수만있을 뿐, 값을 �
 
 String 클래스는 워낙 많이 사용되서 특별한 메소드도 제공되는데요.
 
-[Java 8 공식 사이트](#https://docs.oracle.com/javase/8/docs/api/)
+[Java8 공식 사이트](https://docs.oracle.com/javase/8/docs/api/)
 
 마찬가지로 공식싸이트에 들어가서 왼쪽 상단의 java.lang 패키지를 선택하면 왼쪽 하단에서 String 클래스를 눌러볼 수 있습니다.
 
