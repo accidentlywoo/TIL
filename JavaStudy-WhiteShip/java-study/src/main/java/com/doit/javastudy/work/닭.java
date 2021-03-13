@@ -1,17 +1,13 @@
 package com.doit.javastudy.work;
 
 public class 닭 implements Duck {
-	@Override
+	final String quack = "꼬끼오!";
 	public void quack() {
-		System.out.println("꼬끼오!");
+		System.out.println(quack);
 	}
 
-	@Override
-	public void walking() {
-		System.out.println("뒤뚱 뒤뚱");
-	}
+	public void walking() { System.out.println("뒤뚱 뒤뚱"); }
 
-	@Override
 	public void flying() {
 		System.out.println("호다닭!");
 	}
