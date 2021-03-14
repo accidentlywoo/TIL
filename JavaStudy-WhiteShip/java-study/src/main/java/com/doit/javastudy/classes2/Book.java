@@ -15,4 +15,8 @@ class Book implements Cloneable{
 	protected Object clone() throws CloneNotSupportedException {
 		return super.clone();
 	}
+	public void useCase(A a){
+		a.aMethod("test", 3);
+		(ASub)a.b();
+	}
 }

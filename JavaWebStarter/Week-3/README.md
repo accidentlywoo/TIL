@@ -120,7 +120,7 @@ new키워드와 함께 생성자를 사용하게되면, Class Area에 있는 클
 
 UML 표기법으로 메소드 시그니처를 표현했습니다. + -> public , : 리턴타입
 
-<img src="./image/dynamicDispatching.png" width="30%" height="30%" display="inline-block" alt="다이나믹 디스패칭"/>
+<img src="./image/dynamicDispatching.png" width="60%" height="60%" display="inline-block" alt="다이나믹 디스패칭"/>
 
 오버라이딩되고있는 aMethod는 컴파일 시점에는 Super클래스의 내용으로 컴파일되어.class남지만 런타임 시점에 다이나믹 디스패칭 메커니즘으로 SubClass의 aMethod내용으로 동작합니다.
 
@@ -270,6 +270,8 @@ Vehicle 인터페이스를 구현한 KickBoard, Bus 구현체는 자동 타입�
 ```Vehicle vehicle = kickBoard```,```Vehicle vehicle = bus```
 
 업캐스팅은 명시적으로 캐스팅 선언을 하지 않아도 됩니다.
+
+
 
 DownCasting은 명시적으로 타입을 지정해야 합니다. ```구현클래스 변수 = (구현클래스) 인터페이스변수; 
 
