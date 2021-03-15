@@ -17,6 +17,5 @@ class Book implements Cloneable{
 	}
 	public void useCase(A a){
 		a.aMethod("test", 3);
-		(ASub)a.b();
 	}
 }
