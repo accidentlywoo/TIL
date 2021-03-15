@@ -20,3 +20,5 @@
 
 ## 웹 개발을 위해 필요한 기본 기술
 1. [데이터로 소통하기위한 XML과 JSON](./XmlAndJson/README.md)
+2. [Web 통신을 위한 HTTP 기초](./HTTP-basic/README.md)
+3. [데이터를 저장하고 관리하는 DataBase 기초](./DataBase-basic/README.md)
