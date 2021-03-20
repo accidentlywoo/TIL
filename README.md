@@ -81,22 +81,32 @@
 - [자바 웹 개발 마스터 - 입문자용 자료만들기](https://github.com/accidentlywoo/TIL/tree/main/JavaWebStarter)
   
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
-- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :ledger:
-- [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/book/JavaEEDesignPattern) :open_book:
-- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book:
-- [알고리즘 산책]() :open_book:
-- [토비스프링 바이블 읽기]() :open_book: :: 부분적으로 읽었지만 정리계획 중..
-- [이것이 자바다]() :ledger: :: 읽고 정리안하는 중..
-- [함께 자라기]() :ledger: :: 읽고 정리안하는 중..
-- [코어 자바스크립트]() :ledger: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
-- [자바스크립트 핵심가이드]() :ledger: :: 읽고 정리안하는 중.. 복습과 실습이 필요..
-- [이펙티브 자바]() :ledger: :: 1회독 정리안하는 중.. 2회독과 정리 및 실습이 필요..
-- [객체 지향의 사실과 오해]() :ledger: :: 읽고 정리안하는 중..
-- [운영체제 개론]() :ledger: :: 읽고 정리안하는 중..
+- [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :thought_balloon:
+- [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/book/JavaEEDesignPattern) :ledger:
+- [이것이 자바다]() :ledger:
+- [함께 자라기]() :ledger:
+- [코어 자바스크립트]() :ledger:
+- [자바스크립트 핵심가이드]() :ledger:
+- [이펙티브 자바]() :ledger:
+- [객체 지향의 사실과 오해]() :ledger:
+- [운영체제 개론]() :closed_book:
+- [그림으로 배우는 HTTP & Network]() :ledger:
   
-- [모던 자바 인 액션]() :thought_balloon:
+- [토비스프링 바이블 읽기]() :open_book:
+  
+--- 21년 3월 책읽기
+- [다시 확률 통계 - 확률편]() :open_book:
+- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book:
 - [시작하세요! 도커]() :open_book:
+- [그림으로 공부하는 IT 인프라 구조]() :open_book:
+- [쿠버네티스 오퍼레이터]() :thought_balloon:
+- [쿠버네티스 모범 사례]() :thought_balloon:
+- [오브젝트]() :thought_balloon:
+- [마이크로서비스 디자인패턴]() :thought_balloon:
+- [이펙티브 자바]() :thought_balloon: 2회독
 
+
+---
 
 - [머신러닝 필수 논문 List](https://www.notion.so/c3b3474d18ef4304b23ea360367a5137?v=5d763ad5773f44eb950f49de7d7671bd) :green_book:
 
