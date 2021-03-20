@@ -2,6 +2,8 @@ package com.doit.javastudy.work;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamTest2 {
 	class Member{
@@ -27,8 +29,15 @@ public class StreamTest2 {
 				outterClass.new Member("오덕", 0, "자라나라머리머"),
 				outterClass.new Member("이말룡", 6, "머선129")
 		);
-//		int sum = members.stream().mapToInt(e -> e.penaltyCount).sum();
-		int sum = members.stream().mapToInt(Member::getPenaltyCount).sum();
-		System.out.println(sum);
+//		int sum = members.stream().map(member -> member.getPenaltyCount()).reduce(0, (a, b) -> a + b);
+//		int sum = members.stream().map(Member::getPenaltyCount).reduce(0,  Integer::sum);
+//		int sum = members.stream().mapToInt(Member::getPenaltyCount).sum();
+
+//		int sum = members.stream().collect(Collectors.summingInt(Member::getPenaltyCount));
+		int sum;
+		Stream<Member> stream = members.stream();
+//		stream.forEach(s -> outterClass.sum += s.getPenaltyCount());
+//		System.out.println("기영이네 페널티 합은 " + outterClass.sum);
+//		members.stream().map(c->c.getPenaltyCount()).forEach(s->System.out.println("기영이네 패널티의 합은 : "+s));
 	}
 }
