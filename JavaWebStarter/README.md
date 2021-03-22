@@ -13,8 +13,10 @@
 ### :running_woman: [3주차 - 자바 상속과 다형성](Week-3/README.md)
 - 상속, 형변환, 메소드 오버라이딩, 다형성, 다운 캐스팅과 인터페이스
 
-### :running_woman: [4주차 - 자바 클래스](Week-4/README.md)
+### :green_book: [4주차 - 자바 클래스](Week-4/README.md)
 - Object, String, Wrapper, Generic, Collection, Inner Class, Lambda, Stream
+
+### :running_woman: [5주차 - 예외 처리와 멀티 스레드](Week-5/README.md)
 
 ---
 
