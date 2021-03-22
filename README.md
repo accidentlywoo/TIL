@@ -34,7 +34,6 @@
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
-- [Spring Boot 2.4 + JPA Toy](https://github.com/accidentlywoo/TIL/tree/main/SeeUSpringBoot2.4) :running_woman:
 - [Spring Boot - 공홈](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) :green_book:
 
 ## JPA
@@ -45,10 +44,10 @@
 
 ## DevOps
 
-- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :running_woman: :green_book:  
-- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :running_woman:
+- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
+- [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :green_book:
 - [도전! CKA - 공홈 + Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
-- [시작하세요 도커 정리]() :running_woman:
+- [시작하세요 도커 정리]() :green_book:
 - [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone:
 
 ## Data Base ! 
@@ -69,10 +68,11 @@
 - [우아한테크러닝 3기](https://github.com/accidentlywoo/HelloReactive) :woman_student: 
 
 ## NodeJS
-- [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS) :running_woman:
+- [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS) :green_book:
 
 ## Python
-- [파이선 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
+- [파이썬 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
+- [Python 기초, 데이터 구조, 알고리즘](https://github.com/accidentlywoo/python_algorithm) :running_woman:
 
 ## AI / ML
 - [생활코딩 머신러닝 야학](https://github.com/accidentlywoo/TIL/tree/main/ML-opentutorials)
