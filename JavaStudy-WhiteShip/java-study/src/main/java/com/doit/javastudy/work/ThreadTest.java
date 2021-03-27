@@ -27,3 +27,5 @@ public class ThreadTest implements Runnable{
 		System.out.println("Main Thread End");
 	}
 }
+// 훌륭합니다!
+//https://gist.github.com/accidentlywoo/bfca35138b40cf3022609231ab36841a 를 참고해주세요.
