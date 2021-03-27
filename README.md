@@ -52,7 +52,7 @@
 
 ## Data Base ! 
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/main/MySQL) :thought_balloon:
-- [동시성 전쟁](./Concurrency/README.md)
+- [동시성 전쟁 - DB 트랜잭션](./Concurrency/README.md)
 
 
 ### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
