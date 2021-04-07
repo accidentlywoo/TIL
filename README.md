@@ -51,8 +51,6 @@
 - [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone:
 
 ## Data Base ! 
-- [MySQL](https://github.com/accidentlywoo/TIL/tree/main/MySQL) :thought_balloon:
-- [동시성 전쟁 - DB 트랜잭션](./Concurrency/README.md)
 
 
 ### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
@@ -60,7 +58,10 @@
 - [Hive]() :thought_balloon:
 
 ### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
-
+- [MySQL InnoDB(feat. Real MySQL:open_book:)](./InnoDB/README.md)
+- [MySQL](https://github.com/accidentlywoo/TIL/tree/main/MySQL) :thought_balloon:
+- [동시성 전쟁 - DB 트랜잭션](./Concurrency/README.md)
+    
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
 - [모던 JavaScript 튜터리얼]() :thought_balloon:
