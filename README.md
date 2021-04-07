@@ -1,14 +1,6 @@
 # TIL
  상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중, :fire: - 초집중, - 두둘기고 보는 우당탕탕 시리즈 :cyclone:
 
- 프로그래밍 공부기록을 모아서 기록하고 기록하자!
- 
- 3년차 개발 회고 및 공부내용 정리. 네트워크, 데브옵스 공부를 진지하게 해보자
-
- 뚝딱뚝딱 정리중-
-
- 막 개발을 하고싶지만,.. 두둘겨 맞으면서 서로의 약속을(프로토콜) 지키는 찐개발자가 되자.
-
 ## CS
 ### 알고리즘
 - [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/main/Clever-Algorithm) :green_book: 
@@ -43,7 +35,6 @@
 - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
 
 ## DevOps
-
 - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :green_book:
 - [도전! CKA - 공홈 + Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
@@ -51,8 +42,6 @@
 - [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone:
 
 ## Data Base ! 
-
-
 ### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
 - [Presto](https://github.com/accidentlywoo/TIL/tree/main/Presto) :green_book:
 - [Hive]() :thought_balloon:
@@ -81,7 +70,10 @@
 
 ## 튜터링 및 강의 자료
 - [자바 웹 개발 마스터 - 입문자용 자료만들기](https://github.com/accidentlywoo/TIL/tree/main/JavaWebStarter)
-  
+
+## public 개인 프로젝트
+- [Dream Coffee(feat. MSA)](https://github.com/accidentlywoo/MSA-Gang)
+
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :thought_balloon:
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/book/JavaEEDesignPattern) :ledger:
@@ -94,11 +86,12 @@
 - [운영체제 개론]() :closed_book:
 - [그림으로 배우는 HTTP & Network]() :ledger:
   
-- [토비스프링 바이블 읽기]() :open_book:
+- [토비스프링 바이블 읽기]() :open_book::fire:
   
 --- 21년 상반기
 - [다시 확률 통계 - 확률편]() :open_book:
-- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book:
+- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book::fire:
+- [스프링 마이크로서비스 코딩 공작소]() :open_book::fire:
 - [시작하세요! 도커]() :open_book:
 - [그림으로 공부하는 IT 인프라 구조]() :open_book:
 - [쿠버네티스 오퍼레이터]() :thought_balloon:
@@ -126,8 +119,6 @@
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
 - [우아한 테크세미나-우아한 스프링](https://drive.google.com/file/d/10G1qCgdFrVXpxLUTgrSwp5ZMboXlfwmH/view)
-
-## 습관 만들기
 
 ## 분기 계획 (:gem: - 목표, :dart: - 성취, :broken_heart: - 미달)
 ### 2021 1분기 계획 : :clock12:
