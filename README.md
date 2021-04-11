@@ -115,7 +115,7 @@
 - [운영체제 공룡책 무료강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98#)
 - [Googole Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [우아한테크세미나-TDD, 리팩터링](https://youngwonseo.github.io/tdd-refactoring/)
-
+- [Cloud Native Service 구축을 위해 고려해야될 12가지 요소 (12 Factors)](https://12factor.net/ko/)
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
 - [우아한 테크세미나-우아한 스프링](https://drive.google.com/file/d/10G1qCgdFrVXpxLUTgrSwp5ZMboXlfwmH/view)
