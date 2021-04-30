@@ -24,6 +24,8 @@
   - [Scheduling](#scheduling)
     - [Taints and Tolerations](#taints-and-tolerations)
     - [Node Selector & Node Affinity](#node-selector--node-affinity)
+    - [Node Affinity](#node-affinity)
+      - [Node Affinity Types](#node-affinity-types)
 
 ---
 
@@ -566,3 +568,108 @@ spec:
 ```kubectl taint node master 위명령결과```
 
 ### Node Selector & Node Affinity
+pod-definition.yml
+
+```
+apiVersion:
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: data-processor
+    image: data-processor
+  nodeSelector:
+    size: Large
+```
+
+어떻게 Know K8S가 Large Size를 구분할까?
+
+- Label Nodes
+formmat  
+```kubectl label nodes <node-name> <label-key>=<label-value>```
+
+-> ```kubectl label nodes node-1 size=Large```
+
+- Node Selector - Limitations :: 더 복잡한 요구사항은?
+
+Large Or Medium?
+
+Not Small
+
+### Node Affinity
+이전 야믈~ 파일을 보자
+
+pod-definition.yml
+
+```
+apiVersion:
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: data-processor
+    image: data-processor
+  nodeSelector:
+    size: Large
+```
+이 구성에서 Large Or Medium? / Not Small 조건을 줄 수 있을 까?
+
+Affinity는 이런 복잡한 요구사항을 적을 수 있게한다. (REST API에서 Negotiation 같은 느낌)
+
+pod- definition.yml
+(Large Or Medium)
+```
+apiVersion:
+kind:
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: data-processor
+    image: data-processor
+
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator:  In
+            value:
+            - Large
+            - Medium
+```
+
+pod- definition.yml
+(Not Small)
+```
+apiVersion:
+kind:
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: data-processor
+    image: data-processor
+
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: size
+            operator:  NotIn
+            value:
+            - Small
+```
+
+#### Node Affinity Types
+Available:
+- requiredDuringSchedulingIgnoredDuringExecution : DuringScheduling - required, DuringExecution - Ignored
+
+- preferredDuringSchedulingIgnoredDuringExecution : DuringScheduling - preferred, DuringExecution - Ignored
+
+Planned:
+- requiredDuringSchedulingRequiredDuringExecution : DuringScheduling - required, DuringExecution - required
