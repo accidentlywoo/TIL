@@ -9,42 +9,46 @@
 ### 리눅스
 - [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic) :running_woman: :fire:
 - [도커 뚜둘뚜둘](https://github.com/accidentlywoo/TIL/tree/main/Docker-basic) :running_woman: :fire:
-### network
+<!-- ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/main/network) :green_book:
-- [백엔드라면! HTTP](https://github.com/accidentlywoo/TIL/tree/main/HTTP) :running_woman: :fire:
+- [백엔드라면! HTTP](https://github.com/accidentlywoo/TIL/tree/main/HTTP) :running_woman: :fire: -->
 
 ### 컴퓨터 구조
-### 암호학
+<!-- ### 암호학
 - [Oauth2.0](https://github.com/accidentlywoo/TIL/tree/main/Oauth2.0)
-- [JWT 정리]() :thought_balloon:
+- [JWT 정리]() :thought_balloon: -->
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: 
 - [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip)
  
+## Kotlin 
+- [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction)
+
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
 - [Spring Boot - 공홈](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) :green_book:
 
 ## JPA
-- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book: :fire:
+- [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book:
   
 ## Test
-- [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman:
+<!-- - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman: -->
+- [JUnit5](https://github.com/accidentlywoo/HelloTesting)
 
-## DevOps
-- [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
+<!-- ## DevOps -->
+<!-- - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :green_book:
-- [도전! CKA - 공홈 + Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman:
-- [시작하세요 도커 정리]() :green_book:
-- [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone:
+- [도전! CKA - 공홈 + Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman: -->
+<!-- - [시작하세요 도커 정리]() :green_book: -->
+<!-- - [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone: -->
 
 ## Data Base ! 
-### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
-- [Presto](https://github.com/accidentlywoo/TIL/tree/main/Presto) :green_book:
-- [Hive]() :thought_balloon:
+#### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
+<!-- - [Presto](https://github.com/accidentlywoo/TIL/tree/main/Presto) :green_book:
+- [Hive]() :thought_balloon: -->
 
 ### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
 - [MySQL InnoDB(feat. Real MySQL:open_book:)](./InnoDB/README.md)
@@ -58,15 +62,12 @@
 ## React
 - [우아한테크러닝 3기](https://github.com/accidentlywoo/HelloReactive) :woman_student: 
 
-## NodeJS
-- [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS) :green_book:
+<!-- ## NodeJS
+- [Node.js - 공식 홈페이지 + @](https://github.com/accidentlywoo/HelloNodeJS) :green_book: -->
 
 ## Python
 - [파이썬 3.8과 스크래퍼, 크롤러, 데이터 분석 및 머신러닝](https://github.com/accidentlywoo/python) :woman_student: :: 정리안됨 주의
 - [Python 기초, 데이터 구조, 알고리즘](https://github.com/accidentlywoo/python_algorithm) :running_woman:
-
-## AI / ML
-- [생활코딩 머신러닝 야학](https://github.com/accidentlywoo/TIL/tree/main/ML-opentutorials)
 
 ## 튜터링 및 강의 자료
 - [자바 웹 개발 마스터 - 입문자용 자료만들기](https://github.com/accidentlywoo/TIL/tree/main/JavaWebStarter)
@@ -85,21 +86,21 @@
 - [객체 지향의 사실과 오해]() :ledger:
 - [운영체제 개론]() :closed_book:
 - [그림으로 배우는 HTTP & Network]() :ledger:
-  
+- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :ledger:
+- [스프링 마이크로서비스 코딩 공작소]() :ledger:
+
 - [토비스프링 바이블 읽기]() :open_book::fire:
   
 --- 21년 상반기
+- [Kotlin In Action]() :open_book::fire:
+- [오브젝트]() :thought_balloon:
+- [이펙티브 자바]() :thought_balloon: 2회독
 - [다시 확률 통계 - 확률편]() :open_book:
-- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :open_book::fire:
-- [스프링 마이크로서비스 코딩 공작소]() :open_book::fire:
 - [시작하세요! 도커]() :open_book:
 - [그림으로 공부하는 IT 인프라 구조]() :open_book:
 - [쿠버네티스 오퍼레이터]() :thought_balloon:
 - [쿠버네티스 모범 사례]() :thought_balloon:
-- [오브젝트]() :thought_balloon:
 - [마이크로서비스 디자인패턴]() :thought_balloon:
-- [이펙티브 자바]() :thought_balloon: 2회독
-
 
 ---
 
@@ -122,7 +123,7 @@
 
 ## 분기 계획 (:gem: - 목표, :dart: - 성취, :broken_heart: - 미달)
 ### 2021 1분기 계획 : :clock12:
-  1. Java 웹 개발 마스터 튜터 성공적 완수 및 자료 정리 :gem:
+  1. Java 웹 개발 마스터 튜터 성공적 완수 및 자료 정리 :dart:
   2. 알고리즘, 리눅스, 네트워크, OS 기초 탄탄 -> (+ 대학원 종합시험 통과!!) :gem: :: 기초 정리
   3. 대학원 논문 1차 페이퍼 작성 및 연구 :gem:
   4. 대학원 복학 :dart:
