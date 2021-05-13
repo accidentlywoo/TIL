@@ -30,6 +30,7 @@
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
 - [Spring Boot - 공홈](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) :green_book:
+- [우아한테크캠프 Pro 2기](https://github.com/accidentlywoo/WooTechPro)
 
 ## JPA
 - [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book:
@@ -51,7 +52,7 @@
 <!-- - [Presto](https://github.com/accidentlywoo/TIL/tree/main/Presto) :green_book:
 - [Hive]() :thought_balloon: -->
 
-### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
+#### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
 - [MySQL InnoDB(feat. Real MySQL:open_book:)](./InnoDB/README.md)
 - [MySQL](https://github.com/accidentlywoo/TIL/tree/main/MySQL) :thought_balloon:
 - [동시성 전쟁 - DB 트랜잭션](./Concurrency/README.md)
