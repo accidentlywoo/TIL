@@ -37,7 +37,7 @@
 ## Test
 <!-- - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman: -->
 - [JUnit5](https://github.com/accidentlywoo/HelloTesting)
-- [MockK](./Mock/README.md)
+- [MockK](https://github.com/accidentlywoo/TIL/tree/main/Mock)
 
 <!-- ## DevOps -->
 <!-- - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
