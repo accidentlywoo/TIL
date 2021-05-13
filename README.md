@@ -37,6 +37,7 @@
 ## Test
 <!-- - [더 자바, 애플리케이션을 테스트하는 다양한 방법](https://github.com/accidentlywoo/HelloTesting) :running_woman: -->
 - [JUnit5](https://github.com/accidentlywoo/HelloTesting)
+- [MockK]()
 
 <!-- ## DevOps -->
 <!-- - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
@@ -120,23 +121,24 @@
 ## 컨퍼런스
 - [2020 IF KAKAO](https://if.kakao.com/session)
 - [우아한 테크세미나-우아한 스프링](https://drive.google.com/file/d/10G1qCgdFrVXpxLUTgrSwp5ZMboXlfwmH/view)
+- [마틴파울러 사이트](https://martinfowler.com/)
 
 ## 분기 계획 (:gem: - 목표, :dart: - 성취, :broken_heart: - 미달)
 ### 2021 1분기 계획 : :clock12:
   1. Java 웹 개발 마스터 튜터 성공적 완수 및 자료 정리 :dart:
   2. 알고리즘, 리눅스, 네트워크, OS 기초 탄탄 -> (+ 대학원 종합시험 통과!!) :gem: :: 기초 정리
-  3. 대학원 논문 1차 페이퍼 작성 및 연구 :gem:
+  3. 대학원 논문 1차 페이퍼 작성 및 연구 :broken_heart:
   4. 대학원 복학 :dart:
-  5. 패스트 캠퍼스 Java Web Master 튜터 블로깅 :gem:
+  5. 패스트 캠퍼스 Java Web Master 튜터 블로깅 :broken_heart:
 
 ### 2021 2분기 계획 : :clock3:
   1. 종합시험 합격 (알고리즘, 리눅스, 네트워크, OS) :gem: :: 성취 전파
-  2. 논문 통과 :gem:
-  3. 대학원 졸업 :gem: :woman_student:
+  2. 논문 통과 :broken_heart:
+  3. 대학원 졸업 :broken_heart:
+  4. 우아한테크캠프 Pro 우수 수료 :gem:
 
 ### 2021 3분기 계획 : :clock6:
-  1. 꽃 길 
-  2. CKA 뿌시기 따고야 만다! :gem:
+  1. CKA 겟차! :gem:
    
 
 ### 2021 4분기 계획 : :clock9:
