@@ -7,8 +7,8 @@
 ### OS
 
 ### 리눅스
-- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic) :running_woman: :fire:
-- [도커 뚜둘뚜둘](https://github.com/accidentlywoo/TIL/tree/main/Docker-basic) :running_woman: :fire:
+- [리눅스 기초](https://github.com/accidentlywoo/TIL/tree/main/Linux-basic) :running_woman: :green_book:
+- [도커 뚜둘뚜둘](https://github.com/accidentlywoo/TIL/tree/main/Docker-basic) :running_woman: :green_book:
 <!-- ### network
 - [실무에서 주워 담는 네트워크](https://github.com/accidentlywoo/TIL/tree/main/network) :green_book:
 - [백엔드라면! HTTP](https://github.com/accidentlywoo/TIL/tree/main/HTTP) :running_woman: :fire: -->
@@ -21,16 +21,15 @@
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: 
-- [갓기선과 함께하는 매주 자바 스터디](https://github.com/accidentlywoo/TIL/tree/main/JavaStudy-WhiteShip)
  
 ## Kotlin 
-- [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction)
+- [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :fire:
 
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
 - [Spring Boot - 공홈](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) :green_book:
-- [우아한테크캠프 Pro 2기](https://github.com/accidentlywoo/WooTechPro)
+- [우아한테크캠프 Pro 2기](https://github.com/accidentlywoo/WooTechPro) :fire::fire:
 
 ## JPA
 - [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book:
