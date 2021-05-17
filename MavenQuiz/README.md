@@ -88,3 +88,11 @@
     <dependencyManagement>블록은 종속성을 해결해야 할 때무다 조회 테이블로 작동한다.
     이 경우 Maven은 일치하는 종속성 (groupId 및 artifactId)이 선언되었는지 확인하고 일치하는 버전을 반환하는지 확인하는 조회 테이블을 살펴본다.
 
+
+## Maven과 Gradle 좀 더 이해하기
+- [우아한 코스 자바 빌드 툴 Maven vs Gradle](https://woowacourse.github.io/javable/post/2020-09-17-java-build-tool/)
+
+-> 핵심 내용
+ > Maven is not a perfect tool (nor is Gradle for that matter), we all have heard the Maven/Gradle bashing from colleagues (or ourselves) at some point in our developer career. Instead of spending time raging about the state of the tools, what if we used that energy to create something positive?
+
+ - [그레들 공식홈페이지에서 보여주는 Maven보다 겁나빠른 Gradle 빌드속도](https://gradle.org/maven-vs-gradle/)
