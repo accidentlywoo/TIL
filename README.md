@@ -123,3 +123,4 @@
 - [2020 IF KAKAO](https://if.kakao.com/session)
 - [우아한 테크세미나-우아한 스프링](https://drive.google.com/file/d/10G1qCgdFrVXpxLUTgrSwp5ZMboXlfwmH/view)
 - [마틴파울러 사이트](https://martinfowler.com/)
+- [Java equals와 hashcode 집착 정리](https://johngrib.github.io/wiki/Object-hashCode/#%EA%B7%B8%EB%9F%B0%EB%8D%B0-%EC%99%9C-31%EC%9D%84-%EA%B3%B1%ED%95%98%EB%8A%94-%EA%B1%B8%EA%B9%8C)
