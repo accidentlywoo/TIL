@@ -73,9 +73,9 @@
 ## 튜터링 및 강의 자료
 - [자바 웹 개발 마스터 - 입문자용 자료만들기](https://github.com/accidentlywoo/TIL/tree/main/JavaWebStarter)
 
-## public 개인 프로젝트
+<!-- ## public 개인 프로젝트
 - [Dream Coffee(feat. MSA)](https://github.com/accidentlywoo/MSA-Gang)
-- [Kotlin-SpringBoot On Boarding Project](https://github.com/accidentlywoo/kotlinSpringboot)
+- [Kotlin-SpringBoot On Boarding Project](https://github.com/accidentlywoo/kotlinSpringboot) -->
 
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :thought_balloon:
