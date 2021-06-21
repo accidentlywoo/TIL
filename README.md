@@ -94,6 +94,7 @@
 - [토비스프링 바이블 읽기]() :open_book::fire:
   
 --- 21년 상반기
+- [객체지향의 사실과 오해]() :ledger:
 - [Kotlin In Action]() :open_book::fire:
 - [오브젝트]() :thought_balloon:
 - [이펙티브 자바]() :thought_balloon: 2회독
