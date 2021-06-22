@@ -59,6 +59,7 @@
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
 - [모던 JavaScript 튜터리얼]() :thought_balloon:
+- [Hello Type Script](https://github.com/accidentlywoo/HelloTypeScript) :running_woman:
 
 ## React
 - [우아한테크러닝 3기](https://github.com/accidentlywoo/HelloReactive) :woman_student: 
@@ -95,8 +96,9 @@
   
 --- 21년 상반기
 - [객체지향의 사실과 오해]() :ledger:
-- [Kotlin In Action]() :open_book::fire:
-- [오브젝트]() :thought_balloon:
+- [함께 자라기]() :open_book:
+- [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :open_book::fire:
+- [오브젝트]() :open_book:
 - [이펙티브 자바]() :thought_balloon: 2회독
 - [다시 확률 통계 - 확률편]() :open_book:
 - [시작하세요! 도커]() :open_book:
