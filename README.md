@@ -1,6 +1,7 @@
 # TIL
  상태 : :running_woman: - 진행 중, :woman_student: - 정리 끝, :green_book: - 꾸준히, :thought_balloon: - 구상 중, :fire: - 초집중, - 두둘기고 보는 우당탕탕 시리즈 :cyclone:
 
+ 조금씩 개인 코드 두둘기기! 야금야금 건강한 개발체조!
 ## CS
 ### 알고리즘
 - [영리한 프로그래밍을 위한 알고리즘](https://github.com/accidentlywoo/TIL/tree/main/Clever-Algorithm) :green_book: 
@@ -94,18 +95,15 @@
 
 - [토비스프링 바이블 읽기]() :open_book::fire:
   
---- 21년 상반기
+--- 21년 하반기
 - [객체지향의 사실과 오해]() :ledger:
 - [함께 자라기]() :open_book:
 - [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :open_book::fire:
 - [오브젝트]() :open_book:
 - [이펙티브 자바]() :thought_balloon: 2회독
-- [다시 확률 통계 - 확률편]() :open_book:
-- [시작하세요! 도커]() :open_book:
 - [그림으로 공부하는 IT 인프라 구조]() :open_book:
-- [쿠버네티스 오퍼레이터]() :thought_balloon:
-- [쿠버네티스 모범 사례]() :thought_balloon:
-- [마이크로서비스 디자인패턴]() :thought_balloon:
+- CKA 따기!
+- 졸업 시험 통과!
 
 ---
 
