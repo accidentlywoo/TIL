@@ -22,15 +22,17 @@
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
 - [스프링 없는 웹 어플리케이션](https://github.com/accidentlywoo/secsec) :woman_student: 
- 
 ## Kotlin 
 - [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :fire:
+
+## C#
+- [궁금해서 배워보는 C#](https://github.com/accidentlywoo/C-#-Blazor)
 
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:
 - [Spring Transation 정리](https://github.com/accidentlywoo/TIL/tree/main/SpringTransaction) :thought_balloon:
 - [Spring Boot - 공홈](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) :green_book:
-- [우아한테크캠프 Pro 2기](https://github.com/accidentlywoo/WooTechPro) :fire::fire:
+- [우아한테크캠프 Pro 2기](https://github.com/accidentlywoo/WooTechPro)
 
 ## JPA
 - [JPA 정리하기](https://github.com/accidentlywoo/TIL/tree/main/JPA-theorem) :green_book:
