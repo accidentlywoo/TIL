@@ -26,7 +26,7 @@
 - [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :fire:
 
 ## C#
-- [궁금해서 배워보는 C#](https://github.com/accidentlywoo/C-#-Blazor)
+- [궁금해서 배워보는 C#](https://github.com/accidentlywoo/TIL/tree/main/C-%23-Blazor)
 
 ## Spring
 - [스프링 5 실습](https://github.com/accidentlywoo/secSpring) :woman_student:

@@ -24,7 +24,7 @@ Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price:C2} pe
 ```
 
 자습서가 이상한지 몰라고 소숫점 자리 출력물에 이상한 아이콘이 보여서 신기했다 이게 머선 129
-<img src="https://github.com/accidentlywoo/C-#-Blazor/image/소숫점자리.png" width="30%" height="30%" display="inline-block" alt="그래프"/>
+<img src="https://github.com/accidentlywoo/TIL/tree/main/C-%23-Blazor/image/소숫점자리.png" width="30%" height="30%" display="inline-block" alt="그래프"/>
 
 
 ## 참고 사이트
