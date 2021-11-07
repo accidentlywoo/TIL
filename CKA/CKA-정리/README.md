@@ -422,3 +422,17 @@ spec:
 $ kubectl apply -f pod.yaml
 ```
 
+## 11. hostPath PV 생성
+
+## 12. PV와 PVC 생성하여 nginx파드에 볼륨 마운트
+
+## 13. 스토리지 클래스에 해당하는 PVC 생성
+
+## 14. 멀티 컨테이너 파드 배포2(사이드카 패턴)
+
+## 15. 디플로이먼트 Expose
+
+## 16. 인그레스 생성
+
+## 17. NetworkPolicy 생성
+
