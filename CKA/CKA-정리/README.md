@@ -334,5 +334,91 @@ snapshot save /opt/snapsho.db
 Snapshot saved at /opt/snapsho.db
 ```
 
+## 6. 특정 레이블을 가진 파드 중 CPU 사용량이 가장 높은 파드 조회
+파드의 CPU 사용량은 kubectl top pod 명령을 통해 확인할 수 있다.
 
+-l 옵션과 레이블명을 추가하여 특정 레이블을 가진 파드의 CPU 사용량을 조회할 수 있다.
+
+문제에서는 해당 파드명을 파일형태로 저장한다.
+
+```cli
+$ kubectl top pod -l {LABEL}
+$ echo {파드명} > {문제에서 요구하는 파일명}
+```
+
+## 7. 특정 노드에 파드 생성
+특정 노드에 스케줄링되는 파드를 생성한다.
+
+파드가 스케줄링되는 노드를 지정하려면 nodeSelector 옵션을 사용해야 한다.
+
+해당 옵션은 CLI로는 생성할 수 없고 YAML을 작성해야 한다.
+
+```
+nodeSelector:
+{문제에서 요구하는 레이블}
+```
+
+```cli
+$ kubectl run ckatest --image nginx --dry-run=client -o yaml > pod.yaml
+# 파드 기본 템플릿 작성
+
+$ vi pod.taml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ckatest
+  name: ckatest
+spec:
+  containeres:
+  - image: nginx
+    name: ckatest
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  nodeSelector:
+    disktype: ssd
+# pod.yaml 내용 수정
+
+$ kubectl apply -f pod.yaml
+```
+
+## 8. 파드의 로그 파일로 출력
+파드의 로그는 kubectl logs {파드명}으로 출력한다.
+
+표준출력 > 을 사용해 파일 형태로 출력한다.
+
+```cli
+$ kubectl logs {파드명} > {문제의파일경로}
+```
+
+## 9. 디플로이먼트 스케일링
+```cli
+$ kubectl scale deployment {디플로이먼트명} --replicas={요구값}
+```
+
+## 10. 멀티 컨테이너 파드 배포
+컨테이너를 여러개 가지고 있는 파드를 배포해야 한다.
+
+containers: 하위에 한 세트를 추가하면 된다.
+
+```cli
+$ kubectl run ckatest --image nginx --dry-run=client -o yaml > pod.yaml
+
+$ vi pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: muti-containers
+spec:
+  containers:
+  - name: {containerA}
+    image: {ImageA}
+  - name: {containerB}
+    iamge: {ImageB}
+  ...
+
+$ kubectl apply -f pod.yaml
+```
 
