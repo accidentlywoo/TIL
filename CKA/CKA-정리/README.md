@@ -460,7 +460,138 @@ $ kubectl create -f hostpath.yaml
 
 spec 부분에 storage, accessModes, path 부분을 문제에서 요구하는 대로 수정하여 생성한다.
 
+```cli
+$ cat pv.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: take-pv-volume
+  labels:
+    type: local
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data"
+# 파일 생성
+
+$ kubectl apply -f pv.yaml
+persistentvolume/task-pv-volume created
+# pv 리소스 생성
+
+$ kubectl get pv
+NAME CAPACITY ACCESS MODES RECLAIM POLICY STATUS CLAIM STORAGECLASS REASON AGE 
+task-pv-volume 10Gi RWO Retain Available 65s
+```
+
+2. PVC 생성
+생성한 PV에 맞게 PVC를 생성한다.
+
+storage는 PV의 storage보다 작거나 같아야 한다.
+
+```cli
+$ cat pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: task-pv-claim
+spec:
+  accdessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+
+$ kubectl apply -f pvc.yaml
+persistentvolumeclaim/task-pv-claim created
+# pvc 리소스 생성
+
+$ kubectl get pv,pvc
+NAME CAPACITY ACCESS MODES RECLAIM POLICY STATUS CLAIM STORAGECLASS REASON AGE 
+persistentvolume/task-pv-volume 10Gi RWO Retain Bound default/task-pv-claim 5m28s 
+
+NAME STATUS VOLUME CAPACITY ACCESS MODES STORAGECLASS AGE 
+persistentvolumeclaim/task-pv-claim Bound task-pv-volume 10Gi RWO 6s
+```
+PVC 조회 시 위의 출력처럼 Bound가 되야 한다.
+
+Pending으로 계속 유지될 경우 pvc가 요청한 내용에 pv가 일치하지 않은 경우이기 때문에 spec을 다시 확인해봐야 한다.
+
+3. 파드 생성 및 pvc 연결
+PVC 생성에서 실제 볼륨 역할을 하는 PV와 이 볼륨을 사용하는 요청인 PVC를 생성했다.
+
+실제 파드 생성시 해당 볼륨을 사용하려면 아래와 같이 파드의 volume부분에 PVC를 등록하면 된다.
+
+```cli
+$ cat pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: task-pv-pod
+spec:
+  containers:
+    - name: task-pv-container
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: task-pv-storage
+  volumes:
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: task-pv-claim
+# pod.yaml 파일 작성
+
+$ kubectl apply -f pod.yaml
+pad/task-pv-pod created
+# 파드 생성
+
+$ kubectl get pod
+NAME READY STATUS RESTARTS AGE 
+task-pv-pod 1/1 Running 0 17s
+# 파드 조회
+
+$ kubectl describe po task-pv-pod
+... 
+    Mounts:
+       /usr/share/nginx/html from task-pv-storage (rw) 
+... 
+Volumes:
+  task-pv-storage: 
+    Type: PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName: task-pv-claim 
+    ReadOnly: false 
+...
+```
+
 ## 13. 스토리지 클래스에 해당하는 PVC 생성
+위처럼 PV를 별도로 생성하고 관리할 수도 있지만, 스토리지 클래스는 PVC에 맞는 PV를 자동으로 생성(프로비저닝)해준다.
+
+문제에는 스토리지 클래스가 주어져 있고 해당 스토리지 클래스에서 PV를 생성할 수 있도록 PV를 작성해야 한다.
+
+```cli
+$ kubectl describe storageclass {스토리지클래스명}
+# 주어진 스토리지 클래스 상세 정보 확인
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadataL
+  name: myclaim
+spec:
+  accessModes:
+    - {스토리지클래스와 동일하게 작성}
+  volumeMode:  FileSystem
+  resources:
+    requests:
+      storage: {문제에서 요구하는 용량}
+  storageClassName: {문제에서 주어진 스토리지 클래스}
+
+$ kubectl get pv,pvc --all-namespace
+```˜
 
 ## 14. 멀티 컨테이너 파드 배포2(사이드카 패턴)
 
