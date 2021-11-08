@@ -423,8 +423,42 @@ $ kubectl apply -f pod.yaml
 ```
 
 ## 11. hostPath PV 생성
+수동으로 PV를 하나 생성한다. 
+
+파드는 기본적으로 stateless로 파드 삭제 시 내부에 파일 시스템에 작성되었던 내용들도 모두 삭제된다.
+
+이를 막기 위해 영속성이 필요한 데이터들은 PV와 PVC를 활용해 관리한다.
+
+PV는 어떤 스토리지를 사용할 지에 대한 부분이고, PVC는 파드가 어떤 PV를 사용할 지에 대한 정의이다.
+
+PV는 다양한 스토리지와 연결하여 사용할 수 있는대, hostPath의 경우 실제 컨테이너가 실행되는 호스트 머신의 파일시스템을 사용한다. 
+
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: task-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "{문제에서 주어지는 경로}"
+```
+
+```cli
+$ kubectl create -f hostpath.yaml
+```
 
 ## 12. PV와 PVC 생성하여 nginx파드에 볼륨 마운트
+1. PV 생성
+아래는 일반적인 PV 생성 YAML 파일이다.
+
+spec 부분에 storage, accessModes, path 부분을 문제에서 요구하는 대로 수정하여 생성한다.
 
 ## 13. 스토리지 클래스에 해당하는 PVC 생성
 
