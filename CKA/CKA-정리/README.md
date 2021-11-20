@@ -592,12 +592,171 @@ spec:
 
 $ kubectl get pv,pvc --all-namespace
 ```˜
+accessModes: 아래 부분에는 스토리지 클래스와 동일한 내용을 적는다.
+
+RWO, ROX, RWX중 하나로 되있을 것.
+
+storage는 문제에서 지정한 만큼 할당하고, storageClassName에 스토리지 클래스 명을 지정한다.
+
+kubectl get pv,pvc --all-namespaces 명령을 통해 정상적으로 PV가 생성되었는지 확인한다.
+
+PV가 생성되지 않을 경우 yaml파일 내용이 스토리지 클래스와 일치하지 않은 것이기 때문에 재생성이 필요하다.
 
 ## 14. 멀티 컨테이너 파드 배포2(사이드카 패턴)
+두 개의 컨테이너가 하나의 볼륨을 공유하도록 배포해야 한다.
+
+클러스터에는 nginx 싱글 컨테이너만 존재한다.
+
+해당 nginx의 로그 파일이 저장되는 경로에 컨테이너 볼륨을 마운트하고, 해당 볼륨을 log-container라는 이름의 새로운 컨테이너에도 마운트한다.
+
+두 컨테이너가 동일한 볼륨을 공유하게 되고, 따라서 log-container에 접근시 nginx의 로그를 조회할 수 있어야 한다.
+
+```cli
+$ kubectl get po {파드명} -o yaml > nginx.yaml
+# 기존 nginx 파드 정보 추출
+
+$ kubectl delete po {파드명}
+# 기존 nginx 파드 삭제
+
+$ cat nginx.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: two-containers
+spec:
+  volumes:
+  - name: shared-data
+    emptyDir: {}
+  containers:
+  - name: nginx-container
+    image: ngix
+    volumeMounts:
+    - name: shared-data
+      mountPath: var/log/nginx
+  - name: log-container
+    iamge: centos
+    command: ["/bin/sh"]
+    args: ["-c", "while true; do ls log; sleep 5; don"]
+    volumeMounts:
+    - name: shared-data
+      mountPath: log
+# nginx.yaml 파일 수정 (volume 및 log-container 추가)
+
+$ kubectl apply -f nginx.yaml
+# 새로운 파드 생성
+
+$ kubectl get po
+NAME READY STATUS RESTARTS AGE 
+two-containers 2/2 Running 0 22s
+# 파드 확인
+
+$ kubectl logs two-containers -c log-container
+accdess.log
+error.log
+```
+새로운 log-container 생성 후 nginx와 같은 볼륨을 마운트시킨다.
+
+log-container의 log 경로로 접근해보면 nginx가 생성하는 로그 파일을 조회할 수 있다.
+
+해당 YAML내용은 기억에 의존해 재생성한 YAML파일이기 때문에 실제 문제 내용과는 차이가 있을 수 있다.
 
 ## 15. 디플로이먼트 Expose
+특정 Deployment가 주어지고 이에 대한 서비스를 생성하는 문제이다.
+
+service YAML파일을 작성하여 생성하는 방법도 있지만, kubectl expose 명령어를 통해 간편하게 서비스를 생성할 수 있다.
+
+```
+$ kubectl expose deployment hello-world --type=NodePort --name=example-service
+```
 
 ## 16. 인그레스 생성
+인그레스는 L7 스위치 역할을 논리적으로 수행하여 클러스터로 접근하는 URL 별로 다른 서비스에 트래픽을 분산한다.
+
+아래 인그레스 리소스 작성 예시를 보면 {클러스터도메인}/shop 으로 돌어오는 패킷은 쿠버네티스 내 shopservice 서비스의 80포트로 전달하고, {클러스터도메인}/login으로 돌아오는 패킷은 loginservice로 전달한다.
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /shop
+        pathType: Prefix
+        backend:
+          service:
+            name: shopservice
+            port:
+              number: 80
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: loginservice
+            port:
+              number: 80
+          
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: {문제에서 주어지는 경로}
+        pathType: Prefix
+        backend:
+          service:
+            name: {문제에서 주어지는 서비스명}
+            port:
+              number: {문제에서 주어지는 포트}
+```
 
 ## 17. NetworkPolicy 생성
+K8S의 NetworkPolicy를 활용하면 클러스터 내 네트워크 트래픽을 제한할 수 있다.
+
+문제의 경우 특정 네임스페이스(myns)의 특정 포트(80)에서 파드(mypod)에 오는 Ingress 트래픽을 허용해야 한다.
+
+먼저 네임스페이스와 파드에 레이블을 붙인 후 NetworkPolicy를 생성한다.
+
+```cli
+$ kubectl label pods mypod role=app
+# 정책 적용할 파드에 레이블링
+
+$ kubectl label namespace myns node=accept
+# 정책 적용할 네임스페이스에 레이블링
+
+$ vi networkpolicy.yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: test-network-policy
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      role: app # 문제 대상 파드에 동일한 레이블이 있어여 한다
+  policyTypes:
+  - Ingress:
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          node: accept # 문제 대상 노드에 동일한 레이블이 있어야 한다.
+    ports:
+    - protocol: TCP
+      port: 80
+
+$ kubectl apply -f networkpolicy.yaml
+```
+해당 정책이 적용된 mypod의 경우 node=accept 레이블을 가진 myns에서 80포트로 접근하는 트래픽만 허용된다.
+
+이러한 정책을 통해 파드간 무분별한 트래픽 교환을 방지하며, 보안성이 뛰어난 서비스를 운영할 수 있다.
 
