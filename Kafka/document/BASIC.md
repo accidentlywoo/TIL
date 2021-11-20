@@ -33,5 +33,43 @@ LinkedIn내에서 개발
 2. 이벤트 스트림을 디스킁에 저장 : Write to Disk
 3. 이벤트 스트림을 분석 및 처리 : Processing & Ananlysis
 
+## Topic, Partition, Segment
+
+### Topic
+Kafaka 안에서 메시지가 저장되는 장소. 논리적인 표현
+
+producers.. -> topic -> consumers..
+
+- Producer : 메시지를 생산(Produce)해서 Kafka의 Topic으로 메시지를 보내는 애플리케이션
+- Consumer : Topic의 메시지를 가져와서 소비(Consume)하는 애플리케이션
+- Consumer Group : Topic의 메시지를 사용하기 위해 협력하는 Consumer들의 집합
+- 하나의 Consumer는 하나의 Consumer Group에 포함되며, Consumer Group내의 
+
+#### Producer와 Consumer의 기본 동작 방식
+Producer와 Consumer의 분리(Decoupling)
+
+- Producer와 Consumer는 서로 알지 못하며, Producer와 Consumer는 각각 고유의 속도로 Commit Log에 Write 및 Read를 수행
+- 다른 Consumer Group에 속한 Consumer들은 서로 관련이 없으며, Commit Log에 있는 Event(Message)를 동시에 다른 위치에서 Read할 수 있음
+
+#### Kafka Commit Log
+추가만 가능하고 변경 불가능한 데이터 스트럭처
+
+- Commit Log : 추가만 가능하고 변경 불가능한 데이터 스트럭처. 데이터(Event)는 항상 로그 끝에 추가되고 변경되지 않음
+- Offset : Commit Log에서 Event의 위치
+
+#### Kafka Offset
+Commit Log에서 Event의 위치
+
+- Producer가 Write라는 ```LOG-END-OFFSET```과 Consumer Group의 Consumer가 Read하고,
+처리한 후에 Commit한 ```CURRENT-OFFSET``과의 차이(Consumer Lag)가 발생할 수 있음.
+
+---
+
+논리적 정의를 정리해보자!
+
+- Topic : Kafka 안에서 메시지가 저장되는 장소, 논리적인 표현
+- Partition : Commit Log, 하나의 Topic은 하나 이상의 Partition으로 구성. 병렬처리(Throughput 향상)를 위해서 다수의 Partition 사용
+- Segment : 메시지(데이터)가 저장되는 실제 물리 File. Segment File이 지정된 크기보다 크거나 지정된 기간보다 오래되면 새 파일이 열리고 메시지는 새 파일에 추가됨.
+
 
 
