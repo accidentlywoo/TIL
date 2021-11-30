@@ -17,7 +17,7 @@
 ### 컴퓨터 구조
 <!-- ### 암호학
 - [Oauth2.0](https://github.com/accidentlywoo/TIL/tree/main/Oauth2.0)
-- [JWT 정리]() :thought_balloon: -->
+- [JWT 정리](#) :thought_balloon: -->
 
 ## Java 
 - [이것이 자바다 + 실습](https://github.com/accidentlywoo/sec) :woman_student: 
@@ -46,13 +46,13 @@
 <!-- - [GCP - Qwiklabs](https://github.com/accidentlywoo/TIL/tree/main/Qwiklabs) :green_book:  
 - [GCP - Container, Docker, Kubernetes, CD pipeline](https://github.com/accidentlywoo/TIL/tree/main/GCP-studyjam) :green_book:
 - [도전! CKA - 공홈 + Udemy](https://github.com/accidentlywoo/TIL/tree/main/CKA) :running_woman: -->
-<!-- - [시작하세요 도커 정리]() :green_book: -->
-<!-- - [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기]() :cyclone: -->
+<!-- - [시작하세요 도커 정리](#) :green_book: -->
+<!-- - [우당탕탕 도커 컴포즈로 로컬개발환경 구축하기](#) :cyclone: -->
 
 ## Data Base ! 
 #### - OLAP(OnLine Analytical Processing) :: 의사결정에 도움되는 데이터 분석에 관심
 <!-- - [Presto](https://github.com/accidentlywoo/TIL/tree/main/Presto) :green_book:
-- [Hive]() :thought_balloon: -->
+- [Hive](#) :thought_balloon: -->
 
 #### - OLTP(OnLine Transaction Processing) :: 업무의 효율적인 처리에만 관심
 - [MySQL InnoDB(feat. Real MySQL:open_book:)](./InnoDB/README.md)
@@ -61,7 +61,7 @@
     
 ## JavaScript
 - [Vue 고인물](https://github.com/accidentlywoo/legacyVue) :woman_student:
-- [모던 JavaScript 튜터리얼]() :thought_balloon:
+- [모던 JavaScript 튜터리얼](#) :thought_balloon:
 - [Hello Type Script](https://github.com/accidentlywoo/HelloTypeScript) :running_woman:
 
 ## React
@@ -84,28 +84,30 @@
 ## 도서 및 논문 :books: (:open_book: - 공부 중, :ledger: - 읽기 끝, :closed_book: - 정리 끝)
 - [리팩터링 2판](https://github.com/accidentlywoo/HelloRefactoring) :thought_balloon:
 - [Java EE 디자인 패턴](https://github.com/accidentlywoo/TIL/tree/book/JavaEEDesignPattern) :ledger:
-- [이것이 자바다]() :ledger:
-- [함께 자라기]() :ledger:
-- [코어 자바스크립트]() :ledger:
-- [자바스크립트 핵심가이드]() :ledger:
-- [이펙티브 자바]() :ledger:
-- [객체 지향의 사실과 오해]() :ledger:
-- [운영체제 개론]() :closed_book:
-- [그림으로 배우는 HTTP & Network]() :ledger:
-- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기]() :ledger:
-- [스프링 마이크로서비스 코딩 공작소]() :ledger:
+- [이것이 자바다](#) :ledger:
+- [함께 자라기](#) :ledger:
+- [코어 자바스크립트](#) :ledger:
+- [자바스크립트 핵심가이드](#) :ledger:
+- [이펙티브 자바](#) :ledger:
+- [객체 지향의 사실과 오해](#) :ledger:
+- [운영체제 개론](#) :closed_book:
+- [그림으로 배우는 HTTP & Network](#) :ledger:
+- [자바 기반의 마이크로서비스 이해와 아키텍처 구축하기](#) :ledger:
+- [스프링 마이크로서비스 코딩 공작소](#) :ledger:
+- [객체지향의 사실과 오해](#) :ledger:
+- [그림으로 공부하는 IT 인프라 구조](#) :ledger:
+- [함께 자라기](#) :ledger:
 
-- [토비스프링 바이블 읽기]() :open_book::fire:
-  
---- 21년 하반기
-- [객체지향의 사실과 오해]() :ledger:
-- [함께 자라기]() :open_book:
-- [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :open_book::fire:
-- [오브젝트]() :open_book:
-- [이펙티브 자바]() :thought_balloon: 2회독
-- [그림으로 공부하는 IT 인프라 구조]() :open_book:
-- CKA 따기!
-- 졸업 시험 통과!
+- [토비스프링 바이블 읽기](#) :open_book::fire:
+
+
+--- 21년 상반기
+
+- [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :open_book:
+- [오브젝트](#) :open_book:
+- [이펙티브 자바](#) :thought_balloon: 2회독
+- [네트워크, AWS, Git 기초 자료 정리](#)
+- [자바, 스프링, RDB, JPA 기초 자료 정리](#)
 
 ---
 
