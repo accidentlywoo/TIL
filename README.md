@@ -106,8 +106,8 @@
 - [Kotlin In Action](https://github.com/accidentlywoo/KotlinInAction) :open_book:
 - [오브젝트](#) :open_book:
 - [이펙티브 자바](#) :thought_balloon: 2회독
-- [네트워크, AWS, Git 기초 자료 정리](#)
-- [자바, 스프링, RDB, JPA 기초 자료 정리](#)
+- [네트워크, Git, AWS 기초 자료 정리](https://github.com/accidentlywoo/TIL/tree/main/java-web-starter/network-git-aws-basic)
+- [자바, 스프링, RDB, JPA 기초 자료 정리](https://github.com/accidentlywoo/TIL/tree/main/java-web-starter/java-spring-rdb-jpa-basic)
 
 ---
 
